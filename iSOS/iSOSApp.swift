@@ -1,10 +1,3 @@
-//
-//  iSOSApp.swift
-//  iSOS
-//
-//  Created by Massimo Paloscia on 17/10/23.
-//
-
 import SwiftUI
 
 @main

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E6B4AAE2AE1419600F1C4AD /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */; };
 		4ED20FF02ADE95B4007B4E50 /* iSOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */; };
 		4ED20FF22ADE95B4007B4E50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED20FF12ADE95B4007B4E50 /* ContentView.swift */; };
 		4ED20FF42ADE95B6007B4E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		4ED20FEC2ADE95B4007B4E50 /* iSOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSOSApp.swift; sourceTree = "<group>"; };
 		4ED20FF12ADE95B4007B4E50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */,
 				4ED20FF12ADE95B4007B4E50 /* ContentView.swift */,
+				4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FF52ADE95B6007B4E50 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED20FF22ADE95B4007B4E50 /* ContentView.swift in Sources */,
+				4E6B4AAE2AE1419600F1C4AD /* LocationViewModel.swift in Sources */,
 				4ED20FF02ADE95B4007B4E50 /* iSOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +279,8 @@
 				DEVELOPMENT_TEAM = SRL43XWPNS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +309,8 @@
 				DEVELOPMENT_TEAM = SRL43XWPNS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

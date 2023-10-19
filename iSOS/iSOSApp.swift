@@ -4,7 +4,7 @@ import SwiftUI
 struct iSOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

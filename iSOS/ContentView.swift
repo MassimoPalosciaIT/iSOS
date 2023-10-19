@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  Shared
-//
-//
-
 import SwiftUI
 import CoreLocation
 

@@ -9,7 +9,18 @@ import SwiftUI
 
 struct CallButtonView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Circle().onTapGesture {
+            startCall(to: "1234567890")
+        }
+    }
+    
+    func startCall(to number: String) {
+        guard let url = URL(string: "tel://\(number)"), UIApplication.shared.canOpenURL(url) else {
+            print("Error: Unable to initiate call.")
+            return
+        }
+        
+        UIApplication.shared.open(url)
     }
 }
 

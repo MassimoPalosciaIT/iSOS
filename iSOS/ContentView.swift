@@ -27,41 +27,29 @@ struct TrackingView: View {
     
     var body: some View {
         VStack {
-            VStack {
-                PairView(
-                    leftText: "Latitude:",
-                    rightText: String(coordinate?.latitude ?? 0)
-                )
-                PairView(
-                    leftText: "Longitude:",
-                    rightText: String(coordinate?.longitude ?? 0)
-                )
-                PairView(
-                    leftText: "Country",
-                    rightText: locationViewModel.currentPlacemark?.country ?? ""
-                )
-            }
-            .padding()
+            Text(getLatitude())
+            Text(getLongitude())
+            Text(getCountry())
         }
     }
     
     var coordinate: CLLocationCoordinate2D? {
         locationViewModel.lastSeenLocation?.coordinate
     }
-}
-
-struct PairView: View {
-    let leftText: String
-    let rightText: String
     
-    var body: some View {
-        HStack {
-            Text(leftText)
-            Spacer()
-            Text(rightText)
-        }
+    func getLatitude() -> String {
+        return String(coordinate?.latitude ?? 0)
+    }
+    
+    func getLongitude() -> String {
+        return String(coordinate?.longitude ?? 0)
+    }
+    
+    func getCountry() -> String {
+        return locationViewModel.currentPlacemark?.country ?? "No country found"
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

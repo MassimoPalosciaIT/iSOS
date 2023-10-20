@@ -2,7 +2,10 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct MainView: View {
-    var coordinates: String = "40°50'12.05\"N 14°18'23.70\"E"
+    var coordinates: String = ""
+    //var locationViewModel: LocationViewModel = LocationViewModel()
+    
+    //coordinates = locationViewModel.getLatitude()
     
     var body: some View {
         
@@ -240,12 +243,7 @@ struct AppButtonCircular: View {
                     .foregroundColor(.white)
                     .font(.system(size: 64))
             }
-            
-            
         }
-                
-            
-        
     }
 }
 

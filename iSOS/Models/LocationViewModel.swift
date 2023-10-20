@@ -48,4 +48,20 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             self.currentPlacemark = placemarks?.first
         }
     }
+    
+    var coordinate: CLLocationCoordinate2D? {
+        lastSeenLocation?.coordinate
+    }
+    
+    func getLatitude() -> String {
+        return String(coordinate?.latitude ?? 0)
+    }
+
+    func getLongitude() -> String {
+        return String(coordinate?.longitude ?? 0)
+    }
+
+    func getCountry() -> String {
+        return currentPlacemark?.country ?? "No country found"
+    }
 }

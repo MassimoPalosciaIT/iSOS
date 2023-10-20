@@ -22,35 +22,6 @@ struct ContentView: View {
     }
 }
 
-struct TrackingView: View {
-    @EnvironmentObject var locationViewModel: LocationViewModel
-    
-    var body: some View {
-        VStack {
-            Text(getLatitude())
-            Text(getLongitude())
-            Text(getCountry())
-        }
-    }
-    
-    var coordinate: CLLocationCoordinate2D? {
-        locationViewModel.lastSeenLocation?.coordinate
-    }
-    
-    func getLatitude() -> String {
-        return String(coordinate?.latitude ?? 0)
-    }
-    
-    func getLongitude() -> String {
-        return String(coordinate?.longitude ?? 0)
-    }
-    
-    func getCountry() -> String {
-        return locationViewModel.currentPlacemark?.country ?? "No country found"
-    }
-}
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

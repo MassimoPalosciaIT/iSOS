@@ -48,6 +48,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AB943F62AE29D18005A5D1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AC173802AE27B8700F4818C /* CallModel.swift */,
+				4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1AB943F72AE29D34005A5D1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AC1737F2AE265E700F4818C /* Location screens */,
+				1A48E0D22AE169900012E64E /* MainView.swift */,
+				4E36D5202AE2608000209E4E /* MedicalEmergencyView.swift */,
+				4E36D5222AE27F2300209E4E /* PoliceEmergencyView.swift */,
+				4E36D5242AE2853300209E4E /* FireDepartmentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1AC1737F2AE265E700F4818C /* Location screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,15 +97,10 @@
 		4ED20FEE2ADE95B4007B4E50 /* iSOS */ = {
 			isa = PBXGroup;
 			children = (
-				4ED20FF12ADE95B4007B4E50 /* ContentView.swift */,
-				1AC1737F2AE265E700F4818C /* Location screens */,
 				4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */,
-				4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */,
-				1A48E0D22AE169900012E64E /* MainView.swift */,
-				4E36D5202AE2608000209E4E /* MedicalEmergencyView.swift */,
-				4E36D5222AE27F2300209E4E /* PoliceEmergencyView.swift */,
-				4E36D5242AE2853300209E4E /* FireDepartmentView.swift */,
-				1AC173802AE27B8700F4818C /* CallModel.swift */,
+				4ED20FF12ADE95B4007B4E50 /* ContentView.swift */,
+				1AB943F72AE29D34005A5D1C /* View */,
+				1AB943F62AE29D18005A5D1C /* Models */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FF52ADE95B6007B4E50 /* Preview Content */,
 			);

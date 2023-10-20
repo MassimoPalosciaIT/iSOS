@@ -53,7 +53,7 @@ struct PoliceEmergencyView: View {
                     
                 }
             }.background(Color.iSOSBackground.ignoresSafeArea())
-            .navigationTitle("Medical Help")
+            .navigationTitle("Police")
             .navigationBarTitleDisplayMode(.inline)
         
     }

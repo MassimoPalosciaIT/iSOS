@@ -53,7 +53,7 @@ struct FireDepartmentView: View {
                 
             }
         }.background(Color.iSOSBackground.ignoresSafeArea())
-            .navigationTitle("Medical Help")
+            .navigationTitle("Fire Department")
             .navigationBarTitleDisplayMode(.inline)
     }
 }

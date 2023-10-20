@@ -10,7 +10,7 @@
 		1A48E0D32AE169900012E64E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A48E0D22AE169900012E64E /* MainView.swift */; };
 		1AC1737A2AE2648700F4818C /* RequestLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173792AE2648700F4818C /* RequestLocationView.swift */; };
 		1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1737B2AE2655400F4818C /* ErrorView.swift */; };
-		1AC173812AE27B8700F4818C /* CallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* CallButtonView.swift */; };
+		1AC173812AE27B8700F4818C /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* CallModel.swift */; };
 		4E36D5212AE2608000209E4E /* MedicalEmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5202AE2608000209E4E /* MedicalEmergencyView.swift */; };
 		4E36D5232AE27F2300209E4E /* PoliceEmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5222AE27F2300209E4E /* PoliceEmergencyView.swift */; };
 		4E36D5252AE2853300209E4E /* FireDepartmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5242AE2853300209E4E /* FireDepartmentView.swift */; };
@@ -25,7 +25,7 @@
 		1A48E0D22AE169900012E64E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1AC173792AE2648700F4818C /* RequestLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationView.swift; sourceTree = "<group>"; };
 		1AC1737B2AE2655400F4818C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		1AC173802AE27B8700F4818C /* CallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButtonView.swift; sourceTree = "<group>"; };
+		1AC173802AE27B8700F4818C /* CallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
 		4E36D5202AE2608000209E4E /* MedicalEmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalEmergencyView.swift; sourceTree = "<group>"; };
 		4E36D5222AE27F2300209E4E /* PoliceEmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceEmergencyView.swift; sourceTree = "<group>"; };
 		4E36D5242AE2853300209E4E /* FireDepartmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDepartmentView.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 				4E36D5242AE2853300209E4E /* FireDepartmentView.swift */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FF52ADE95B6007B4E50 /* Preview Content */,
-				1AC173802AE27B8700F4818C /* CallButtonView.swift */,
+				1AC173802AE27B8700F4818C /* CallModel.swift */,
 			);
 			path = iSOS;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 				4ED20FF22ADE95B4007B4E50 /* ContentView.swift in Sources */,
 				1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */,
 				1A48E0D32AE169900012E64E /* MainView.swift in Sources */,
-				1AC173812AE27B8700F4818C /* CallButtonView.swift in Sources */,
+				1AC173812AE27B8700F4818C /* CallModel.swift in Sources */,
 				4E36D5232AE27F2300209E4E /* PoliceEmergencyView.swift in Sources */,
 				4E36D5252AE2853300209E4E /* FireDepartmentView.swift in Sources */,
 				4E6B4AAE2AE1419600F1C4AD /* LocationViewModel.swift in Sources */,

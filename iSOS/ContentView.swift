@@ -14,7 +14,7 @@ struct ContentView: View {
         case .denied:
             ErrorView(errorText: "The app does not have location permissions. Please enable them in settings.")
         case .authorizedAlways, .authorizedWhenInUse:
-            TrackingView()
+            MainView()
                 .environmentObject(locationViewModel)
         default:
             Text("Unexpected status")

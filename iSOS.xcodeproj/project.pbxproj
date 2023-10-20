@@ -84,9 +84,9 @@
 				4E36D5202AE2608000209E4E /* MedicalEmergencyView.swift */,
 				4E36D5222AE27F2300209E4E /* PoliceEmergencyView.swift */,
 				4E36D5242AE2853300209E4E /* FireDepartmentView.swift */,
+				1AC173802AE27B8700F4818C /* CallModel.swift */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FF52ADE95B6007B4E50 /* Preview Content */,
-				1AC173802AE27B8700F4818C /* CallModel.swift */,
 			);
 			path = iSOS;
 			sourceTree = "<group>";
@@ -312,7 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iSOS/Preview Content\"";
-				DEVELOPMENT_TEAM = GXDG2KXXXC;
+				DEVELOPMENT_TEAM = SRL43XWPNS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
@@ -326,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mattnovoselov.iSOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.massimopaloscia.iSOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -342,7 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iSOS/Preview Content\"";
-				DEVELOPMENT_TEAM = GXDG2KXXXC;
+				DEVELOPMENT_TEAM = SRL43XWPNS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
@@ -356,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mattnovoselov.iSOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.massimopaloscia.iSOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

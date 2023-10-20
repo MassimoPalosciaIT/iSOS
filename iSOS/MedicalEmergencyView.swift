@@ -12,6 +12,8 @@ struct MedicalEmergencyView: View {
     
     var coordinates: String = "40°50'12.05\"N 14°18'23.70\"E"
     
+    var callModel: CallModel = CallModel()
+    
     init() {
         let appearance = UINavigationBarAppearance();              appearance.titleTextAttributes = [             
             .font: UIFont.systemFont(ofSize: 24, weight: .bold),
@@ -51,7 +53,9 @@ struct MedicalEmergencyView: View {
                     
                     Spacer()
                     
-                    AppButtonCircular(gradientColor1: .redGradient1, gradientColor2: .redGradient2, iconName: "phone.fill")
+                    AppButtonCircular(gradientColor1: .redGradient1, gradientColor2: .redGradient2, iconName: "phone.fill").onTapGesture {
+                        callModel.startCall(to: "1234")
+                    }
                     
                     Spacer()
                     

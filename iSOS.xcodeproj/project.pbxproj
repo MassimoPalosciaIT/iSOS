@@ -11,6 +11,9 @@
 		1AC1737A2AE2648700F4818C /* RequestLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173792AE2648700F4818C /* RequestLocationView.swift */; };
 		1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1737B2AE2655400F4818C /* ErrorView.swift */; };
 		1AC173812AE27B8700F4818C /* CallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* CallButtonView.swift */; };
+		4E36D5212AE2608000209E4E /* MedicalEmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5202AE2608000209E4E /* MedicalEmergencyView.swift */; };
+		4E36D5232AE27F2300209E4E /* PoliceEmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5222AE27F2300209E4E /* PoliceEmergencyView.swift */; };
+		4E36D5252AE2853300209E4E /* FireDepartmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5242AE2853300209E4E /* FireDepartmentView.swift */; };
 		4E6B4AAE2AE1419600F1C4AD /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */; };
 		4ED20FF02ADE95B4007B4E50 /* iSOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */; };
 		4ED20FF22ADE95B4007B4E50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED20FF12ADE95B4007B4E50 /* ContentView.swift */; };
@@ -23,6 +26,9 @@
 		1AC173792AE2648700F4818C /* RequestLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationView.swift; sourceTree = "<group>"; };
 		1AC1737B2AE2655400F4818C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		1AC173802AE27B8700F4818C /* CallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButtonView.swift; sourceTree = "<group>"; };
+		4E36D5202AE2608000209E4E /* MedicalEmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalEmergencyView.swift; sourceTree = "<group>"; };
+		4E36D5222AE27F2300209E4E /* PoliceEmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceEmergencyView.swift; sourceTree = "<group>"; };
+		4E36D5242AE2853300209E4E /* FireDepartmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDepartmentView.swift; sourceTree = "<group>"; };
 		4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		4ED20FEC2ADE95B4007B4E50 /* iSOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSOSApp.swift; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 				4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */,
 				4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */,
 				1A48E0D22AE169900012E64E /* MainView.swift */,
+				4E36D5202AE2608000209E4E /* MedicalEmergencyView.swift */,
+				4E36D5222AE27F2300209E4E /* PoliceEmergencyView.swift */,
+				4E36D5242AE2853300209E4E /* FireDepartmentView.swift */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FF52ADE95B6007B4E50 /* Preview Content */,
 				1AC173802AE27B8700F4818C /* CallButtonView.swift */,
@@ -165,8 +174,11 @@
 				1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */,
 				1A48E0D32AE169900012E64E /* MainView.swift in Sources */,
 				1AC173812AE27B8700F4818C /* CallButtonView.swift in Sources */,
+				4E36D5232AE27F2300209E4E /* PoliceEmergencyView.swift in Sources */,
+				4E36D5252AE2853300209E4E /* FireDepartmentView.swift in Sources */,
 				4E6B4AAE2AE1419600F1C4AD /* LocationViewModel.swift in Sources */,
 				4ED20FF02ADE95B4007B4E50 /* iSOSApp.swift in Sources */,
+				4E36D5212AE2608000209E4E /* MedicalEmergencyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

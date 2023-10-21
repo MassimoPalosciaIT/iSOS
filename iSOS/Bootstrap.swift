@@ -1,8 +1,8 @@
 import SwiftUI
 import CoreLocation
 
-struct ContentView: View {
-    @StateObject var locationViewModel = LocationViewModel()
+struct Bootstrap: View {
+    @StateObject var locationViewModel = LocationModel()
     
     var body: some View {
         switch locationViewModel.authorizationStatus {
@@ -14,7 +14,7 @@ struct ContentView: View {
         case .denied:
             ErrorView(errorText: "The app does not have location permissions. Please enable them in settings.")
         case .authorizedAlways, .authorizedWhenInUse:
-            MainView()
+            SelectionView()
                 .environmentObject(locationViewModel)
         default:
             Text("Unexpected status")
@@ -24,6 +24,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Bootstrap()
     }
 }

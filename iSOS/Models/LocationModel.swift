@@ -1,22 +1,16 @@
-//
-//  LocationViewModel.swift
-//  Core Location Test
-//
-
-//
-
 import Foundation
-import SwiftUI
 import CoreLocation
 
-
-class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+class LocationModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var authorizationStatus: CLAuthorizationStatus
     @Published var lastSeenLocation: CLLocation?
     @Published var currentPlacemark: CLPlacemark?
-    
     private let locationManager: CLLocationManager
     
+    var coordinate: CLLocationCoordinate2D? {
+        lastSeenLocation?.coordinate
+    }
+
     override init() {
         locationManager = CLLocationManager()
         authorizationStatus = locationManager.authorizationStatus
@@ -36,24 +30,23 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         authorizationStatus = manager.authorizationStatus
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        lastSeenLocation = locations.first
-        fetchCountryAndCity(for: locations.first)
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        authorizationStatus = status
     }
-    
+
     func fetchCountryAndCity(for location: CLLocation?) {
         guard let location = location else { return }
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+            if let error = error {
+                print("Error geocoding location: \(error.localizedDescription)")
+                return
+            }
             self.currentPlacemark = placemarks?.first
         }
     }
-    
-    var coordinate: CLLocationCoordinate2D? {
-        lastSeenLocation?.coordinate
-    }
-    
-    func getLatitude() -> String {
+    ///
+    public func getLatitude() -> String {
         return String(coordinate?.latitude ?? 0)
     }
 
@@ -64,4 +57,5 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     func getCountry() -> String {
         return currentPlacemark?.country ?? "No country found"
     }
+    ///
 }

@@ -1,21 +1,18 @@
 import SwiftUI
 
 struct RequestLocationView: View {
-    @EnvironmentObject var locationViewModel: LocationViewModel
+    @EnvironmentObject var locationViewModel: LocationModel
     
     var body: some View {
-        VStack {
             ZStack{
-                VStack {
-                    LinearGradient(colors: [.redGradient1, .redGradient2.opacity(0)], startPoint: .top, endPoint: .bottom)
-                        .frame(height: 270)
-                        .ignoresSafeArea()
-                        .opacity(0.7)
-                    Spacer()
-                }
+                TopGradient(gradientColor1: Color.redGradient1, gradientColor2: Color.redGradient2)
                 
                 ZStack{
-                    AppButton_popup(gradientColor1: Color.iSOSGray, gradientColor2: Color.iSOSGray, iconName: "location.fill")
+                    AppPopupButton(
+                        backgrpundColor: Color.iSOSGray,
+                        iconName: "location.fill"
+                    )
+
                     VStack {
                         Text("We need your permission")
                             .fontWeight(.bold)
@@ -30,7 +27,9 @@ struct RequestLocationView: View {
                             .foregroundColor(.white)
                             .font(.system(size: 128))
                             .fontWeight(.light)
+                        
                         Spacer()
+                        
                         Group(){
                             Button(action: {
                                 locationViewModel.requestPermission()
@@ -49,37 +48,6 @@ struct RequestLocationView: View {
         
             }
             .background(Color.iSOSBackground.ignoresSafeArea())
-        }
-    }
-}
-
-struct AppButton_popup: View {
-    var gradientColor1: Color
-    var gradientColor2: Color
-    var iconName: String
-    
-    let cornerRadius: Double = 20
-    let frameHeight: Double = 340
-    
-    var body: some View {
-        RoundedRectangle(cornerRadius: cornerRadius)
-            .fill(LinearGradient(colors: [gradientColor1, gradientColor2], startPoint: .leading, endPoint: .trailing))
-            .frame(height: frameHeight)
-            .overlay(
-                HStack() {
-                    
-                    Image(systemName: iconName)
-                        .foregroundColor(.white)
-                        .opacity(0.03)
-                        .font(.system(size: 256))
-                        .padding(.trailing, 200)
-                    Spacer()
-                }.mask(
-                    RoundedRectangle(cornerRadius: cornerRadius)
-                        .frame(width: frameHeight, height: frameHeight)
-                    
-                )
-            )
     }
 }
 

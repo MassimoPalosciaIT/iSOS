@@ -12,6 +12,7 @@
 		1A48E0D32AE169900012E64E /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A48E0D22AE169900012E64E /* SelectionView.swift */; };
 		1A7F95A82AE44537008110B2 /* EmergencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F95A72AE44537008110B2 /* EmergencyModel.swift */; };
 		1A7F95AD2AE459BE008110B2 /* EmergencyMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */; };
+		1AA8546E2AE55D2500964C14 /* HapticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8546D2AE55D2500964C14 /* HapticModel.swift */; };
 		1AB943FA2AE3F10A005A5D1C /* UIElementsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB943F92AE3F10A005A5D1C /* UIElementsModel.swift */; };
 		1AC1737A2AE2648700F4818C /* RequestLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173792AE2648700F4818C /* RequestLocationView.swift */; };
 		1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1737B2AE2655400F4818C /* ErrorView.swift */; };
@@ -31,6 +32,7 @@
 		1A48E0D22AE169900012E64E /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		1A7F95A72AE44537008110B2 /* EmergencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyModel.swift; sourceTree = "<group>"; };
 		1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMenuModel.swift; sourceTree = "<group>"; };
+		1AA8546D2AE55D2500964C14 /* HapticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticModel.swift; sourceTree = "<group>"; };
 		1AB943F92AE3F10A005A5D1C /* UIElementsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElementsModel.swift; sourceTree = "<group>"; };
 		1AC173792AE2648700F4818C /* RequestLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationView.swift; sourceTree = "<group>"; };
 		1AC1737B2AE2655400F4818C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				1AB943F92AE3F10A005A5D1C /* UIElementsModel.swift */,
 				1A7F95A72AE44537008110B2 /* EmergencyModel.swift */,
 				1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */,
+				1AA8546D2AE55D2500964C14 /* HapticModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A1FB9192AE47E9D00ED0D91 /* MapsModel.swift in Sources */,
+				1AA8546E2AE55D2500964C14 /* HapticModel.swift in Sources */,
 				1AC1737A2AE2648700F4818C /* RequestLocationView.swift in Sources */,
 				4ED20FF22ADE95B4007B4E50 /* Bootstrap.swift in Sources */,
 				1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */,

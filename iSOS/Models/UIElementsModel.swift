@@ -109,6 +109,7 @@ struct LocationButton: View {
             }.frame(maxHeight: 125)
             
         }.onTapGesture() {
+            softHaptic()
             UIPasteboard.general.setValue(formatedCoordinates,
                                           forPasteboardType: UTType.plainText.identifier)
         }
@@ -181,6 +182,7 @@ struct AppButtonCall: View {
         }
         .onTapGesture {
             callModel.startCall(to: callNumber)
+            mediumHaptic()
         }
     }
 }

@@ -46,7 +46,7 @@ class LocationModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     ///
-    public func getLatitude() -> String {
+    func getLatitude() -> String {
         return String(coordinate?.latitude ?? 0)
     }
 

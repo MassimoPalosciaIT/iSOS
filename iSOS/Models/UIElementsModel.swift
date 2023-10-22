@@ -8,33 +8,33 @@ struct EmergencyMenuButton: View {
     var gradientColor1: Color
     var gradientColor2: Color
     let side_padding: CGFloat = 10
-    var action: () -> Void // Added this action closure
+    var action: () -> Void
 
     var body: some View {
-        ZStack {
-            AppStandartButton(gradientColor1: gradientColor1, gradientColor2: gradientColor2, iconName: iconName)
-            
-            VStack {
-                HStack {
-                    Group {
-                        Image(systemName: iconName)
-                            .padding(.leading, side_padding)
-                        Text(title)
-                            .fontWeight(.bold)
-                        Spacer()
+        Button(action: action) {
+            ZStack {
+                AppStandartButton(gradientColor1: gradientColor1, gradientColor2: gradientColor2, iconName: iconName)
+                
+                VStack {
+                    HStack {
+                        Group {
+                            Image(systemName: iconName)
+                                .padding(.leading, side_padding)
+                            Text(title)
+                                .fontWeight(.bold)
+                            Spacer()
+                        }
+                        .font(.system(size: 23))
+                        .foregroundColor(.white)
+                        .fontWeight(.medium)
                     }
-                    .font(.system(size: 23))
-                    .foregroundColor(.white)
-                    .fontWeight(.medium)
+                    .padding(.top, side_padding)
+                    Spacer()
                 }
-                .padding(.top, side_padding)
-                Spacer()
+                .frame(height: 115)
             }
-            .frame(height: 115)
         }
-        .onTapGesture {  // Added this tap gesture
-            action()
-        }
+        .buttonStyle(PlainButtonStyle())  // This style removes the default button styling, ensuring your custom styles remain.
     }
 }
 
@@ -82,40 +82,42 @@ struct LocationButton: View {
     }
     
     var body: some View {
-        ZStack{
-            AppStandartButton(gradientColor1: backroundColor, gradientColor2: backroundColor, iconName: iconName)
-            
-            VStack{
-                HStack {
-                    Group {
-                        Image(systemName: iconName)
-                            .padding(.leading, 20)
-                        Text(title)
-                            .fontWeight(.bold)
-                        Spacer()
-                    }
-                    .font(.system(size: 24))
-                    .foregroundColor(.white)
-                    .fontWeight(.medium)
-                }.padding(.top, 20.0)
-                
-                Spacer()
-                Text(formatedCoordinates)
-                    .font(.system(size: 21))
-                    .foregroundColor(.white)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 20.0)
-            }.frame(maxHeight: 125)
-            
-        }.onTapGesture() {
+        Button(action: {
             softHaptic()
             UIPasteboard.general.setValue(formatedCoordinates,
                                           forPasteboardType: UTType.plainText.identifier)
+        }) {
+            ZStack{
+                AppStandartButton(gradientColor1: backroundColor, gradientColor2: backroundColor, iconName: iconName)
+                
+                VStack{
+                    HStack {
+                        Group {
+                            Image(systemName: iconName)
+                                .padding(.leading, 20)
+                            Text(title)
+                                .fontWeight(.bold)
+                            Spacer()
+                        }
+                        .font(.system(size: 24))
+                        .foregroundColor(.white)
+                        .fontWeight(.medium)
+                    }.padding(.top, 20.0)
+                    
+                    Spacer()
+                    Text(formatedCoordinates)
+                        .font(.system(size: 21))
+                        .foregroundColor(.white)
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom, 20.0)
+                }.frame(maxHeight: 125)
+                
+            }
         }
+        .buttonStyle(PlainButtonStyle())
     }
 }
-
 
 struct AppStandartButton: View {
     var gradientColor1: Color
@@ -170,20 +172,22 @@ struct AppButtonCall: View {
     let iconName: String = "phone.fill"
     
     var body: some View {
-        ZStack{
-            Circle()
-                .fill(LinearGradient(colors: [gradientColor1, gradientColor2], startPoint: .top, endPoint: .bottom))
-                .frame(height: 168)
-                .shadow(color: gradientColor1.opacity(0.8), radius: 50)
-            
-            Image(systemName: iconName)
-                .foregroundColor(.white)
-                .font(.system(size: 64))
-        }
-        .onTapGesture {
+        Button(action: {
             callModel.startCall(to: callNumber)
             mediumHaptic()
+        }) {
+            ZStack{
+                Circle()
+                    .fill(LinearGradient(colors: [gradientColor1, gradientColor2], startPoint: .top, endPoint: .bottom))
+                    .frame(height: 168)
+                    .shadow(color: gradientColor1.opacity(0.8), radius: 50)
+                
+                Image(systemName: iconName)
+                    .foregroundColor(.white)
+                    .font(.system(size: 64))
+            }
         }
+        .buttonStyle(PlainButtonStyle())
     }
 }
 

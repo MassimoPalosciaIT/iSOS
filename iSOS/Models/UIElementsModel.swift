@@ -59,7 +59,7 @@ struct EmergencySelectionButton: View {
                             Image(systemName: "chevron.right")
                                 .padding(.trailing, side_padding)
                         }
-                        .font(.system(size: 23))
+                        .font(.system(size: 24))
                         .foregroundColor(.white)
                         .fontWeight(.medium)
                         

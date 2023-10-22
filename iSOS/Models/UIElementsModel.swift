@@ -105,12 +105,16 @@ struct LocationButton: View {
                     }.padding(.top, 20.0)
                     
                     Spacer()
-                    Text(formatedCoordinates)
-                        .font(.system(size: 21))
-                        .foregroundColor(.white)
-                        .fontWeight(.semibold)
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom, 20.0)
+                    
+                    HStack{
+                        Text(formatedCoordinates)
+                            .font(.system(size: 21))
+                            .foregroundColor(.white)
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                            .padding([.leading, .bottom], 20.0)
+                        Spacer()
+                    }
                 }.frame(maxHeight: 125)
                 
             }

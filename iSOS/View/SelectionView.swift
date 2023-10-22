@@ -31,6 +31,7 @@ struct SelectionView: View {
                                 iconName: "cross.fill",
                                 gradientColor1: Color.redGradient1,
                                 gradientColor2: Color.redGradient2,
+                                emergencyType: EmergencyType.medicalHelp,
                                 menus: [
                                     EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: test_tap),
                                     EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
@@ -47,6 +48,7 @@ struct SelectionView: View {
                                 iconName: "flame.fill",
                                 gradientColor1: Color.orangeGradient1,
                                 gradientColor2: Color.orangeGradient2,
+                                emergencyType: EmergencyType.fireDepartment,
                                 menus: [
                                     EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: test_tap),
                                     EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: test_tap),
@@ -60,6 +62,7 @@ struct SelectionView: View {
                                 iconName: "shield.righthalf.filled",
                                 gradientColor1: Color.blueGradient1,
                                 gradientColor2: Color.blueGradient2,
+                                emergencyType: EmergencyType.police,
                                 menus: [
                                     EmergencyMenu(title: "Stations", iconName: "house.lodge.fill",  action: {
                                         open_link(searchQuery: "Police stations", locationViewModel: locationViewModel)

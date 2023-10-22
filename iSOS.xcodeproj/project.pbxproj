@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A00002D2AE54BB60008B9B0 /* emergencyNumbers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1A00002C2AE54BB60008B9B0 /* emergencyNumbers.csv */; };
 		1A1FB9192AE47E9D00ED0D91 /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1FB9182AE47E9D00ED0D91 /* MapsModel.swift */; };
 		1A48E0D32AE169900012E64E /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A48E0D22AE169900012E64E /* SelectionView.swift */; };
 		1A7F95A82AE44537008110B2 /* EmergencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F95A72AE44537008110B2 /* EmergencyModel.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A00002C2AE54BB60008B9B0 /* emergencyNumbers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emergencyNumbers.csv; sourceTree = "<group>"; };
 		1A1FB9182AE47E9D00ED0D91 /* MapsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
 		1A1FB9202AE5371300ED0D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1A48E0D22AE169900012E64E /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A00002E2AE54BC30008B9B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A00002C2AE54BB60008B9B0 /* emergencyNumbers.csv */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1AB943F62AE29D18005A5D1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 				4ED20FF12ADE95B4007B4E50 /* Bootstrap.swift */,
 				1AB943F72AE29D34005A5D1C /* View */,
 				1AB943F62AE29D18005A5D1C /* Models */,
+				1A00002E2AE54BC30008B9B0 /* Resources */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FF52ADE95B6007B4E50 /* Preview Content */,
 			);
@@ -183,6 +194,7 @@
 			files = (
 				4ED20FF72ADE95B6007B4E50 /* Preview Assets.xcassets in Resources */,
 				4ED20FF42ADE95B6007B4E50 /* Assets.xcassets in Resources */,
+				1A00002D2AE54BB60008B9B0 /* emergencyNumbers.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,18 @@
 import SwiftUI
 
-struct EmergencyView: View {    
+struct EmergencyView: View {
+    @EnvironmentObject var locationViewModel: LocationViewModel
+    
     let selectedEmergecny: Emergency
+    
+    var currentCountry: String {
+        return locationViewModel.getCountry()
+    }
+    
+    var computedCountryEmergencyNumber: String {
+        return getEmergencyNumber(for: currentCountry, emergencyType: selectedEmergecny.emergencyType)
+    }
+    
     var body: some View {
         VStack {
             ZStack{
@@ -31,8 +42,8 @@ struct EmergencyView: View {
                     }
                     
                     Spacer()
-                    
-                    AppButtonCall(gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2, callNumber:"123456789")
+
+                    AppButtonCall(gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2, callNumber:computedCountryEmergencyNumber)
                     
                     Spacer()
                     
@@ -56,16 +67,20 @@ struct EmergencyView: View {
 }
 
 #Preview {
-    let emergency = Emergency(
+    let emergency: Emergency =
+    
+    Emergency(
         title: "Medical help",
         iconName: "cross.fill",
         gradientColor1: Color.redGradient1,
         gradientColor2: Color.redGradient2,
+        emergencyType: EmergencyType.medicalHelp,
         menus: [
             EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: test_tap),
             EmergencyMenu(title: "Hospitals", iconName: "building.2.fill", action: test_tap),
             EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: test_tap),
         ]
     )
-    return EmergencyView(selectedEmergecny: emergency)
+    
+    return EmergencyView(selectedEmergecny: emergency).environmentObject(LocationViewModel())
 }

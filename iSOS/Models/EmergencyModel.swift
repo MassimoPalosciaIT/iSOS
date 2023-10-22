@@ -7,5 +7,6 @@ struct Emergency: Identifiable {
     var iconName: String
     var gradientColor1: Color
     var gradientColor2: Color
+    var emergencyType: EmergencyType
     var menus: [EmergencyMenu]
 }

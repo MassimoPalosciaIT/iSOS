@@ -5,4 +5,5 @@ struct EmergencyMenu: Identifiable {
     var id = UUID()
     var title: String
     var iconName: String
+    var action: () -> Void 
 }

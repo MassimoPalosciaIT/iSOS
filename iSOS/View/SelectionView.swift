@@ -1,6 +1,8 @@
 import SwiftUI
 
-struct SelectionView: View {    
+struct SelectionView: View {
+    @EnvironmentObject var locationViewModel: LocationViewModel
+    
     init() {
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [
@@ -22,7 +24,7 @@ struct SelectionView: View {
                                 .foregroundColor(.white)
                             Spacer()
                         }
-
+                        
                         EmergencySelectionButton(selectedEmergency:
                             Emergency(
                                 title: "Medical help",
@@ -30,9 +32,11 @@ struct SelectionView: View {
                                 gradientColor1: Color.redGradient1,
                                 gradientColor2: Color.redGradient2,
                                 menus: [
-                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill"),
-                                    EmergencyMenu(title: "Hospitals", iconName: "building.2.fill"),
-                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill"),
+                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: test_tap),
+                                    EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
+                                        open_link(searchQuery: "Hospitals", locationViewModel: locationViewModel)
+                                    }),
+                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: test_tap),
                                 ]
                             )
                         )
@@ -44,8 +48,8 @@ struct SelectionView: View {
                                 gradientColor1: Color.orangeGradient1,
                                 gradientColor2: Color.orangeGradient2,
                                 menus: [
-                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill"),
-                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill"),
+                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: test_tap),
+                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: test_tap),
                                 ]
                             )
                         )
@@ -57,8 +61,10 @@ struct SelectionView: View {
                                 gradientColor1: Color.blueGradient1,
                                 gradientColor2: Color.blueGradient2,
                                 menus: [
-                                    EmergencyMenu(title: "Stations", iconName: "house.lodge.fill"),
-                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill"),
+                                    EmergencyMenu(title: "Stations", iconName: "house.lodge.fill",  action: {
+                                        open_link(searchQuery: "Police stations", locationViewModel: locationViewModel)
+                                    }),
+                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: test_tap),
                                 ]
                             )
                         )
@@ -76,9 +82,6 @@ struct SelectionView: View {
     }
 }
 
-
-struct HelpView_Previews: PreviewProvider {
-    static var previews: some View {
-        SelectionView()
-    }
+#Preview {
+    SelectionView().environmentObject(LocationViewModel())
 }

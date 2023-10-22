@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RequestLocationView: View {
-    @EnvironmentObject var locationViewModel: LocationModel
+    @EnvironmentObject var locationViewModel: LocationViewModel
     
     var body: some View {
             ZStack{

@@ -8,13 +8,13 @@ struct EmergencyMenuButton: View {
     var gradientColor1: Color
     var gradientColor2: Color
     let side_padding: CGFloat = 10
-    
+    var action: () -> Void // Added this action closure
+
     var body: some View {
-        ZStack{
+        ZStack {
             AppStandartButton(gradientColor1: gradientColor1, gradientColor2: gradientColor2, iconName: iconName)
             
-            VStack
-            {
+            VStack {
                 HStack {
                     Group {
                         Image(systemName: iconName)
@@ -26,11 +26,14 @@ struct EmergencyMenuButton: View {
                     .font(.system(size: 23))
                     .foregroundColor(.white)
                     .fontWeight(.medium)
-                    
                 }
                 .padding(.top, side_padding)
                 Spacer()
-            }.frame(height: 115)
+            }
+            .frame(height: 115)
+        }
+        .onTapGesture {  // Added this tap gesture
+            action()
         }
     }
 }
@@ -68,10 +71,15 @@ struct EmergencySelectionButton: View {
 }
 
 struct LocationButton: View {
+    @EnvironmentObject var locationViewModel: LocationViewModel
+    
     let title: String = "You are here:"
     let iconName: String = "location.fill"
     let backroundColor: Color = Color.iSOSGray
-    var formatedCoordinates: String =  "00°00'00.00\"N 00°00'00.00\"E"
+
+    var formatedCoordinates: String {
+        return locationViewModel.getFormattedCoordinates()
+    }
     
     var body: some View {
         ZStack{
@@ -92,7 +100,6 @@ struct LocationButton: View {
                 }.padding(.top, 20.0)
                 
                 Spacer()
-                
                 Text(formatedCoordinates)
                     .font(.system(size: 21))
                     .foregroundColor(.white)
@@ -107,6 +114,7 @@ struct LocationButton: View {
         }
     }
 }
+
 
 struct AppStandartButton: View {
     var gradientColor1: Color
@@ -214,18 +222,7 @@ struct BackButton: View {
 
 
 #Preview {
-    EmergencySelectionButton(selectedEmergency:
-        Emergency(
-            title: "Medical help",
-            iconName: "cross.fill",
-            gradientColor1: Color.redGradient1,
-            gradientColor2: Color.redGradient2,
-            menus: [
-                EmergencyMenu(title: "First Aid", iconName: "cross.case.fill"),
-                EmergencyMenu(title: "Hospitals", iconName: "building.2.fill"),
-                EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill"),
-            ]
-        )
-    )
+    LocationButton().environmentObject(LocationViewModel())
+        
     .padding(.horizontal, 25.0)
 }

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ErrorView: View {
-    @EnvironmentObject var locationViewModel: LocationModel
+    @EnvironmentObject var locationViewModel: LocationViewModel
     var errorText:String
     
     var body: some View {

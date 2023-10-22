@@ -1,16 +1,13 @@
-import Foundation
 import CoreLocation
 
-class LocationModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+
+class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var authorizationStatus: CLAuthorizationStatus
     @Published var lastSeenLocation: CLLocation?
     @Published var currentPlacemark: CLPlacemark?
+    
     private let locationManager: CLLocationManager
     
-    var coordinate: CLLocationCoordinate2D? {
-        lastSeenLocation?.coordinate
-    }
-
     override init() {
         locationManager = CLLocationManager()
         authorizationStatus = locationManager.authorizationStatus
@@ -30,32 +27,61 @@ class LocationModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         authorizationStatus = manager.authorizationStatus
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        authorizationStatus = status
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        lastSeenLocation = locations.first
+        fetchCountryAndCity(for: locations.first)
     }
-
+    
     func fetchCountryAndCity(for location: CLLocation?) {
         guard let location = location else { return }
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
-            if let error = error {
-                print("Error geocoding location: \(error.localizedDescription)")
-                return
-            }
             self.currentPlacemark = placemarks?.first
         }
     }
-    ///
+    
     func getLatitude() -> String {
-        return String(coordinate?.latitude ?? 0)
+        return String(self.coordinate?.latitude ?? 0)
     }
-
+    
     func getLongitude() -> String {
-        return String(coordinate?.longitude ?? 0)
+        return String(self.coordinate?.longitude ?? 0)
+    }
+    
+    func getCountry() -> String {
+        return self.currentPlacemark?.country ?? "No country"
+    }
+    
+    func getFormattedCoordinates() -> String {
+        guard let coordinate = self.coordinate else {
+            return "00°00'00.00\"N 00°00'00.00\"E"
+        }
+        
+        let latitude = coordinate.latitude
+        let longitude = coordinate.longitude
+        
+        func format(coordinate: Double, positive: String, negative: String) -> String {
+            let isPositive = coordinate >= 0
+            let absoluteValue = abs(coordinate)
+            
+            let degrees = Int(absoluteValue)
+            let minutesDouble = (absoluteValue - Double(degrees)) * 60.0
+            let minutes = Int(minutesDouble)
+            let seconds = (minutesDouble - Double(minutes)) * 60.0
+            
+            let direction = isPositive ? positive : negative
+            
+            return String(format: "%02d°%02d'%05.2f\"%@", degrees, minutes, seconds, direction)
+        }
+        
+        let latitudeString = format(coordinate: latitude, positive: "N", negative: "S")
+        let longitudeString = format(coordinate: longitude, positive: "E", negative: "W")
+        
+        return "\(latitudeString) \(longitudeString)"
     }
 
-    func getCountry() -> String {
-        return currentPlacemark?.country ?? "No country found"
+    
+    var coordinate: CLLocationCoordinate2D? {
+        self.lastSeenLocation?.coordinate
     }
-    ///
 }

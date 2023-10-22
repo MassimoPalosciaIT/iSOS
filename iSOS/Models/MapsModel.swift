@@ -1,22 +1,14 @@
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Link("Hospitals nearby", destination: URL(string: maps_link(searchQuery:"Hospitals", latitude: 50.894967, longitude: 4.341626))!)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-        }
-        .padding()
-    }
+func open_link(searchQuery: String, locationViewModel: LocationViewModel) {
+    
+    let latitude = locationViewModel.getLatitude()
+    let longitude = locationViewModel.getLongitude()
+    
+    guard let url = URL(string: "http://maps.apple.com/?q=\(searchQuery)&near=\(latitude),\(longitude)&z=10&t=m") else { return }
+    UIApplication.shared.open(url)
 }
 
-func maps_link(searchQuery: String, latitude:Double, longitude:Double) -> String {
-    return "http://maps.apple.com/?q=\(searchQuery)&near=\(latitude),\(longitude)&z=10&t=m"
-}
-
-
-#Preview {
-    ContentView()
+func test_tap(){
+    print("Test tap")
 }

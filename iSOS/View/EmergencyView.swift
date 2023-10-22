@@ -14,14 +14,18 @@ struct EmergencyView: View {
                         HStack(spacing: 10){
                             ForEach(0..<(amountOfMenus  + 1) / 2, id: \.self) { i in
                                 let singleMenu = selectedEmergecny.menus[i]
-                                EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2)
+                                EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
+                                    singleMenu.action()
+                                }
                             }
                         }
                         
                         HStack(spacing: 10){
                             ForEach((amountOfMenus  + 1) / 2..<amountOfMenus*1, id: \.self) { i in
                                 let singleMenu = selectedEmergecny.menus[i]
-                                EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2)
+                                EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
+                                    singleMenu.action()
+                                }
                             }
                         }
                     }
@@ -58,9 +62,9 @@ struct EmergencyView: View {
         gradientColor1: Color.redGradient1,
         gradientColor2: Color.redGradient2,
         menus: [
-            EmergencyMenu(title: "First Aid", iconName: "cross.case.fill"),
-            EmergencyMenu(title: "Hospitals", iconName: "building.2.fill"),
-            EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill"),
+            EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: test_tap),
+            EmergencyMenu(title: "Hospitals", iconName: "building.2.fill", action: test_tap),
+            EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: test_tap),
         ]
     )
     return EmergencyView(selectedEmergecny: emergency)

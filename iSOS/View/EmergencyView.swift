@@ -32,7 +32,7 @@ struct EmergencyView: View {
                         }
                         
                         HStack(spacing: 10){
-                            ForEach((amountOfMenus  + 1) / 2..<amountOfMenus*1, id: \.self) { i in
+                            ForEach((amountOfMenus  + 1) / 2..<amountOfMenus, id: \.self) { i in
                                 let singleMenu = selectedEmergecny.menus[i]
                                 EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
                                     singleMenu.action()

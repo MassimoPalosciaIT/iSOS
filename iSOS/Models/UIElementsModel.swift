@@ -232,7 +232,7 @@ struct BackButton: View {
 
 
 #Preview {
-    LocationButton().environmentObject(LocationViewModel())
+    BackButton()
         
     .padding(.horizontal, 25.0)
 }

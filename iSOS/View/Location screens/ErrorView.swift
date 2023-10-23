@@ -11,7 +11,7 @@ struct ErrorView: View {
             ZStack{
                 AppPopupButton(
                     backgrpundColor: Color.iSOSGray,
-                    iconName: "xmark"
+                    iconName: ""
                 )
                 
                 VStack {

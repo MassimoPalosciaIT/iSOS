@@ -10,7 +10,7 @@ struct RequestLocationView: View {
                 ZStack{
                     AppPopupButton(
                         backgrpundColor: Color.iSOSGray,
-                        iconName: "location.fill"
+                        iconName: ""
                     )
 
                     VStack {

@@ -70,59 +70,6 @@ struct EmergencySelectionButton: View {
     }
 }
 
-struct LocationButton: View {
-    @EnvironmentObject var locationViewModel: LocationViewModel
-    
-    let title: String = "You are here:"
-    let iconName: String = "location.fill"
-    let backroundColor: Color = Color.iSOSGray
-
-    var formatedCoordinates: String {
-        return locationViewModel.getFormattedCoordinates()
-    }
-    
-    var body: some View {
-        Button(action: {
-            softHaptic()
-            UIPasteboard.general.setValue(formatedCoordinates,
-                                          forPasteboardType: UTType.plainText.identifier)
-        }) {
-            ZStack{
-                AppStandartButton(gradientColor1: backroundColor, gradientColor2: backroundColor, iconName: iconName)
-                
-                VStack{
-                    HStack {
-                        Group {
-                            Image(systemName: iconName)
-                                .padding(.leading, 20)
-                            Text(title)
-                                .fontWeight(.bold)
-                            Spacer()
-                        }
-                        .font(.system(size: 24))
-                        .foregroundColor(.white)
-                        .fontWeight(.medium)
-                    }.padding(.top, 20.0)
-                    
-                    Spacer()
-                    
-                    HStack{
-                        Text(formatedCoordinates)
-                            .font(.system(size: 21))
-                            .foregroundColor(.white)
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.center)
-                            .padding([.leading, .bottom], 20.0)
-                        Spacer()
-                    }
-                }.frame(maxHeight: 125)
-                
-            }
-        }
-        .buttonStyle(PlainButtonStyle())
-    }
-}
-
 struct AppStandartButton: View {
     var gradientColor1: Color
     var gradientColor2: Color
@@ -229,10 +176,135 @@ struct BackButton: View {
     }
 }
 
+struct AppPopupCopy: View {
+    let title: String = "Coordinates copied to the clipboard"
+    let iconName = "doc.on.doc.fill"
+    let side_padding: CGFloat = 10
+    
+    var body: some View {
+        ZStack{
+            AppStandartButton(
+                gradientColor1: Color.iSOSGray,
+                gradientColor2: Color.iSOSGray,
+                iconName: iconName,
+                frameHeight: 44,
+                iconOpacity: 0
+            )
+            
+            HStack {
+                Group {
+                    Image(systemName: iconName)
+                    Text(title)
+                        .fontWeight(.bold)
+                }
+                .font(.system(size: 16))
+                .foregroundColor(.white)
+                .fontWeight(.medium)
+                
+            }
+        }
+    }
+}
+
+struct LocationButton: View {
+    @EnvironmentObject var locationViewModel: LocationViewModel
+    @State private var textOpacity: Double = 0.0
+    
+    let title: String = "You are here:"
+    let iconName: String = "location.fill"
+    let backroundColor: Color = Color.iSOSGray
+
+    var formatedCoordinates: String {
+        return locationViewModel.getFormattedCoordinates()
+    }
+    
+    var body: some View {
+        Button(action: {
+            softHaptic()
+            UIPasteboard.general.setValue(formatedCoordinates,
+                                          forPasteboardType: UTType.plainText.identifier)
+            
+            withAnimation(.easeIn(duration: 0.4)) {
+                textOpacity = 1.0
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                withAnimation(.easeOut(duration: 0.4)) {
+                    textOpacity = 0.0
+                }
+            }
+            
+        }) {
+            VStack(spacing: 5){
+                AppPopupCopy()
+                    .opacity(textOpacity)
+                
+                ZStack{
+                    AppStandartButton(gradientColor1: backroundColor, gradientColor2: backroundColor, iconName: iconName)
+                    
+                    VStack{
+                        HStack {
+                            Group {
+                                Image(systemName: iconName)
+                                    .padding(.leading, 20)
+                                Text(title)
+                                    .fontWeight(.bold)
+                                Spacer()
+                            }
+                            .font(.system(size: 24))
+                            .foregroundColor(.white)
+                            .fontWeight(.medium)
+                        }.padding(.top, 20.0)
+                        
+                        Spacer()
+                        
+                        HStack{
+                            Text(formatedCoordinates)
+                                .font(.system(size: 21))
+                                .foregroundColor(.white)
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .padding([.leading, .bottom], 20.0)
+                            Spacer()
+                        }
+                    }.frame(maxHeight: 125)
+                    
+                }
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+}
+
+struct FadeTextView: View {
+    @State private var textOpacity: Double = 0.0
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Button("Show Text") {
+                // Start the fade-in animation
+                withAnimation(.easeIn(duration: 1.0)) {
+                    textOpacity = 1.0
+                }
+                
+                // Delay of 5 seconds, then fade-out
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                    withAnimation(.easeOut(duration: 1.0)) {
+                        textOpacity = 0.0
+                    }
+                }
+            }
+            
+            AppPopupCopy()
+                .opacity(textOpacity) // Bind the text's opacity to the state variable
+        }
+        .padding()
+    }
+}
 
 
 #Preview {
-    BackButton()
+    LocationButton().environmentObject(LocationViewModel())
         
     .padding(.horizontal, 25.0)
 }

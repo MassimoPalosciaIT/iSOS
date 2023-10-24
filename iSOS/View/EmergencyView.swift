@@ -60,12 +60,12 @@ struct EmergencyView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         
-        //.navigationBarBackButtonHidden(true)
-        .toolbar(content: {
-            ToolbarItem (placement: .navigationBarLeading)  {
-                BackButton()
-            }
-        })
+//        .navigationBarBackButtonHidden(true)
+//        .toolbar(content: {
+//            ToolbarItem (placement: .navigationBarLeading)  {
+//                BackButton()
+//            }
+//        })
     }
 }
 

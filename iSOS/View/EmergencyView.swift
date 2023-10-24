@@ -59,13 +59,6 @@ struct EmergencyView: View {
             .navigationTitle(selectedEmergecny.title)
             .navigationBarTitleDisplayMode(.inline)
         }
-        
-//        .navigationBarBackButtonHidden(true)
-//        .toolbar(content: {
-//            ToolbarItem (placement: .navigationBarLeading)  {
-//                BackButton()
-//            }
-//        })
     }
 }
 

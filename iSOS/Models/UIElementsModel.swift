@@ -13,7 +13,7 @@ struct EmergencyMenuButton: View {
     var body: some View {
         Button(action: action) {
             ZStack {
-                AppStandartButton(gradientColor1: gradientColor1, gradientColor2: gradientColor2, iconName: iconName)
+                AppStandartButton(gradientColor1: gradientColor1, gradientColor2: gradientColor2, iconName: iconName,iconOpacity: 0.12)
                 
                 VStack {
                     HStack {

@@ -166,25 +166,6 @@ struct TopGradient: View {
     }
 }
 
-struct BackButton: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    var body: some View {
-        HStack {
-            Button(action: {presentationMode.wrappedValue.dismiss()})
-            {
-                HStack(spacing: 3) {
-                    Group{
-                        Image(systemName: "chevron.left")
-                        Text("Back")
-                    }
-                    .foregroundColor(.white)
-                }
-            }
-        }
-    }
-}
-
 struct AppPopupCopy: View {
     let title: String = "Coordinates copied to the clipboard"
     let iconName = "doc.on.doc.fill"

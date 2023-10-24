@@ -4,26 +4,23 @@ struct SelectionView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
     
     init() {
-        let appearance = UINavigationBarAppearance()
-        appearance.titleTextAttributes = [
-            .font: UIFont.systemFont(ofSize: 28, weight: .bold),
-            .foregroundColor: UIColor.white
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        let titleFontSize: CGFloat = 28.0
+        let titleFont = UIFont.boldSystemFont(ofSize: titleFontSize)
+        navBarAppearance.titleTextAttributes = [
+            .foregroundColor: UIColor.white,
+            .font: titleFont
         ]
-        UINavigationBar.appearance().standardAppearance = appearance
     }
-    
+
     var body: some View {
         NavigationStack{
             VStack {
                 ZStack{
                     TopGradient(gradientColor1: Color.redGradient1, gradientColor2: Color.redGradient2)
                     VStack(spacing: 10) {
-                        HStack{
-                            Text("Need Help?")
-                                .font(.system(size: 32, weight: .bold))
-                                .foregroundColor(.white)
-                            Spacer()
-                        }
                         
                         EmergencySelectionButton(selectedEmergency:
                             Emergency(
@@ -75,12 +72,15 @@ struct SelectionView: View {
                         Spacer()
                         
                         LocationButton()
-                    }.padding([.top, .leading, .trailing], 25)
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 10.0)
                     
                 }
                 .frame(maxHeight: .infinity)
                 .background(Color.iSOSBackground.ignoresSafeArea())
             }
+            .navigationTitle("Need help?")
         }
     }
 }

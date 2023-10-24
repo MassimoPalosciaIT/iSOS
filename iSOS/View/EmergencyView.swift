@@ -2,6 +2,7 @@ import SwiftUI
 
 struct EmergencyView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
+    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     
     let selectedEmergecny: Emergency
     
@@ -42,27 +43,29 @@ struct EmergencyView: View {
                     }
                     
                     Spacer()
-
+                    
                     AppButtonCall(gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2, callNumber:computedCountryEmergencyNumber)
                     
                     Spacer()
                     
                     LocationButton()
                 }
-                .padding([.top, .leading, .trailing], 20)
+                .padding(.horizontal)
+                .padding(.top, 20.0)
                 
             }
             .frame(maxHeight: .infinity)
             .background(Color.iSOSBackground.ignoresSafeArea())
             .navigationTitle(selectedEmergecny.title)
+            .navigationBarTitleDisplayMode(.inline)
         }
         
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(
-            leading:
+        //.navigationBarBackButtonHidden(true)
+        .toolbar(content: {
+            ToolbarItem (placement: .navigationBarLeading)  {
                 BackButton()
-        )
-        
+            }
+        })
     }
 }
 

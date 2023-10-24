@@ -8,10 +8,7 @@ struct RequestLocationView: View {
                 TopGradient(gradientColor1: Color.redGradient1, gradientColor2: Color.redGradient2)
                 
                 ZStack{
-                    AppPopupButton(
-                        backgrpundColor: Color.iSOSGray,
-                        iconName: ""
-                    )
+                    AppPopupButton(iconName: "location.fill")
 
                     VStack {
                         Text("We need your permission")
@@ -44,7 +41,7 @@ struct RequestLocationView: View {
                         }.padding(.bottom, 20.0)
                         
                     }.frame(height: 340)
-                }.padding(.horizontal, 25)
+                }.padding(.horizontal)
         
             }
             .background(Color.iSOSBackground.ignoresSafeArea())

@@ -9,10 +9,7 @@ struct ErrorView: View {
             TopGradient(gradientColor1: Color.redGradient1, gradientColor2: Color.redGradient2)
             
             ZStack{
-                AppPopupButton(
-                    backgrpundColor: Color.iSOSGray,
-                    iconName: ""
-                )
+                AppPopupButton(iconName: "xmark")
                 
                 VStack {
                     
@@ -41,7 +38,7 @@ struct ErrorView: View {
                         .padding([.leading, .bottom, .trailing], 20.0)
                     
                 }.frame(height: 340)
-            }.padding(.horizontal, 25)
+            }.padding(.horizontal)
             
         }
         .background(Color.iSOSBackground.ignoresSafeArea())

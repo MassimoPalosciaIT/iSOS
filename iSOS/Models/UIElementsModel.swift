@@ -172,25 +172,25 @@ struct AppPopupCopy: View {
     let side_padding: CGFloat = 10
     
     var body: some View {
-            ZStack{
-                AppStandartButton(
-                    gradientColor1: Color.iSOSGray,
-                    gradientColor2: Color.iSOSGray,
-                    iconName: iconName,
-                    frameHeight: 45,
-                    iconOpacity: 0
-                )
-                
-                HStack {
-                    Group {
-                        Image(systemName: iconName)
-                        Text(title)
-                    }
-                    .font(.system(size: 18))
-                    .foregroundColor(.white)
-                    .fontWeight(.medium)
+        ZStack{
+            AppStandartButton(
+                gradientColor1: Color.iSOSGray,
+                gradientColor2: Color.iSOSGray,
+                iconName: iconName,
+                frameHeight: 45,
+                iconOpacity: 0
+            )
+            
+            HStack {
+                Group {
+                    Image(systemName: iconName)
+                    Text(title)
                 }
+                .font(.system(size: 18))
+                .foregroundColor(.white)
+                .fontWeight(.medium)
             }
+        }
     }
 }
 
@@ -266,9 +266,120 @@ struct LocationButton: View {
     }
 }
 
-#Preview {
-    LocationButton()
+enum BlobType {
+    case question
+    case blobReply
+}
+
+struct TextBlob: View {
+    var blobType: BlobType
+    var blobColor: Color
+    var textColor: Color
+    var messageText: String
+    
+    init(blobType: BlobType, messageText: String) {
+        self.blobType = blobType
+        self.messageText = messageText
         
-    .environmentObject(LocationViewModel())
-    .padding(.horizontal)
+        switch blobType {
+            case .question:
+                self.blobColor = Color.blobWhite
+                self.textColor = Color.black
+            case .blobReply:
+                self.blobColor = Color.blobBlue
+                self.textColor = Color.blobWhite
+        }
+    }
+    
+    var body: some View {
+        ZStack {
+            ReplyBlobShape()
+                .fill(blobColor)
+            
+            HStack {
+                Text(messageText)
+                    .font(.system(size: 20))
+                    .fontWeight(.semibold)
+                    .padding([.top, .bottom, .trailing])
+                    .padding(.leading, 25)
+                    .foregroundStyle(textColor)
+                
+                Spacer()
+            }
+        }
+        .frame(width: 280, height: 90)
+    }
+}
+
+struct BlobCombo: View {
+    var messageQuestion: String
+    var messageReply: String
+    
+    var body: some View {
+        VStack(spacing: 10){
+            HStack{
+                TextBlob(blobType: BlobType.question, messageText: messageQuestion)
+                Spacer()
+            }
+            
+            HStack{
+                Spacer()
+                TextBlob(blobType: BlobType.blobReply, messageText: messageReply)
+            }
+        }
+    }
+}
+
+struct ConversationSheet: View {
+    var conversations: [Conversation] = [
+        Conversation(questionText: "Hello", answerText: "Ciao"),
+        Conversation(questionText: "Text 2", answerText: "Texto 2"),
+        Conversation(questionText: "Text 2", answerText: "Texto 2"),
+        Conversation(questionText: "Text 2", answerText: "Texto 2"),
+        Conversation(questionText: "Text 2", answerText: "Texto 2"),
+    ]
+    
+    var body: some View {
+        VStack (spacing: 10){
+            HStack{
+                Text("Conversation")
+                    .font(.system(size: 20))
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                Spacer()
+            }
+            
+            HStack{
+                Group{
+                    Text("🇬🇧")
+                    Spacer()
+                    Text("🇮🇹")
+
+                }
+                .font(.system(size: 64))
+                .foregroundStyle(.white)
+            }
+            
+            ScrollView{
+                VStack(spacing:20){
+                    
+                    ForEach(conversations) { selectedConversation in
+                        BlobCombo(messageQuestion: selectedConversation.questionText, messageReply: selectedConversation.answerText)
+                        }
+                }
+                
+            }
+        }
+        .padding(.horizontal)
+        .padding(.top)
+        .frame(maxHeight: .infinity)
+        .background(Color.iSOSGray)
+    }
+}
+
+#Preview {
+        ConversationSheet()
+
+//        .environmentObject(LocationViewModel())
+//        .padding(.horizontal)
 }

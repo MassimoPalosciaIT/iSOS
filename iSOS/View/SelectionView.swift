@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SelectionView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
+    @State private var showingSheet = true
     
     init() {
         let navBarAppearance = UINavigationBar.appearance()
@@ -81,6 +82,8 @@ struct SelectionView: View {
                 .background(Color.iSOSBackground.ignoresSafeArea())
             }
             .navigationTitle("Need help?")
+        }.sheet(isPresented: $showingSheet) {
+            SheetView()
         }
     }
 }

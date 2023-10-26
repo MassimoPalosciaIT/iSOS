@@ -9,6 +9,6 @@ func open_link(searchQuery: String, locationViewModel: LocationViewModel) {
     UIApplication.shared.open(url)
 }
 
-func test_tap(){
+func testTap(){
     print("Test tap")
 }

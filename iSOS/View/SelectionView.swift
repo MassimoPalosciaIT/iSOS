@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SelectionView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
-    @State private var showingSheet = true
+    @AppStorage("isOnboarding") var showingTutorialSheet: Bool = true
     
     init() {
         let navBarAppearance = UINavigationBar.appearance()
@@ -15,7 +15,7 @@ struct SelectionView: View {
             .font: titleFont
         ]
     }
-
+    
     var body: some View {
         NavigationStack{
             VStack {
@@ -31,11 +31,11 @@ struct SelectionView: View {
                                 gradientColor2: Color.redGradient2,
                                 emergencyType: EmergencyType.medicalHelp,
                                 menus: [
-                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: test_tap),
+                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: testTap),
                                     EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
                                         open_link(searchQuery: "Hospitals", locationViewModel: locationViewModel)
                                     }),
-                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: test_tap),
+                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
                                 ]
                             )
                         )
@@ -48,8 +48,8 @@ struct SelectionView: View {
                                 gradientColor2: Color.orangeGradient2,
                                 emergencyType: EmergencyType.fireDepartment,
                                 menus: [
-                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: test_tap),
-                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: test_tap),
+                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: testTap),
+                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
                                 ]
                             )
                         )
@@ -65,7 +65,7 @@ struct SelectionView: View {
                                     EmergencyMenu(title: "Stations", iconName: "house.lodge.fill",  action: {
                                         open_link(searchQuery: "Police stations", locationViewModel: locationViewModel)
                                     }),
-                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: test_tap),
+                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
                                 ]
                             )
                         )
@@ -76,18 +76,29 @@ struct SelectionView: View {
                     }
                     .padding(.horizontal)
                     .padding(.top, 10.0)
-                    
                 }
                 .frame(maxHeight: .infinity)
                 .background(Color.iSOSBackground.ignoresSafeArea())
             }
             .navigationTitle("Need help?")
-        }.sheet(isPresented: $showingSheet) {
-            SheetView()
+        }.sheet(isPresented: $showingTutorialSheet) {
+            TutorialView()
         }
     }
 }
 
 #Preview {
     SelectionView().environmentObject(LocationViewModel())
+}
+
+
+extension UIWindow {
+    open override func didAddSubview(_ subview: UIView) {
+        if !(backgroundColor == nil){
+            backgroundColor = UIColor(Color.black)
+        }
+        else{
+            backgroundColor = .clear
+        }
+    }
 }

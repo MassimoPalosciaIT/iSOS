@@ -1,9 +1,17 @@
 import SwiftUI
 
+enum ActiveSheet: Identifiable {
+    case conversation, firstAid
+    var id: Int {
+        hashValue
+    }
+}
+
+
 struct EmergencyView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
-    @State public var showingSheet = false
+    @State var activeSheet: ActiveSheet?
     
     let selectedEmergecny: Emergency
     
@@ -59,10 +67,17 @@ struct EmergencyView: View {
             .navigationTitle(selectedEmergecny.title)
             .navigationBarTitleDisplayMode(.inline)
         }
-        .sheet(isPresented: $showingSheet) {
-            ConversationSheet()
-                .presentationDetents([.large])
-                .presentationDragIndicator(.visible)
+        .sheet(item: $activeSheet) { item in
+            Group{
+                switch item {
+                    case .conversation:
+                        ConversationView()
+                    case .firstAid:
+                        FirstAidView()
+                }
+            }
+            .presentationDetents([.large])
+            .presentationDragIndicator(.visible)
         }
     }
 }
@@ -77,22 +92,11 @@ struct EmergencyView: View {
         gradientColor2: Color.redGradient2,
         emergencyType: EmergencyType.medicalHelp,
         menus: [
-            EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: test_tap),
-            EmergencyMenu(title: "Hospitals", iconName: "building.2.fill", action: test_tap),
-            EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: test_tap),
+            EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action:  testTap),
+            EmergencyMenu(title: "Hospitals", iconName: "building.2.fill", action: testTap),
+            EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
         ]
     )
     
     return EmergencyView(selectedEmergecny: emergency).environmentObject(LocationViewModel())
-}
-
-extension UIWindow {
-    open override func didAddSubview(_ subview: UIView) {
-        if !(backgroundColor == nil){
-            backgroundColor = UIColor(Color.black)
-        }
-        else{
-            backgroundColor = .clear
-        }
-    }
 }

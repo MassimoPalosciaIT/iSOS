@@ -282,12 +282,12 @@ struct TextBlob: View {
         self.messageText = messageText
         
         switch blobType {
-            case .question:
-                self.blobColor = Color.blobWhite
-                self.textColor = Color.black
-            case .blobReply:
-                self.blobColor = Color.blobBlue
-                self.textColor = Color.blobWhite
+        case .question:
+            self.blobColor = Color.blobWhite
+            self.textColor = Color.black
+        case .blobReply:
+            self.blobColor = Color.blobBlue
+            self.textColor = Color.blobWhite
         }
     }
     
@@ -330,21 +330,55 @@ struct BlobCombo: View {
     }
 }
 
-struct CustomButtonStyle: ButtonStyle {
+struct TutorialButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
             .background(Color.redGradient1)
             .foregroundColor(.white)
-            .cornerRadius(20)
-            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+            .cornerRadius(15)
+    }
+}
+
+struct TutorialElement: View {
+    var iconName: String
+    var title: String
+    var description: String
+    
+    var body: some View {
+        HStack(){
+
+            Image(systemName: iconName)
+                .font(.system(size: 40))
+                .fontWeight(.medium)
+                .foregroundColor(Color.redGradient1)
+                .padding(.trailing, 20)
+                .frame(width: 40,height: 40)
             
+            
+            HStack{
+                VStack(alignment: .leading){
+                    Text(title)
+                        .foregroundColor(.white)
+                        .font(.system(size: 15))
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
+                    
+                    Text(description)
+                        .foregroundColor(.gray)
+                        .font(.system(size: 15))
+                        .fontWeight(.medium)
+                        .multilineTextAlignment(.leading)
+                }
+            }
+            Spacer()
+        }.padding(.horizontal, 10)
     }
 }
 
 #Preview {
-        LocationButton()
-
+    TutorialElement(iconName: "phone.circle", title: "Emergency number locator", description: "The app determines your country's emergency number.")
+    
         .environmentObject(LocationViewModel())
         .padding(.horizontal)
 }

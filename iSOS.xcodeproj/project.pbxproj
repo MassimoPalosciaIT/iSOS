@@ -19,7 +19,9 @@
 		1AC1737A2AE2648700F4818C /* RequestLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173792AE2648700F4818C /* RequestLocationView.swift */; };
 		1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1737B2AE2655400F4818C /* ErrorView.swift */; };
 		1AC173812AE27B8700F4818C /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* CallModel.swift */; };
-		4E23C3052AEA55E200AD7073 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E23C3042AEA55E200AD7073 /* SheetView.swift */; };
+		1AC70CFA2AEAE97E0023F294 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CF92AEAE97E0023F294 /* ConversationView.swift */; };
+		1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */; };
+		4E23C3052AEA55E200AD7073 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E23C3042AEA55E200AD7073 /* TutorialView.swift */; };
 		4E36D5212AE2608000209E4E /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5202AE2608000209E4E /* EmergencyView.swift */; };
 		4E6B4AAE2AE1419600F1C4AD /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */; };
 		4ED20FF02ADE95B4007B4E50 /* iSOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */; };
@@ -42,7 +44,9 @@
 		1AC173792AE2648700F4818C /* RequestLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationView.swift; sourceTree = "<group>"; };
 		1AC1737B2AE2655400F4818C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		1AC173802AE27B8700F4818C /* CallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
-		4E23C3042AEA55E200AD7073 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		1AC70CF92AEAE97E0023F294 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidView.swift; sourceTree = "<group>"; };
+		4E23C3042AEA55E200AD7073 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		4E36D5202AE2608000209E4E /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		4ED20FEC2ADE95B4007B4E50 /* iSOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,12 +81,10 @@
 				4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */,
 				1A1FB9182AE47E9D00ED0D91 /* MapsModel.swift */,
 				1AC173802AE27B8700F4818C /* CallModel.swift */,
-				1AB943F92AE3F10A005A5D1C /* UIElementsModel.swift */,
 				1A7F95A72AE44537008110B2 /* EmergencyModel.swift */,
 				1A96617B2AEA62030021B6F3 /* ConversationModel.swift */,
 				1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */,
 				1AA8546D2AE55D2500964C14 /* HapticModel.swift */,
-				1A96617D2AEA64890021B6F3 /* ShapesViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -90,6 +92,7 @@
 		1AB943F72AE29D34005A5D1C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1AC70CFB2AEAF5C20023F294 /* Sheets */,
 				1AC1737F2AE265E700F4818C /* Location screens */,
 				1A48E0D22AE169900012E64E /* SelectionView.swift */,
 				4E36D5202AE2608000209E4E /* EmergencyView.swift */,
@@ -104,6 +107,25 @@
 				1AC173792AE2648700F4818C /* RequestLocationView.swift */,
 			);
 			path = "Location screens";
+			sourceTree = "<group>";
+		};
+		1AC70CF82AEAE9390023F294 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1AB943F92AE3F10A005A5D1C /* UIElementsModel.swift */,
+				1A96617D2AEA64890021B6F3 /* ShapesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1AC70CFB2AEAF5C20023F294 /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				4E23C3042AEA55E200AD7073 /* TutorialView.swift */,
+				1AC70CF92AEAE97E0023F294 /* ConversationView.swift */,
+				1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */,
+			);
+			path = Sheets;
 			sourceTree = "<group>";
 		};
 		4ED20FE32ADE95B4007B4E50 = {
@@ -128,9 +150,9 @@
 				1A1FB9202AE5371300ED0D91 /* Info.plist */,
 				4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */,
 				4ED20FF12ADE95B4007B4E50 /* Bootstrap.swift */,
-				4E23C3042AEA55E200AD7073 /* SheetView.swift */,
 				1AB943F72AE29D34005A5D1C /* View */,
 				1AB943F62AE29D18005A5D1C /* Models */,
+				1AC70CF82AEAE9390023F294 /* ViewModel */,
 				1A00002E2AE54BC30008B9B0 /* Resources */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FF52ADE95B6007B4E50 /* Preview Content */,
@@ -225,9 +247,11 @@
 				1A48E0D32AE169900012E64E /* SelectionView.swift in Sources */,
 				1AC173812AE27B8700F4818C /* CallModel.swift in Sources */,
 				1AB943FA2AE3F10A005A5D1C /* UIElementsModel.swift in Sources */,
-				4E23C3052AEA55E200AD7073 /* SheetView.swift in Sources */,
+				1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */,
+				4E23C3052AEA55E200AD7073 /* TutorialView.swift in Sources */,
 				1A96617E2AEA64890021B6F3 /* ShapesViewModel.swift in Sources */,
 				1A96617C2AEA62030021B6F3 /* ConversationModel.swift in Sources */,
+				1AC70CFA2AEAE97E0023F294 /* ConversationView.swift in Sources */,
 				4E6B4AAE2AE1419600F1C4AD /* LocationViewModel.swift in Sources */,
 				1A7F95A82AE44537008110B2 /* EmergencyModel.swift in Sources */,
 				1A7F95AD2AE459BE008110B2 /* EmergencyMenuModel.swift in Sources */,

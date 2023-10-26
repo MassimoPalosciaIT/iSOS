@@ -1,17 +1,24 @@
-//
-//  FirstAidView.swift
-//  iSOS
-//
-//  Created by Matt Novoselov on 26/10/23.
-//
-
 import SwiftUI
 
 struct FirstAidView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (spacing: 10){
+            HStack{
+                Text("First aid")
+                    .font(.system(size: 20))
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                Spacer()
+            }
+            Spacer()
+        }
+        .padding(.horizontal)
+        .padding(.top)
+        .frame(maxHeight: .infinity)
+        .background(Color.iSOSGray)
     }
 }
+
 
 #Preview {
     FirstAidView()

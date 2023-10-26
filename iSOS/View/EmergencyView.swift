@@ -3,6 +3,7 @@ import SwiftUI
 struct EmergencyView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
+    @State public var showingSheet = false
     
     let selectedEmergecny: Emergency
     
@@ -13,7 +14,6 @@ struct EmergencyView: View {
     var computedCountryEmergencyNumber: String {
         return getEmergencyNumber(for: currentCountry, emergencyType: selectedEmergecny.emergencyType)
     }
-    
     var body: some View {
         VStack {
             ZStack{
@@ -59,6 +59,11 @@ struct EmergencyView: View {
             .navigationTitle(selectedEmergecny.title)
             .navigationBarTitleDisplayMode(.inline)
         }
+        .sheet(isPresented: $showingSheet) {
+            ConversationSheet()
+                .presentationDetents([.large])
+                .presentationDragIndicator(.visible)
+        }
     }
 }
 
@@ -79,4 +84,15 @@ struct EmergencyView: View {
     )
     
     return EmergencyView(selectedEmergecny: emergency).environmentObject(LocationViewModel())
+}
+
+extension UIWindow {
+    open override func didAddSubview(_ subview: UIView) {
+        if !(backgroundColor == nil){
+            backgroundColor = UIColor(Color.black)
+        }
+        else{
+            backgroundColor = .clear
+        }
+    }
 }

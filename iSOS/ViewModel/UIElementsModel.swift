@@ -330,56 +330,21 @@ struct BlobCombo: View {
     }
 }
 
-struct ConversationSheet: View {
-    var conversations: [Conversation] = [
-        Conversation(questionText: "Hello", answerText: "Ciao"),
-        Conversation(questionText: "Text 2", answerText: "Texto 2"),
-        Conversation(questionText: "Text 2", answerText: "Texto 2"),
-        Conversation(questionText: "Text 2", answerText: "Texto 2"),
-        Conversation(questionText: "Text 2", answerText: "Texto 2"),
-    ]
-    
-    var body: some View {
-        VStack (spacing: 10){
-            HStack{
-                Text("Conversation")
-                    .font(.system(size: 20))
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.white)
-                Spacer()
-            }
+struct CustomButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(Color.redGradient1)
+            .foregroundColor(.white)
+            .cornerRadius(20)
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
             
-            HStack{
-                Group{
-                    Text("🇬🇧")
-                    Spacer()
-                    Text("🇮🇹")
-
-                }
-                .font(.system(size: 64))
-                .foregroundStyle(.white)
-            }
-            
-            ScrollView{
-                VStack(spacing:20){
-                    
-                    ForEach(conversations) { selectedConversation in
-                        BlobCombo(messageQuestion: selectedConversation.questionText, messageReply: selectedConversation.answerText)
-                        }
-                }
-                
-            }
-        }
-        .padding(.horizontal)
-        .padding(.top)
-        .frame(maxHeight: .infinity)
-        .background(Color.iSOSGray)
     }
 }
 
 #Preview {
-        ConversationSheet()
+        LocationButton()
 
-//        .environmentObject(LocationViewModel())
-//        .padding(.horizontal)
+        .environmentObject(LocationViewModel())
+        .padding(.horizontal)
 }

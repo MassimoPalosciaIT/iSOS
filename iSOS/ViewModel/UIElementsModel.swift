@@ -70,66 +70,34 @@ struct EmergencySelectionButton: View {
     }
 }
 
-struct AppStandartButton2: View {
-    var gradientColor1: Color
-    var gradientColor2: Color
-    var iconName: String
-    var frameHeight: Double = 120
-    var iconSize: Int = 130
-    var iconOpacity: Double = 0.15
-    let cornerRadius: Double = 20
-    
-    var body: some View {
-        RoundedRectangle(cornerRadius: cornerRadius)
-            .fill(LinearGradient(colors: [gradientColor1, gradientColor2], startPoint: .leading, endPoint: .trailing))
-            .frame(height: frameHeight)
-            .overlay(
-                HStack() {
-                    Spacer()
-                    Image(systemName: iconName)
-                        .foregroundColor(.white)
-                        .opacity(iconOpacity)
-                        .font(.system(size: CGFloat(iconSize)))
-                        .padding(.trailing, -20)
-                }.mask(
-                    RoundedRectangle(cornerRadius: cornerRadius)
-                        .frame(height: frameHeight)
-                )
-            )
-    }
-}
-
 struct FirstAidSelectionButton: View {
-    var iconName: String;
-    var title: String;
-    var gradientColor1: Color;
-    var gradientColor2: Color;
     let side_padding: CGFloat = 20
+    var iconName: String
+    var title: String
     
     var body: some View {
-        
-        ZStack{
-            AppStandartButton2(gradientColor1: gradientColor1, gradientColor2: gradientColor2, iconName: iconName)
-            
-            VStack
-            {
-                HStack() {
-                    Group {
-                        Text(title)
-                            .fontWeight(.bold)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .padding(.trailing, side_padding)
+            ZStack{
+                AppStandartButton(gradientColor1: Color.appButtonGray, gradientColor2: Color.appButtonGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
+                
+                VStack
+                {
+                    HStack {
+                        Group {
+                            Image(systemName:iconName)
+                                .padding(.leading, side_padding)
+                            Text(title)
+                                .fontWeight(.bold)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .padding(.trailing, side_padding)
+                        }
+                        .font(.system(size: 26))
+                        .foregroundColor(.white)
+                        .fontWeight(.medium)
+                        
                     }
-                    .font(.system(size: 26))
-                    .foregroundColor(.white)
-                    .fontWeight(.medium)
-                    .padding(.leading, 10.0)
-                    
-                }
-            }.frame(height: 120)
-        }
-        
+                }.frame(height: 80)
+            }
     }
 }
 
@@ -336,13 +304,13 @@ struct BlobCombo: View {
     var body: some View {
         VStack(spacing: 10){
             HStack{
-                TextBlob(question: messageQuestion, fillColor: Color.blobWhite, textColor: Color.black)
+                TextBlob(textContent: messageQuestion, fillColor: Color.blobWhite, textColor: Color.black)
                 Spacer()
             }
             
             HStack{
                 Spacer()
-                TextBlob(question: messageReply, fillColor: Color.blobBlue, textColor: Color.white)
+                TextBlob(textContent: messageReply, fillColor: Color.blobBlue, textColor: Color.white)
             }
         }
     }
@@ -395,12 +363,12 @@ struct TutorialElement: View {
 }
 
 struct TextBlob: View {
-    var question: String = "Lorem"
+    var textContent: String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempor convallis libero, vitae placerat nisi volutpat sit amet."
     var fillColor: Color = Color.blobBlue
     var textColor: Color = Color.white
     
     var body: some View {
-        Text(question)
+        Text(textContent)
             .fontWeight(.semibold)
             .padding()
             .background(fillColor)

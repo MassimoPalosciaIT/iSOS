@@ -67,18 +67,18 @@ struct EmergencyView: View {
             .navigationTitle(selectedEmergecny.title)
             .navigationBarTitleDisplayMode(.inline)
         }
-        .sheet(item: $activeSheet) { item in
-            Group{
-                switch item {
-                    case .conversation:
-                        ConversationView()
-                    case .firstAid:
-                        FirstAidView()
-                }
-            }
-            .presentationDetents([.large])
-            .presentationDragIndicator(.visible)
-        }
+//        .sheet(item: $activeSheet) { item in
+//            Group{
+//                switch item {
+//                    case .conversation:
+//                        ConversationView()
+//                    case .firstAid:
+//                        FirstAidView()
+//                }
+//            }
+//            .presentationDetents([.large])
+//            .presentationDragIndicator(.visible)
+//        }
     }
 }
 

@@ -83,21 +83,28 @@ struct EmergencyView: View {
     }
 }
 
-//#Preview {
-//    let emergency: Emergency =
-//    
-//    Emergency(
-//        title: "Medical help",
-//        iconName: "cross.fill",
-//        gradientColor1: Color.redGradient1,
-//        gradientColor2: Color.redGradient2,
-//        emergencyType: EmergencyType.medicalHelp,
-//        menus: [
-//            EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action:  testTap),
-//            EmergencyMenu(title: "Hospitals", iconName: "building.2.fill", action: testTap),
-//            EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
-//        ]
-//    )
-//    
-////    return EmergencyView(activeSheet: .nil, selectedEmergecny: emergency).environmentObject(LocationViewModel())
-//}
+#Preview {
+    @State var activeSheet: ActiveSheet?
+    
+    let emergency: Emergency =
+    
+    Emergency(
+        title: "Medical help",
+        iconName: "cross.fill",
+        gradientColor1: Color.redGradient1,
+        gradientColor2: Color.redGradient2,
+        emergencyType: EmergencyType.medicalHelp,
+        menus: [
+            EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action:  testTap),
+            EmergencyMenu(title: "Hospitals", iconName: "building.2.fill", action: testTap),
+            EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
+        ]
+    )
+    
+    return EmergencyView(
+        activeSheet: $activeSheet,
+        selectedEmergecny: emergency
+    )
+        
+    .environmentObject(LocationViewModel())
+}

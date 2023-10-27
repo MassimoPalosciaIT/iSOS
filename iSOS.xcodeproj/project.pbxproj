@@ -12,6 +12,7 @@
 		1A48E0D32AE169900012E64E /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A48E0D22AE169900012E64E /* SelectionView.swift */; };
 		1A782D6C2AEBC474008E7FD8 /* FirstAidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D6B2AEBC474008E7FD8 /* FirstAidModel.swift */; };
 		1A782D6E2AEBC78B008E7FD8 /* FirstAidDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */; };
+		1A782D722AEBE990008E7FD8 /* FirstAidCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */; };
 		1A7F95A82AE44537008110B2 /* EmergencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F95A72AE44537008110B2 /* EmergencyModel.swift */; };
 		1A7F95AD2AE459BE008110B2 /* EmergencyMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */; };
 		1A96617C2AEA62030021B6F3 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96617B2AEA62030021B6F3 /* ConversationModel.swift */; };
@@ -39,6 +40,7 @@
 		1A48E0D22AE169900012E64E /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		1A782D6B2AEBC474008E7FD8 /* FirstAidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidModel.swift; sourceTree = "<group>"; };
 		1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidDetailedView.swift; sourceTree = "<group>"; };
+		1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardsModel.swift; sourceTree = "<group>"; };
 		1A7F95A72AE44537008110B2 /* EmergencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyModel.swift; sourceTree = "<group>"; };
 		1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMenuModel.swift; sourceTree = "<group>"; };
 		1A96617B2AEA62030021B6F3 /* ConversationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationModel.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				1AB943F92AE3F10A005A5D1C /* UIElementsModel.swift */,
+				1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				1A1FB9192AE47E9D00ED0D91 /* MapsModel.swift in Sources */,
 				1AA8546E2AE55D2500964C14 /* HapticModel.swift in Sources */,
 				1AC1737A2AE2648700F4818C /* RequestLocationView.swift in Sources */,
+				1A782D722AEBE990008E7FD8 /* FirstAidCardsModel.swift in Sources */,
 				4ED20FF22ADE95B4007B4E50 /* Bootstrap.swift in Sources */,
 				1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */,
 				1A782D6C2AEBC474008E7FD8 /* FirstAidModel.swift in Sources */,
@@ -404,8 +408,8 @@
 				INFOPLIST_FILE = iSOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HelpApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to get coordinates";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to get coordinates";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -437,8 +441,8 @@
 				INFOPLIST_FILE = iSOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HelpApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to get coordinates";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to get coordinates";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;

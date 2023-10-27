@@ -364,17 +364,19 @@ struct TutorialElement: View {
 }
 
 struct TextBlob: View {
-    var textContent: String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempor convallis libero, vitae placerat nisi volutpat sit amet."
+    var textContent: String = "Lorem \n ipsum dolor"
     var fillColor: Color = Color.blobBlue
     var textColor: Color = Color.white
     
     var body: some View {
-        Text(textContent)
+        Text(textContent.replacingOccurrences(of: "\\n", with: "\n"))
             .fontWeight(.semibold)
             .padding()
             .background(fillColor)
             .cornerRadius(20)
             .foregroundColor(textColor)
+            .multilineTextAlignment(.leading) // Align text to the leading edge
+            .lineLimit(nil)
     }
 }
 

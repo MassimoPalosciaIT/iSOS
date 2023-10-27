@@ -92,7 +92,8 @@ struct SelectionView: View {
                 .background(Color.iSOSBackground.ignoresSafeArea())
             }
             .navigationTitle("Need help?")
-        }.sheet(isPresented: $showingTutorialSheet) {
+        }
+        .sheet(isPresented: $showingTutorialSheet) {
             TutorialView()
         }
     }
@@ -102,14 +103,14 @@ struct SelectionView: View {
     SelectionView().environmentObject(LocationViewModel())
 }
 
-
-extension UIWindow {
-    open override func didAddSubview(_ subview: UIView) {
-        if !(backgroundColor == nil){
-            backgroundColor = UIColor(Color.black)
-        }
-        else{
-            backgroundColor = .clear
-        }
-    }
-}
+//
+//extension UIWindow {
+//    open override func didAddSubview(_ subview: UIView) {
+//        if !(backgroundColor == nil){
+//            backgroundColor = UIColor(Color.black)
+//        }
+//        else{
+//            backgroundColor = .clear
+//        }
+//    }
+//}

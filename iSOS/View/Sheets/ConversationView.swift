@@ -30,7 +30,7 @@ struct ConversationView: View {
                 .foregroundStyle(.white)
             }
             
-            ScrollView{
+            ScrollView(showsIndicators: false){
                 VStack(spacing:20){
                     
                     ForEach(conversations) { selectedConversation in

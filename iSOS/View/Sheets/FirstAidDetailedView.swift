@@ -10,21 +10,21 @@ struct FirstAidDetailedView: View {
     }
     
     var body: some View {
-        VStack (spacing: 10){
-            VStack{
-                ForEach(tips, id: \.self) { tip in
-                    TextBlob(textContent: tip, fillColor: Color.appButtonGray)
+        HStack{
+            VStack (){
+                ScrollView(showsIndicators: false){
+                    ForEach(tips, id: \.self) { tip in
+                        TextBlob(textContent: tip, fillColor: Color.appButtonGray)
+                    }
                 }
-
-                Spacer()
             }
+            .padding(.top)
+            .navigationTitle(FirstAidName)
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .padding(.horizontal)
-        .padding(.top)
-        .frame(maxHeight: .infinity)
-        .background(Color.iSOSGray)
-        .navigationTitle(FirstAidName)
-        .navigationBarTitleDisplayMode(.inline)
+        .frame(maxWidth: .infinity)
+        .background(Color.iSOSGray.ignoresSafeArea())
+        
     }
 }
 

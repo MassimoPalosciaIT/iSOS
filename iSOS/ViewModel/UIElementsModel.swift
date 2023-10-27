@@ -329,51 +329,6 @@ struct LocationButton: View {
     }
 }
 
-enum BlobType {
-    case question
-    case blobReply
-}
-
-struct TextBlob: View {
-    var blobType: BlobType
-    var blobColor: Color
-    var textColor: Color
-    var messageText: String
-    
-    init(blobType: BlobType, messageText: String) {
-        self.blobType = blobType
-        self.messageText = messageText
-        
-        switch blobType {
-        case .question:
-            self.blobColor = Color.blobWhite
-            self.textColor = Color.black
-        case .blobReply:
-            self.blobColor = Color.blobBlue
-            self.textColor = Color.blobWhite
-        }
-    }
-    
-    var body: some View {
-        ZStack {
-            ReplyBlobShape()
-                .fill(blobColor)
-            
-            HStack {
-                Text(messageText)
-                    .font(.system(size: 20))
-                    .fontWeight(.semibold)
-                    .padding([.top, .bottom, .trailing])
-                    .padding(.leading, 25)
-                    .foregroundStyle(textColor)
-                
-                Spacer()
-            }
-        }
-        .frame(width: 280, height: 90)
-    }
-}
-
 struct BlobCombo: View {
     var messageQuestion: String
     var messageReply: String
@@ -381,13 +336,13 @@ struct BlobCombo: View {
     var body: some View {
         VStack(spacing: 10){
             HStack{
-                TextBlob(blobType: BlobType.question, messageText: messageQuestion)
+                TextBlob(question: messageQuestion, fillColor: Color.blobWhite, textColor: Color.black)
                 Spacer()
             }
             
             HStack{
                 Spacer()
-                TextBlob(blobType: BlobType.blobReply, messageText: messageReply)
+                TextBlob(question: messageReply, fillColor: Color.blobBlue, textColor: Color.white)
             }
         }
     }
@@ -410,7 +365,7 @@ struct TutorialElement: View {
     
     var body: some View {
         HStack(){
-
+            
             Image(systemName: iconName)
                 .font(.system(size: 40))
                 .fontWeight(.medium)
@@ -439,9 +394,25 @@ struct TutorialElement: View {
     }
 }
 
-#Preview {
-    TutorialElement(iconName: "phone.circle", title: "Emergency number locator", description: "The app determines your country's emergency number.")
+struct TextBlob: View {
+    var question: String = "Lorem"
+    var fillColor: Color = Color.blobBlue
+    var textColor: Color = Color.white
     
+    var body: some View {
+        Text(question)
+            .fontWeight(.semibold)
+            .padding()
+            .background(fillColor)
+            .cornerRadius(20)
+            .foregroundColor(textColor)
+    }
+}
+
+
+
+#Preview {
+        TextBlob()
         .environmentObject(LocationViewModel())
         .padding(.horizontal)
 }

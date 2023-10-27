@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ConversationView: View {
     var conversations: [Conversation] = [
-        Conversation(questionText: "Hello", answerText: "Ciao"),
+        Conversation(questionText: "Hello, I need an ambulance.", answerText: "Salve, mi serve un'ambulanza."),
         Conversation(questionText: "Text 2", answerText: "Texto 2"),
         Conversation(questionText: "Text 2", answerText: "Texto 2"),
         Conversation(questionText: "Text 2", answerText: "Texto 2"),

@@ -70,6 +70,69 @@ struct EmergencySelectionButton: View {
     }
 }
 
+struct AppStandartButton2: View {
+    var gradientColor1: Color
+    var gradientColor2: Color
+    var iconName: String
+    var frameHeight: Double = 120
+    var iconSize: Int = 130
+    var iconOpacity: Double = 0.15
+    let cornerRadius: Double = 20
+    
+    var body: some View {
+        RoundedRectangle(cornerRadius: cornerRadius)
+            .fill(LinearGradient(colors: [gradientColor1, gradientColor2], startPoint: .leading, endPoint: .trailing))
+            .frame(height: frameHeight)
+            .overlay(
+                HStack() {
+                    Spacer()
+                    Image(systemName: iconName)
+                        .foregroundColor(.white)
+                        .opacity(iconOpacity)
+                        .font(.system(size: CGFloat(iconSize)))
+                        .padding(.trailing, -20)
+                }.mask(
+                    RoundedRectangle(cornerRadius: cornerRadius)
+                        .frame(height: frameHeight)
+                )
+            )
+    }
+}
+
+struct FirstAidSelectionButton: View {
+    var iconName: String;
+    var title: String;
+    var gradientColor1: Color;
+    var gradientColor2: Color;
+    let side_padding: CGFloat = 20
+    
+    var body: some View {
+        
+        ZStack{
+            AppStandartButton2(gradientColor1: gradientColor1, gradientColor2: gradientColor2, iconName: iconName)
+            
+            VStack
+            {
+                HStack() {
+                    Group {
+                        Text(title)
+                            .fontWeight(.bold)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .padding(.trailing, side_padding)
+                    }
+                    .font(.system(size: 26))
+                    .foregroundColor(.white)
+                    .fontWeight(.medium)
+                    .padding(.leading, 10.0)
+                    
+                }
+            }.frame(height: 120)
+        }
+        
+    }
+}
+
 struct AppStandartButton: View {
     var gradientColor1: Color
     var gradientColor2: Color

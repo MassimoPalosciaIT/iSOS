@@ -1,24 +1,29 @@
+//
+//  FirstAidSheetView.swift
+//  iSOS
+//
+//  Created by Massimo Paloscia on 27/10/23.
+//
+
 import SwiftUI
 
 struct FirstAidView: View {
     var body: some View {
-        VStack (spacing: 10){
-            HStack{
-                Text("First aid")
-                    .font(.system(size: 20))
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.white)
+        VStack{
+        
+            ScrollView{
                 Spacer()
+                FirstAidSelectionButton(iconName: "drop.fill", title: "Bleeding", gradientColor1: .redGradient1, gradientColor2: .redGradient2)
+                FirstAidSelectionButton(iconName: "bolt.heart", title: "Heart Attack", gradientColor1: .redGradient1, gradientColor2: .redGradient2)
+                FirstAidSelectionButton(iconName: "brain.head.profile", title: "Stroke", gradientColor1: .redGradient1, gradientColor2: .redGradient2)
+                FirstAidSelectionButton(iconName: "bandage", title: "Fracture", gradientColor1: .redGradient1, gradientColor2: .redGradient2)
+                FirstAidSelectionButton(iconName: "flame", title: "Fracture", gradientColor1: .redGradient1, gradientColor2: .redGradient2)
             }
-            Spacer()
-        }
-        .padding(.horizontal)
-        .padding(.top)
-        .frame(maxHeight: .infinity)
-        .background(Color.iSOSGray)
+            
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.iSOSBackground.ignoresSafeArea())
     }
 }
-
 
 #Preview {
     FirstAidView()

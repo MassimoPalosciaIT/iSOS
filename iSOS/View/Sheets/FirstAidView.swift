@@ -1,7 +1,17 @@
 import SwiftUI
 
 struct FirstAidView: View {
-    var firstAidButtons: [FirstAidModel]
+    var firstAidButtons: [FirstAidModel] = [
+        FirstAidModel(title: "Bleeding", iconName: "drop.fill"),
+        FirstAidModel(title: "Heart attack", iconName: "bolt.heart"),
+        FirstAidModel(title: "Burn", iconName: "flame"),
+        FirstAidModel(title: "Asthma attack", iconName: "rays"),
+        FirstAidModel(title: "Fracture", iconName: "bandage"),
+        FirstAidModel(title: "Diabetic emergency", iconName: "microbe.fill"),
+        FirstAidModel(title: "Epileptic seizure", iconName: "lightspectrum.horizontal"),
+        FirstAidModel(title: "Stroke", iconName: "brain.head.profile"),
+        FirstAidModel(title: "Allergic reaction", iconName: "wind"),
+    ]
     
     var body: some View {
         VStack (spacing: 10){
@@ -30,17 +40,5 @@ struct FirstAidView: View {
 }
 
 #Preview {
-    FirstAidView(
-        firstAidButtons: [
-            FirstAidModel(title: "Bleeding", iconName: "drop.fill"),
-            FirstAidModel(title: "Heart attack", iconName: "bolt.heart"),
-            FirstAidModel(title: "Burn", iconName: "flame"),
-            FirstAidModel(title: "Asthma attack", iconName: "rays"),
-            FirstAidModel(title: "Fracture", iconName: "bandage"),
-            FirstAidModel(title: "Diabetic emergency", iconName: "microbe.fill"),
-            FirstAidModel(title: "Epileptic seizure", iconName: "lightspectrum.horizontal"),
-            FirstAidModel(title: "Stroke", iconName: "brain.head.profile"),
-            FirstAidModel(title: "Allergic reaction", iconName: "wind"),
-        ]
-    )
+    FirstAidView()
 }

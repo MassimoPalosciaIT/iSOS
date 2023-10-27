@@ -3,6 +3,7 @@ import SwiftUI
 struct SelectionView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
     @AppStorage("isOnboarding") var showingTutorialSheet: Bool = true
+    @State private var activeSheet: ActiveSheet?
     
     init() {
         let navBarAppearance = UINavigationBar.appearance()
@@ -31,13 +32,17 @@ struct SelectionView: View {
                                 gradientColor2: Color.redGradient2,
                                 emergencyType: EmergencyType.medicalHelp,
                                 menus: [
-                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: testTap),
+                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
+                                        self.activeSheet = .firstAid
+                                    }),
                                     EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
                                         open_link(searchQuery: "Hospitals", locationViewModel: locationViewModel)
                                     }),
-                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
+                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
+                                        self.activeSheet = .conversation
+                                    }),
                                 ]
-                            )
+                            ), activeSheet: $activeSheet
                         )
                         
                         EmergencySelectionButton(selectedEmergency:
@@ -48,10 +53,14 @@ struct SelectionView: View {
                                 gradientColor2: Color.orangeGradient2,
                                 emergencyType: EmergencyType.fireDepartment,
                                 menus: [
-                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: testTap),
-                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
+                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
+                                        self.activeSheet = .firstAid
+                                    }),
+                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
+                                        self.activeSheet = .conversation
+                                    }),
                                 ]
-                            )
+                            ), activeSheet: $activeSheet
                         )
                         
                         EmergencySelectionButton(selectedEmergency:
@@ -65,9 +74,11 @@ struct SelectionView: View {
                                     EmergencyMenu(title: "Stations", iconName: "house.lodge.fill",  action: {
                                         open_link(searchQuery: "Police stations", locationViewModel: locationViewModel)
                                     }),
-                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
+                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
+                                        self.activeSheet = .conversation
+                                    }),
                                 ]
-                            )
+                            ), activeSheet: $activeSheet
                         )
                         
                         Spacer()

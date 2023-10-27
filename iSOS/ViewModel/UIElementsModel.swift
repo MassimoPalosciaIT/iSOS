@@ -40,10 +40,11 @@ struct EmergencyMenuButton: View {
 
 struct EmergencySelectionButton: View {
     var selectedEmergency: Emergency
+    @Binding var activeSheet: ActiveSheet? // Add this line
     let side_padding: CGFloat = 20
     
     var body: some View {
-        NavigationLink(destination: EmergencyView(selectedEmergecny: selectedEmergency)) {
+        NavigationLink(destination: EmergencyView(activeSheet: $activeSheet, selectedEmergecny: selectedEmergency)) {
             ZStack{
                 AppStandartButton(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2, iconName: selectedEmergency.iconName)
                 

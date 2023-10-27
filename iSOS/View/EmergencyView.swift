@@ -1,17 +1,18 @@
 import SwiftUI
 
 enum ActiveSheet: Identifiable {
-    case conversation, firstAid
+    case conversation
+    case firstAid
+
     var id: Int {
         hashValue
     }
 }
 
-
 struct EmergencyView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
-    @State var activeSheet: ActiveSheet?
+    @Binding var activeSheet: ActiveSheet?
     
     let selectedEmergecny: Emergency
     
@@ -67,36 +68,36 @@ struct EmergencyView: View {
             .navigationTitle(selectedEmergecny.title)
             .navigationBarTitleDisplayMode(.inline)
         }
-//        .sheet(item: $activeSheet) { item in
-//            Group{
-//                switch item {
-//                    case .conversation:
-//                        ConversationView()
-//                    case .firstAid:
-//                        FirstAidView()
-//                }
-//            }
-//            .presentationDetents([.large])
-//            .presentationDragIndicator(.visible)
-//        }
+        .sheet(item: $activeSheet) { item in
+            switch item {
+                       case .conversation:
+                           ConversationView()
+                               .presentationDetents([.large])
+                               .presentationDragIndicator(.visible)
+                       case .firstAid:
+                           FirstAidView()
+                               .presentationDetents([.large])
+                               .presentationDragIndicator(.visible)
+            }
+        }
     }
 }
 
-#Preview {
-    let emergency: Emergency =
-    
-    Emergency(
-        title: "Medical help",
-        iconName: "cross.fill",
-        gradientColor1: Color.redGradient1,
-        gradientColor2: Color.redGradient2,
-        emergencyType: EmergencyType.medicalHelp,
-        menus: [
-            EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action:  testTap),
-            EmergencyMenu(title: "Hospitals", iconName: "building.2.fill", action: testTap),
-            EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
-        ]
-    )
-    
-    return EmergencyView(selectedEmergecny: emergency).environmentObject(LocationViewModel())
-}
+//#Preview {
+//    let emergency: Emergency =
+//    
+//    Emergency(
+//        title: "Medical help",
+//        iconName: "cross.fill",
+//        gradientColor1: Color.redGradient1,
+//        gradientColor2: Color.redGradient2,
+//        emergencyType: EmergencyType.medicalHelp,
+//        menus: [
+//            EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action:  testTap),
+//            EmergencyMenu(title: "Hospitals", iconName: "building.2.fill", action: testTap),
+//            EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
+//        ]
+//    )
+//    
+////    return EmergencyView(activeSheet: .nil, selectedEmergecny: emergency).environmentObject(LocationViewModel())
+//}

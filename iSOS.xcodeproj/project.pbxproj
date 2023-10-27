@@ -21,6 +21,7 @@
 		1AC173812AE27B8700F4818C /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* CallModel.swift */; };
 		1AC70CFA2AEAE97E0023F294 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CF92AEAE97E0023F294 /* ConversationView.swift */; };
 		1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */; };
+		4E1207832AEBB6A1003ABE26 /* FirstAid.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4E1207822AEBB6A1003ABE26 /* FirstAid.csv */; };
 		4E23C3052AEA55E200AD7073 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E23C3042AEA55E200AD7073 /* TutorialView.swift */; };
 		4E36D5212AE2608000209E4E /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5202AE2608000209E4E /* EmergencyView.swift */; };
 		4E6B4AAE2AE1419600F1C4AD /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */; };
@@ -46,6 +47,7 @@
 		1AC173802AE27B8700F4818C /* CallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
 		1AC70CF92AEAE97E0023F294 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidView.swift; sourceTree = "<group>"; };
+		4E1207822AEBB6A1003ABE26 /* FirstAid.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FirstAid.csv; sourceTree = "<group>"; };
 		4E23C3042AEA55E200AD7073 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		4E36D5202AE2608000209E4E /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				1A00002C2AE54BB60008B9B0 /* emergencyNumbers.csv */,
+				4E1207822AEBB6A1003ABE26 /* FirstAid.csv */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1207832AEBB6A1003ABE26 /* FirstAid.csv in Resources */,
 				4ED20FF72ADE95B6007B4E50 /* Preview Assets.xcassets in Resources */,
 				4ED20FF42ADE95B6007B4E50 /* Assets.xcassets in Resources */,
 				1A00002D2AE54BB60008B9B0 /* emergencyNumbers.csv in Resources */,

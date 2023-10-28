@@ -16,14 +16,12 @@ struct FirstAidView: View {
                     }
                 }
                 .padding(.horizontal)
-                .frame(maxWidth: .infinity)
-                
-                
                 .navigationTitle("First aid")
             }
             .searchable(text: $search_aid, placement: .navigationBarDrawer(displayMode: .always))
         }
     }
+    
     var searchResults: [FirstAidModel] {
         if search_aid.isEmpty {
             return aidModel.aid

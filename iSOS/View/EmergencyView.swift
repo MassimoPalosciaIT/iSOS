@@ -70,14 +70,16 @@ struct EmergencyView: View {
         }
         .sheet(item: $activeSheet) { item in
             switch item {
-                       case .conversation:
-                           ConversationView()
-                               .presentationDetents([.large])
-                               .presentationDragIndicator(.visible)
-                       case .firstAid:
-                           FirstAidView()
-                               .presentationDetents([.large])
-                               .presentationDragIndicator(.visible)
+               case .conversation:
+                   ConversationView()
+                       .presentationDetents([.large])
+                       .presentationDragIndicator(.visible)
+                       .padding(.top)
+               case .firstAid:
+                    FirstAidView()
+                        .presentationDetents([.large])
+                        .presentationDragIndicator(.visible)
+                        .padding(.top)
             }
         }
     }

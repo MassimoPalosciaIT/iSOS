@@ -7,27 +7,27 @@ struct FirstAidView: View {
     
     var body: some View {
         VStack{
-            VStack{
-                NavigationStack{
-                    ScrollView(showsIndicators: false){
-                        ForEach(searchResults) { button in
-                            NavigationLink(destination: FirstAidDetailedView(FirstAidName: button.title)){
-                                FirstAidSelectionButton(iconName: button.iconName, title: button.title)
-                            }
+            NavigationStack{
+                ScrollView(showsIndicators: false){
+                    ForEach(searchResults) { button in
+                        NavigationLink(destination: FirstAidDetailedView(FirstAidName: button.title)){
+                            FirstAidSelectionButton(iconName: button.iconName, title: button.title)
                         }
                     }
-                    .padding(.horizontal)
-                    .background(Color.iSOSGray)
-                    .navigationTitle("First aid")
-                    .toolbarBackground(
-                        Color.iSOSGray,
-                        for: .navigationBar)
-                }.searchable(text: $search_aid, placement: .navigationBarDrawer(displayMode: .always))
-                    .scrollContentBackground(.hidden)
+                }
+                .padding(.horizontal)
+                .frame(maxWidth: .infinity)
+                .background(Color.iSOSGray)
+                
+                
+                .navigationTitle("First aid")
+                .toolbarBackground(
+                    Color.iSOSGray,
+                    for: .navigationBar)
             }
+            .searchable(text: $search_aid, placement: .navigationBarDrawer(displayMode: .always))
+                .scrollContentBackground(.hidden)
         }
-        .frame(maxHeight: .infinity)
-        .background(Color.iSOSGray)
     }
     var searchResults: [FirstAidModel] {
         if search_aid.isEmpty {

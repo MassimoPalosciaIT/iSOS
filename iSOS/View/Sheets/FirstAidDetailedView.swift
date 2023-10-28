@@ -14,7 +14,7 @@ struct FirstAidDetailedView: View {
             VStack (){
                 ScrollView(showsIndicators: false){
                     ForEach(tips, id: \.self) { tip in
-                        TextBlobFirstAidDetailedView(textContent: tip, fillColor: Color.appButtonGray)
+                        TextBlob(textContent: tip, fillColor: Color.appButtonGray)
                     }
                 }
             }
@@ -22,6 +22,7 @@ struct FirstAidDetailedView: View {
             .navigationTitle(FirstAidName)
             .navigationBarTitleDisplayMode(.inline)
         }
+        .padding(.horizontal)
         .frame(maxWidth: .infinity)
         .background(Color.iSOSGray.ignoresSafeArea())
         

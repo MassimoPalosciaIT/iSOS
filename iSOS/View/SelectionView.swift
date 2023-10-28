@@ -102,15 +102,3 @@ struct SelectionView: View {
 #Preview {
     SelectionView().environmentObject(LocationViewModel())
 }
-
-//
-//extension UIWindow {
-//    open override func didAddSubview(_ subview: UIView) {
-//        if !(backgroundColor == nil){
-//            backgroundColor = UIColor(Color.black)
-//        }
-//        else{
-//            backgroundColor = .clear
-//        }
-//    }
-//}

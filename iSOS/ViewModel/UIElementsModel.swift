@@ -305,13 +305,19 @@ struct BlobCombo: View {
     var body: some View {
         VStack(spacing: 10){
             HStack{
-                TextBlob(textContent: messageQuestion, fillColor: Color.blobWhite, textColor: Color.black)
+                VStack{
+                    TextBlob(textContent: messageQuestion, fillColor: Color.blobWhite, textColor: Color.black)
+                    
+                }.frame(maxWidth: 200)
                 Spacer()
             }
-            
+
             HStack{
                 Spacer()
-                TextBlob(textContent: messageReply, fillColor: Color.blobBlue, textColor: Color.white)
+                VStack{
+                    TextBlob(textContent: messageReply, fillColor: Color.blobBlue, textColor: Color.white)
+                    
+                }.frame(maxWidth: 200)
             }
         }
     }
@@ -364,44 +370,36 @@ struct TutorialElement: View {
 }
 
 struct TextBlob: View {
-    var textContent: String = "Lorem \n ipsum dolor"
+    var textContent: String = "2. Call an ambulance as soon as possible."
     var fillColor: Color = Color.blobBlue
     var textColor: Color = Color.white
     
     var body: some View{
-        Text(textContent.replacingOccurrences(of: "\\n", with: "\n"))
-            .fontWeight(.semibold)
-            .padding()
-            .background(fillColor)
-            .cornerRadius(20)
-            .foregroundColor(textColor)
-            .multilineTextAlignment(.leading) // Align text to the leading edge
-            .lineLimit(nil)
-            
-    }
-}
-
-struct TextBlobFirstAidDetailedView: View {
-    var textContent: String = "Lorem \n ipsum dolor"
-    var fillColor: Color = Color.blobBlue
-    var textColor: Color = Color.white
-    
-    var body: some View{
-        Text(textContent.replacingOccurrences(of: "\\n", with: "\n"))
-            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-            .fontWeight(.semibold)
-            .padding()
-            .background(fillColor)
-            .cornerRadius(20)
-            .foregroundColor(textColor)
-            .multilineTextAlignment(.leading) // Align text to the leading edge
-            .lineLimit(nil)
-            
+        ZStack{
+            Text(textContent.replacingOccurrences(of: "\\n", with: "\n"))
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(fillColor)
+                .cornerRadius(20)
+                .foregroundColor(textColor.opacity(0))
+                .multilineTextAlignment(.leading) // Align text to the leading edge
+                .lineLimit(nil)
+            HStack{
+                Text(textContent.replacingOccurrences(of: "\\n", with: "\n"))
+                    .fontWeight(.semibold)
+                    .padding(.leading)
+                    .foregroundColor(textColor)
+                    .multilineTextAlignment(.leading) // Align text to the leading edge
+                    .lineLimit(nil)
+                
+                Spacer()
+            }
+        }
     }
 }
 
 #Preview {
-        TextBlobFirstAidDetailedView()
+        TextBlob()
         .environmentObject(LocationViewModel())
         .padding(.horizontal)
 }

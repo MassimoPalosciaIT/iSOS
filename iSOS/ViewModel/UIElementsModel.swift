@@ -78,7 +78,7 @@ struct FirstAidSelectionButton: View {
     
     var body: some View {
             ZStack{
-                AppStandartButton(gradientColor1: Color.appButtonGray, gradientColor2: Color.appButtonGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
+                AppStandartButton(gradientColor1: Color.iSOSGray, gradientColor2: Color.iSOSGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
                 
                 VStack
                 {
@@ -306,7 +306,7 @@ struct BlobCombo: View {
         VStack(spacing: 10){
             HStack{
                 VStack{
-                    TextBlob(textContent: messageQuestion, fillColor: Color.blobWhite, textColor: Color.black)
+                    TextBlob(textContent: messageQuestion, fillColor: Color.iSOSGray, textColor: Color.white)
                     
                 }.frame(maxWidth: 200)
                 Spacer()
@@ -315,7 +315,7 @@ struct BlobCombo: View {
             HStack{
                 Spacer()
                 VStack{
-                    TextBlob(textContent: messageReply, fillColor: Color.blobBlue, textColor: Color.white)
+                    TextBlob(textContent: messageReply, fillColor: Color.blobGray, textColor: Color.white)
                     
                 }.frame(maxWidth: 200)
             }
@@ -371,7 +371,7 @@ struct TutorialElement: View {
 
 struct TextBlob: View {
     var textContent: String = "2. Call an ambulance as soon as possible."
-    var fillColor: Color = Color.blobBlue
+    var fillColor: Color = Color.blobGray
     var textColor: Color = Color.white
     
     var body: some View{

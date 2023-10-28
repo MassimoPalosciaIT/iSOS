@@ -43,7 +43,6 @@ struct ConversationView: View {
         .padding(.horizontal)
         .padding(.top)
         .frame(maxHeight: .infinity)
-        .background(Color.iSOSGray)
     }
 }
 

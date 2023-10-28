@@ -43,7 +43,6 @@ struct TutorialView: View {
                 }
             }.padding(.horizontal, 30)
         }
-        .background(Color.iSOSBackground.ignoresSafeArea())
     }
 }
 

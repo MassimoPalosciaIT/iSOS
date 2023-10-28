@@ -17,16 +17,11 @@ struct FirstAidView: View {
                 }
                 .padding(.horizontal)
                 .frame(maxWidth: .infinity)
-                .background(Color.iSOSGray)
                 
                 
                 .navigationTitle("First aid")
-                .toolbarBackground(
-                    Color.iSOSGray,
-                    for: .navigationBar)
             }
             .searchable(text: $search_aid, placement: .navigationBarDrawer(displayMode: .always))
-                .scrollContentBackground(.hidden)
         }
     }
     var searchResults: [FirstAidModel] {

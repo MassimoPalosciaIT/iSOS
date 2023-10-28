@@ -4,6 +4,7 @@ struct FirstAidView: View {
     @State private var search_aid = ""
     let aidModel:FirstAidCardsModel = FirstAidCardsModel()
     
+    
     var body: some View {
         VStack{
             VStack{
@@ -18,8 +19,11 @@ struct FirstAidView: View {
                     .padding(.horizontal)
                     .background(Color.iSOSGray)
                     .navigationTitle("First aid")
-                }
-                .searchable(text: $search_aid, placement: .navigationBarDrawer(displayMode: .always))
+                    .toolbarBackground(
+                        Color.iSOSGray,
+                        for: .navigationBar)
+                }.searchable(text: $search_aid, placement: .navigationBarDrawer(displayMode: .always))
+                    .scrollContentBackground(.hidden)
             }
         }
         .frame(maxHeight: .infinity)

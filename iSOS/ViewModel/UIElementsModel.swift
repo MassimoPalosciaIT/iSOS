@@ -368,7 +368,7 @@ struct TextBlob: View {
     var fillColor: Color = Color.blobBlue
     var textColor: Color = Color.white
     
-    var body: some View {
+    var body: some View{
         Text(textContent.replacingOccurrences(of: "\\n", with: "\n"))
             .fontWeight(.semibold)
             .padding()
@@ -377,13 +377,31 @@ struct TextBlob: View {
             .foregroundColor(textColor)
             .multilineTextAlignment(.leading) // Align text to the leading edge
             .lineLimit(nil)
+            
     }
 }
 
-
+struct TextBlobFirstAidDetailedView: View {
+    var textContent: String = "Lorem \n ipsum dolor"
+    var fillColor: Color = Color.blobBlue
+    var textColor: Color = Color.white
+    
+    var body: some View{
+        Text(textContent.replacingOccurrences(of: "\\n", with: "\n"))
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+            .fontWeight(.semibold)
+            .padding()
+            .background(fillColor)
+            .cornerRadius(20)
+            .foregroundColor(textColor)
+            .multilineTextAlignment(.leading) // Align text to the leading edge
+            .lineLimit(nil)
+            
+    }
+}
 
 #Preview {
-        TextBlob()
+        TextBlobFirstAidDetailedView()
         .environmentObject(LocationViewModel())
         .padding(.horizontal)
 }

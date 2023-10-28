@@ -14,7 +14,7 @@ struct FirstAidDetailedView: View {
             VStack (){
                 ScrollView(showsIndicators: false){
                     ForEach(tips, id: \.self) { tip in
-                        TextBlob(textContent: tip, fillColor: Color.appButtonGray)
+                        TextBlobFirstAidDetailedView(textContent: tip, fillColor: Color.appButtonGray)
                     }
                 }
             }

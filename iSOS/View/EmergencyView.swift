@@ -71,7 +71,8 @@ struct EmergencyView: View {
         .sheet(item: $activeSheet) { item in
             switch item {
                case .conversation:
-                   ConversationView()
+                ConversationView(emergencyType: selectedEmergecny.emergencyType)
+                        .environmentObject(locationViewModel)
                        .presentationDetents([.large])
                        .presentationDragIndicator(.visible)
                        .padding(.top)

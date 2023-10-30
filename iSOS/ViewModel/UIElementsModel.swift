@@ -399,7 +399,7 @@ struct TextBlob: View {
 }
 
 #Preview {
-        TextBlob()
+        BlobCombo(messageQuestion: "test", messageReply: "test")
         .environmentObject(LocationViewModel())
         .padding(.horizontal)
 }

@@ -12,7 +12,7 @@ struct ConversationView: View {
     var convPolice: [Conversation] {
         [
             Conversation(questionText: "Hello, I need to report an emergency.", answerText: "Salve, mi serve un'ambulanza."),
-            Conversation(questionText: "My coordinates are: \(formattedCoordinates)", answerText: "Le mie coordinate sono: \(formattedCoordinates)"),
+            Conversation(questionText: "My coordinates are: \(formattedCoordinates)", answerText: "Le mie coordinate sono: \(formattedCoordinates)\n\n(\(translateCoordinates(coordinate: formattedCoordinates)))"),
             Conversation(questionText: "There is a [robbery/assault/accident/etc.] occurring.", answerText: "Si sta verificando una [rapina/aggressione/accidente/ecc]."),
             Conversation(questionText: "There are [number] of victims/injured people.", answerText: "Ci sono [numero] di vittime/feriti."),
             Conversation(questionText: "Please send help immediately.", answerText: "Vi prego di inviare immediatamente i soccorsi."),
@@ -23,7 +23,7 @@ struct ConversationView: View {
     var convFire: [Conversation] {
         [
             Conversation(questionText: "Hello, I need to report a fire emergency.", answerText: "Salve, mi serve un'ambulanza."),
-            Conversation(questionText: "My coordinates are: \(formattedCoordinates)", answerText: "Le mie coordinate sono: \(formattedCoordinates)"),
+            Conversation(questionText: "My coordinates are: \(formattedCoordinates)", answerText: "Le mie coordinate sono: \(formattedCoordinates)\n\n(\(translateCoordinates(coordinate: formattedCoordinates)))"),
             Conversation(questionText: "The fire is [large/small/spreading rapidly/etc.].", answerText: "L'incendio è [grande/piccolo/che si espande rapidamente/ecc.]"),
             Conversation(questionText: "Please send help immediately; it's urgent.", answerText: "Vi prego di inviare immediatamente i soccorsi; è urgente."),
             Conversation(questionText: "My name is [your name].", answerText: "Il mio nome è [il vostro nome]."),
@@ -33,7 +33,7 @@ struct ConversationView: View {
     var convMedical: [Conversation] {
         [
             Conversation(questionText: "Hello, I need medical assistance immediately.", answerText: "Salve, mi serve un'ambulanza."),
-            Conversation(questionText: "My coordinates are: \(formattedCoordinates)", answerText: "Le mie coordinate sono: \(formattedCoordinates)"),
+            Conversation(questionText: "My coordinates are: \(formattedCoordinates)", answerText: "Le mie coordinate sono: \(formattedCoordinates)\n\n(\(translateCoordinates(coordinate: formattedCoordinates)))"),
             Conversation(questionText: "Someone is injured/ill.", answerText: "Qualcuno è ferito/malato."),
             Conversation(questionText: "There has been an accident.", answerText: "C'è stato un incidente."),
             Conversation(questionText: "The person is [conscious/unconscious/breathing/not breathing].", answerText: "La persona è [cosciente/incosciente/respira/non respira]."),

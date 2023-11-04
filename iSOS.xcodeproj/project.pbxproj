@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A00002D2AE54BB60008B9B0 /* emergencyNumbers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1A00002C2AE54BB60008B9B0 /* emergencyNumbers.csv */; };
 		1A1FB9192AE47E9D00ED0D91 /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1FB9182AE47E9D00ED0D91 /* MapsModel.swift */; };
+		1A2EC8F42AF6BB81009F75C7 /* countries.geo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2EC8F32AF6BB81009F75C7 /* countries.geo.json */; };
+		1A2EC8F82AF6D03B009F75C7 /* emergencyNumbers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1A2EC8F72AF6D03B009F75C7 /* emergencyNumbers.csv */; };
 		1A48E0D32AE169900012E64E /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A48E0D22AE169900012E64E /* SelectionView.swift */; };
 		1A782D6C2AEBC474008E7FD8 /* FirstAidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D6B2AEBC474008E7FD8 /* FirstAidModel.swift */; };
 		1A782D6E2AEBC78B008E7FD8 /* FirstAidDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */; };
 		1A782D722AEBE990008E7FD8 /* FirstAidCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */; };
 		1A7F95A82AE44537008110B2 /* EmergencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F95A72AE44537008110B2 /* EmergencyModel.swift */; };
 		1A7F95AD2AE459BE008110B2 /* EmergencyMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */; };
+		1A83AC7D2AF666E000182B3C /* APPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A83AC742AF666E000182B3C /* APPolygon.m */; };
+		1A83AC7E2AF666E000182B3C /* APCountryInfoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A83AC762AF666E000182B3C /* APCountryInfoBuilder.m */; };
+		1A83AC7F2AF666E000182B3C /* APCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A83AC7A2AF666E000182B3C /* APCountry.m */; };
+		1A83AC802AF666E000182B3C /* APReverseGeocoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A83AC7B2AF666E000182B3C /* APReverseGeocoding.m */; };
 		1A96617C2AEA62030021B6F3 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96617B2AEA62030021B6F3 /* ConversationModel.swift */; };
 		1AA8546E2AE55D2500964C14 /* HapticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8546D2AE55D2500964C14 /* HapticModel.swift */; };
 		1AB008202AEFC3D500887D54 /* CoordinatesTranslationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB0081F2AEFC3D500887D54 /* CoordinatesTranslationModel.swift */; };
@@ -35,15 +40,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A00002C2AE54BB60008B9B0 /* emergencyNumbers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emergencyNumbers.csv; sourceTree = "<group>"; };
 		1A1FB9182AE47E9D00ED0D91 /* MapsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
 		1A1FB9202AE5371300ED0D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1A2EC8F32AF6BB81009F75C7 /* countries.geo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.geo.json; sourceTree = "<group>"; };
+		1A2EC8F72AF6D03B009F75C7 /* emergencyNumbers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emergencyNumbers.csv; sourceTree = "<group>"; };
 		1A48E0D22AE169900012E64E /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		1A782D6B2AEBC474008E7FD8 /* FirstAidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidModel.swift; sourceTree = "<group>"; };
 		1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidDetailedView.swift; sourceTree = "<group>"; };
 		1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardsModel.swift; sourceTree = "<group>"; };
 		1A7F95A72AE44537008110B2 /* EmergencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyModel.swift; sourceTree = "<group>"; };
 		1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMenuModel.swift; sourceTree = "<group>"; };
+		1A83AC722AF666E000182B3C /* APCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCountry.h; sourceTree = "<group>"; };
+		1A83AC742AF666E000182B3C /* APPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPolygon.m; sourceTree = "<group>"; };
+		1A83AC752AF666E000182B3C /* APCountryInfoBuilderDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCountryInfoBuilderDefines.h; sourceTree = "<group>"; };
+		1A83AC762AF666E000182B3C /* APCountryInfoBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCountryInfoBuilder.m; sourceTree = "<group>"; };
+		1A83AC772AF666E000182B3C /* APPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPolygon.h; sourceTree = "<group>"; };
+		1A83AC782AF666E000182B3C /* APCountryInfoBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCountryInfoBuilder.h; sourceTree = "<group>"; };
+		1A83AC792AF666E000182B3C /* APReverseGeocoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APReverseGeocoding.h; sourceTree = "<group>"; };
+		1A83AC7A2AF666E000182B3C /* APCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCountry.m; sourceTree = "<group>"; };
+		1A83AC7B2AF666E000182B3C /* APReverseGeocoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APReverseGeocoding.m; sourceTree = "<group>"; };
+		1A83AC852AF668A600182B3C /* iSOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iSOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A96617B2AEA62030021B6F3 /* ConversationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationModel.swift; sourceTree = "<group>"; };
 		1AA8546D2AE55D2500964C14 /* HapticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticModel.swift; sourceTree = "<group>"; };
 		1AB0081F2AEFC3D500887D54 /* CoordinatesTranslationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesTranslationModel.swift; sourceTree = "<group>"; };
@@ -78,10 +94,43 @@
 		1A00002E2AE54BC30008B9B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1A00002C2AE54BB60008B9B0 /* emergencyNumbers.csv */,
+				1A2EC8F72AF6D03B009F75C7 /* emergencyNumbers.csv */,
 				4E1207822AEBB6A1003ABE26 /* firstAid.csv */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1A83AC6F2AF666E000182B3C /* APOfflineReverseGeocoding */ = {
+			isa = PBXGroup;
+			children = (
+				1A83AC702AF666E000182B3C /* GeoJSON */,
+				1A83AC722AF666E000182B3C /* APCountry.h */,
+				1A83AC732AF666E000182B3C /* Internal */,
+				1A83AC792AF666E000182B3C /* APReverseGeocoding.h */,
+				1A83AC7A2AF666E000182B3C /* APCountry.m */,
+				1A83AC7B2AF666E000182B3C /* APReverseGeocoding.m */,
+			);
+			path = APOfflineReverseGeocoding;
+			sourceTree = "<group>";
+		};
+		1A83AC702AF666E000182B3C /* GeoJSON */ = {
+			isa = PBXGroup;
+			children = (
+				1A2EC8F32AF6BB81009F75C7 /* countries.geo.json */,
+			);
+			path = GeoJSON;
+			sourceTree = "<group>";
+		};
+		1A83AC732AF666E000182B3C /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				1A83AC742AF666E000182B3C /* APPolygon.m */,
+				1A83AC752AF666E000182B3C /* APCountryInfoBuilderDefines.h */,
+				1A83AC762AF666E000182B3C /* APCountryInfoBuilder.m */,
+				1A83AC772AF666E000182B3C /* APPolygon.h */,
+				1A83AC782AF666E000182B3C /* APCountryInfoBuilder.h */,
+			);
+			path = Internal;
 			sourceTree = "<group>";
 		};
 		1AB943F62AE29D18005A5D1C /* Models */ = {
@@ -143,6 +192,7 @@
 		4ED20FE32ADE95B4007B4E50 = {
 			isa = PBXGroup;
 			children = (
+				1A83AC852AF668A600182B3C /* iSOS-Bridging-Header.h */,
 				4ED20FEE2ADE95B4007B4E50 /* iSOS */,
 				4ED20FED2ADE95B4007B4E50 /* Products */,
 			);
@@ -167,6 +217,7 @@
 				1AC70CF82AEAE9390023F294 /* ViewModel */,
 				1A00002E2AE54BC30008B9B0 /* Resources */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
+				1A83AC6F2AF666E000182B3C /* APOfflineReverseGeocoding */,
 				4ED20FF52ADE95B6007B4E50 /* Preview Content */,
 			);
 			path = iSOS;
@@ -239,9 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E1207832AEBB6A1003ABE26 /* firstAid.csv in Resources */,
+				1A2EC8F82AF6D03B009F75C7 /* emergencyNumbers.csv in Resources */,
 				4ED20FF72ADE95B6007B4E50 /* Preview Assets.xcassets in Resources */,
+				1A2EC8F42AF6BB81009F75C7 /* countries.geo.json in Resources */,
 				4ED20FF42ADE95B6007B4E50 /* Assets.xcassets in Resources */,
-				1A00002D2AE54BB60008B9B0 /* emergencyNumbers.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,13 +304,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A83AC802AF666E000182B3C /* APReverseGeocoding.m in Sources */,
 				1A1FB9192AE47E9D00ED0D91 /* MapsModel.swift in Sources */,
 				1AA8546E2AE55D2500964C14 /* HapticModel.swift in Sources */,
 				1AC1737A2AE2648700F4818C /* RequestLocationView.swift in Sources */,
+				1A83AC7F2AF666E000182B3C /* APCountry.m in Sources */,
 				1A782D722AEBE990008E7FD8 /* FirstAidCardsModel.swift in Sources */,
 				4ED20FF22ADE95B4007B4E50 /* Bootstrap.swift in Sources */,
 				1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */,
 				1AB008202AEFC3D500887D54 /* CoordinatesTranslationModel.swift in Sources */,
+				1A83AC7D2AF666E000182B3C /* APPolygon.m in Sources */,
 				1A782D6C2AEBC474008E7FD8 /* FirstAidModel.swift in Sources */,
 				1A48E0D32AE169900012E64E /* SelectionView.swift in Sources */,
 				1AC173812AE27B8700F4818C /* CallModel.swift in Sources */,
@@ -267,6 +322,7 @@
 				1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */,
 				4E23C3052AEA55E200AD7073 /* TutorialView.swift in Sources */,
 				1A96617C2AEA62030021B6F3 /* ConversationModel.swift in Sources */,
+				1A83AC7E2AF666E000182B3C /* APCountryInfoBuilder.m in Sources */,
 				1AC70CFA2AEAE97E0023F294 /* ConversationView.swift in Sources */,
 				4E6B4AAE2AE1419600F1C4AD /* LocationViewModel.swift in Sources */,
 				1A7F95A82AE44537008110B2 /* EmergencyModel.swift in Sources */,
@@ -338,6 +394,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iSOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -394,6 +451,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "iSOS-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

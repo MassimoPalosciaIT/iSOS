@@ -1,62 +1,54 @@
 Afghanistan;119;102;119
-Åland Islands;112;112;112
+Aland Islands;112;112;112
 Albania;129;127;128
 Algeria;17;14;14
-American Samoa;911;911;911
 Andorra;112;112;112
 Angola;113;115;112
-Anguilla;911;911;911
-Antarctica;911;911;911
 Antigua and Barbuda;911;911;911
 Argentina;911;107;100
 Armenia;102;103;101
-Aruba;911;911;911
-Australia;0;0;0
+Australia;000;000;000
 Austria;112;112;112
 Azerbaijan;102;103;101
 Bahamas;911919;911919;911919
 Bahrain;999;999;999
+Baikonur Cosmodrome;103;103;103
 Bangladesh;999;999;999
 Barbados;211;511;311
 Belarus;102;103;101
 Belgium;112;112;112
 Belize;911;911;911
 Benin;117;112;118
-Bermuda;911;911;911
 Bhutan;113;112;110
 Bolivia;110;118;119
 Bosnia and Herzegovina;122;124;123
 Botswana;999;997;998
-Bouvet Island;112;112;112
 Brazil;190;192;193
-British Virgin Islands;911999;911999;911999
-Brunei;993;991;955
+Brunei Darussalam;993;991;955
 Bulgaria;112;112;112
 Burkina Faso;17;112;18
-Burma;999;999;999
 Burundi;117;112;118
 Cambodia;117;119;118
 Cameroon;117;119;118
 Canada;911;911;911
 Cape Verde;132;130;131
-Cayman Islands;911;911;911
 Central African Republic;117;1220;118
 Chad;17;17;18
 Chile;133;131;132
 China;110;120;119
-Christmas Island;0;0;0
-Cocos (Keeling) Islands;0;0;0
 Colombia;123;123;123
 Comoros;17;7720373;18
-Congo;117;117;118
-Cook Islands;999;998;996
 Costa Rica;911;911;911
 Côte d'Ivoire;180111;111;110111170
 Croatia;112;112;112
 Cuba;106;104;105
 Cyprus;112;112;112
+Cyprus U.N. Buffer Zone;112;112;112
 Czech Republic;112;112;112
+Dem. Rep. Korea;8119;8119;8119
+Democratic Republic of the Congo;112;112;118
 Denmark;112;112;112
+Dhekelia;112;112;112
 Djibouti;17;351351;18
 Dominica;911999;911999;911999
 Dominican Republic;911;911;911
@@ -67,31 +59,24 @@ Equatorial Guinea;114;115;112
 Eritrea;113;114;116
 Estonia;112;112;112
 Ethiopia;99191;99192;99193
-Falkland Islands (Islas Malvinas);999;999;999
-Faroe Islands;112;112;112
+Faeroe Islands;112;112;112
+Falkland Islands;112;112;112
 Fiji;911;911;9170
 Finland;112;112;112
 France;112;112;112
-French Guiana;112;112;112
-French Polynesia;17;15;18
+French Polynesia;112;112;112
+French Southern and Antarctic Lands;112;112;112
 Gabon;1730;13001399;18
-Gambia;117;116;118
 Georgia;22;22;22
 Germany;112;112;112
 Ghana;191;193;192
-Gibraltar;112;190;190
 Greece;112;112;112
 Greenland;112;112;112
-Grenada;911;911;911
-Guadeloupe;112;112;112
-Guam;911;911;911
 Guatemala;122123120;122123120;122123120
-Guernsey;999;999;999
 Guinea;114;115;112
 Guinea-Bissau;112;112;112
 Guyana;911;911913;911
 Haiti;114;114;114
-Holy See (Vatican City);112;112;112
 Honduras;199;199;199
 Hong Kong;999;999;999
 Hungary;112;112;112
@@ -106,48 +91,35 @@ Israel;100;100101;100102
 Italy;112;112;112
 Jamaica;911;911;911
 Japan;110;119;119
-Jersey;112;112;112
 Jordan;191;191;191
 Kazakhstan;103;103;103
 Kenya;999;999;999
-Kiribati;999;999;999
-North Korea;8119;8119;8119
-South Korea;112;112119;112119
+Kosovo;192;194;193
 Kuwait;112;112;112
 Kyrgyzstan;102;103;101
-Laos;191;195;190
+Lao PDR;191;195;190
 Latvia;112;112;112
 Lebanon;112;112;112
 Lesotho;123124;121;122
 Liberia;911;911;911
 Libya;193;193;193
-Liechtenstein;112;112;112
 Lithuania;112;112;112
 Luxembourg;112;112;112
-Macau;999;999;999
-Macedonia [FYROM];112;112;112
+Macedonia;112;112;112
 Madagascar;117;117;117118
 Malawi;997;998;999
 Malaysia;999;999;999
-Maldives;119;102;118
 Mali;18;15;17
-Malta;112;112;112
-Marshall Islands;911;911;911
-Martinique;17;15;18
 Mauritania;117;101;118
 Mauritius;999;114;115
-Mayotte;17;15;18
 Mexico;66;66;66
-Micronesia;911;911;911
 Moldova;902;903;901
-Monaco;112;112;112
 Mongolia;102;103;101
 Montenegro;112;112;112
-Montserrat;911999;911999;911999
 Morocco;190;190;190
 Mozambique;119;117;198
+Myanmar;999;999;999
 Namibia;1011;2032276;2032270
-Nauru;118117;118117;118117
 Nepal;100;100;100101
 Netherlands;112;112;112
 New Caledonia;17;15;18
@@ -155,14 +127,13 @@ New Zealand;111;111;111
 Nicaragua;118;118;118
 Niger;112;112;112
 Nigeria;199;199;199
-Niue;999;999;999
-Norfolk Island;0;0;0
+Northern Cyprus;155;112;199
 Norway;112;112;112
 Oman;9999;9999;9999
 Pakistan;15;15;1516
-Palau;911;911;911
+Palestine;100;101;102
 Panama;911;911;911
-Papua New Guinea;0;0;0
+Papua New Guinea;000;000;000
 Paraguay;911;911;911
 Peru;105;117;116
 Philippines;117;117;117
@@ -170,37 +141,32 @@ Poland;112;112;112
 Portugal;112;112;112
 Puerto Rico;911;911;911
 Qatar;999;999;999
-Réunion;17;15112;18
+Republic of Congo;117;117;118
+Republic of Korea;112;119;119
 Romania;112;112;112
-Russia;102;103;101
+Russian Federation;102;103;101
 Rwanda;112;912;112
-Saint Barthélemy;911;911;911
-Saint Helena;911;911;911
-Saint Kitts and Nevis;911;911;911
 Saint Lucia;911;911;911
-Saint Martin;911;911;911
-Saint Pierre and Miquelon;17;15;18
-Saint Vincent and the Grenadines;911999;911999;911999
-Samoa;995;996;994
 San Marino;113;118;115
-Sao Tome and Principe;222222;222222;222222
+São Tomé and Principe;222222;222222;222222
 Saudi Arabia;999;997;998
 Senegal;800002020800001700;800002020800001700;800002020800001700
 Serbia;112;112;112
-Seychelles;999;999;999
+Siachen Glacier;110;120;119
 Sierra Leone;999;999;19
 Singapore;999;995;995
 Slovakia;112;112;112
 Slovenia;113;112;112
 Solomon Islands;999;999;999
 Somalia;888;999;555
+Somaliland;888;999;555
 South Africa;10111;10177;10177
-South Georgia and the Islands;999;999;999
+South Georgia and South Sandwich Islands;999;999;999
+South Sudan;999;999;999
 Spain;112;112;112
 Sri Lanka;119118;110;110
 Sudan;999;999;999
 Suriname;115;115;115
-Svalbard;112;112;112
 Swaziland;999;999;999
 Sweden;112;112;112
 Switzerland;112;112;112
@@ -209,29 +175,24 @@ Taiwan;110;119;119
 Tajikistan;2;3;1
 Tanzania;111;111;111
 Thailand;191;1554;199
+The Gambia;117;116;118
 Timor-Leste;112;112;112
 Togo;117171;242;118
-Tokelau;2116;2112;2116
-Tonga;117171172;242;118
 Trinidad and Tobago;999;990;990
 Tunisia;197;197;197
 Turkey;155;112;155
 Turkmenistan;3;3;3
-Turks and Caicos Islands;911999;911999;911999
-Tuvalu;911;911;911
 Uganda;999;999;999
 Ukraine;112;112;112
 United Arab Emirates;998999;998999;998999
 United Kingdom;999;999;999
 United States;911;911;911
-United States Minor Outlying Islands;911;911;911
 Uruguay;911;911;911
 Uzbekistan;2;3;1
 Vanuatu;112;112;112
+Vatican City;112;112;112
 Venezuela;171;171;171
 Vietnam;113;115;114
-Virgin Islands;911;911;911
-West Bank;101;101;101
 Western Sahara;150;150;150
 Yemen;199;199;199
 Zambia;999;991;993

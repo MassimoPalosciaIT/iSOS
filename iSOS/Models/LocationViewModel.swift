@@ -29,15 +29,6 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         lastSeenLocation = locations.first
-        fetchCountryAndCity(for: locations.first)
-    }
-    
-    func fetchCountryAndCity(for location: CLLocation?) {
-        guard let location = location else { return }
-        let geocoder = CLGeocoder()
-        geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
-            self.currentPlacemark = placemarks?.first
-        }
     }
     
     func getLatitude() -> String {
@@ -46,10 +37,6 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func getLongitude() -> String {
         return String(self.coordinate?.longitude ?? 0)
-    }
-    
-    func getCountry() -> String {
-        return self.currentPlacemark?.country ?? "No country"
     }
     
     func getFormattedCoordinates() -> String {
@@ -79,7 +66,19 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         
         return "\(latitudeString) \(longitudeString)"
     }
+    
+    func getCountry() -> String {
+        let coordinate = CLLocationCoordinate2D(
+            latitude: (self.coordinate?.latitude ?? 0),
+            longitude: (self.coordinate?.longitude ?? 0)
+        )
+        guard let reverseGeocoding = APReverseGeocoding.default(),
+              let country = reverseGeocoding.geocodeCountry(with: coordinate) else {
+            return "Could not perform geocoding for the given coordinates."
+        }
 
+        return country.name ?? "No country"
+    }
     
     var coordinate: CLLocationCoordinate2D? {
         self.lastSeenLocation?.coordinate

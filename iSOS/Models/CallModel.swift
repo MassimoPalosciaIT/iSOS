@@ -42,5 +42,5 @@ func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> St
         }
     }
 
-    return "Number not found"
+    return "+112"
 }

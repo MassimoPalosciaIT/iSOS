@@ -24,10 +24,6 @@ struct EmergencyView: View {
         return getEmergencyNumber(for: currentCountry, emergencyType: selectedEmergecny.emergencyType)
     }
     
-    var computedCountryName: String {
-        return locationViewModel.getCountry()
-    }
-    
     var body: some View {
         VStack {
             ZStack{
@@ -57,8 +53,6 @@ struct EmergencyView: View {
                     }
                     
                     Spacer()
-                    
-                    Text(computedCountryName)
                     
                     AppButtonCall(gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2, callNumber:computedCountryEmergencyNumber)
                     

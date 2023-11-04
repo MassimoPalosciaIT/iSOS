@@ -26,7 +26,7 @@ func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> St
 
     let lines = csvContent.components(separatedBy: .newlines)
     
-    for line in lines.dropFirst() {
+    for line in lines {
         let columns = line.split(separator: ";")
         guard columns.count >= 4 else { continue }
 

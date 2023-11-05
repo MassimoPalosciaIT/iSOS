@@ -7,12 +7,12 @@ struct SelectionView: View {
     
     init() {
         let navBarAppearance = UINavigationBar.appearance()
-        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         
         let titleFontSize: CGFloat = 28.0
         let titleFont = UIFont.boldSystemFont(ofSize: titleFontSize)
         navBarAppearance.titleTextAttributes = [
-            .foregroundColor: UIColor.white,
+            //.foregroundColor: UIColor.white,
             .font: titleFont
         ]
     }

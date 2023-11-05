@@ -77,28 +77,28 @@ struct FirstAidSelectionButton: View {
     var title: String
     
     var body: some View {
-            ZStack{
-                AppStandartButton(gradientColor1: Color.iSOSGray, gradientColor2: Color.iSOSGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
-                
-                VStack
-                {
-                    HStack {
-                        Group {
-                            Image(systemName:iconName)
-                                .padding(.leading, side_padding)
-                            Text(title)
-                                .fontWeight(.bold)
-                            Spacer()
-                            Image(systemName: "chevron.right")
-                                .padding(.trailing, side_padding)
-                        }
-                        .font(.system(size: 26))
-                        //.foregroundColor(.white)
-                        .fontWeight(.medium)
-                        
+        ZStack{
+            AppStandartButton(gradientColor1: Color.iSOSGray, gradientColor2: Color.iSOSGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
+            
+            VStack
+            {
+                HStack {
+                    Group {
+                        Image(systemName:iconName)
+                            .padding(.leading, side_padding)
+                        Text(title)
+                            .fontWeight(.bold)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .padding(.trailing, side_padding)
                     }
-                }.frame(height: 80)
-            }
+                    .font(.system(size: 26))
+                    //.foregroundColor(.white)
+                    .fontWeight(.medium)
+                    
+                }
+            }.frame(height: 80)
+        }
     }
 }
 
@@ -119,7 +119,7 @@ struct AppStandartButton: View {
                 HStack() {
                     Spacer()
                     Image(systemName: iconName)
-                        //.foregroundColor(.white)
+                    //.foregroundColor(.white)
                         .opacity(iconOpacity)
                         .font(.system(size: CGFloat(iconSize)))
                         .padding(.trailing, -35)
@@ -144,7 +144,7 @@ struct AppPopupButton: View {
                 HStack() {
                     Spacer()
                     Image(systemName: iconName)
-                        //.foregroundColor(.white)
+                    //.foregroundColor(.white)
                         .fontWeight(.black)
                         .opacity(0.02)
                         .font(.system(size: CGFloat(300)))
@@ -175,7 +175,7 @@ struct AppButtonCall: View {
                     .shadow(color: gradientColor1.opacity(0.8), radius: 50)
                 
                 Image(systemName: iconName)
-                    //.foregroundColor(.white)
+                //.foregroundColor(.white)
                     .font(.system(size: 64))
             }
         }
@@ -278,7 +278,7 @@ struct LocationButton: View {
                     HStack{
                         Text(formatedCoordinates)
                             .font(.system(size: 21))
-                            //.foregroundColor(.white)
+                        //.foregroundColor(.white)
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.center)
                             .padding([.leading, .bottom], 20.0)
@@ -305,19 +305,34 @@ struct BlobCombo: View {
     var body: some View {
         VStack(spacing: 10){
             HStack{
-                VStack{
-                    TextBlob(textContent: messageQuestion, fillColor: Color.iSOSGray, textColor: Color.white)
+                HStack{
+                    Text(messageQuestion)
+                        .padding()
+                        .background(Color(UIColor.iSOSGray))
+                        .clipShape(BubbleShape(myMessage: false))
+                        .foregroundColor(.white)
+                        .fontWeight(.semibold)
                     
-                }.frame(maxWidth: 200)
+                    Spacer()
+                }
+                .frame(width: 300)
+                
                 Spacer()
             }
-
+            
             HStack{
                 Spacer()
-                VStack{
-                    TextBlob(textContent: messageReply, fillColor: Color.blobGray, textColor: Color.white)
-                    
-                }.frame(maxWidth: 200)
+                
+                HStack{
+                    Spacer()
+                    Text(messageReply)
+                        .padding()
+                        .background(Color(UIColor.blobGray))
+                        .clipShape(BubbleShape(myMessage: true))
+                        .foregroundColor(.white)
+                        .fontWeight(.semibold)
+                }
+                .frame(width: 300)
             }
         }
     }
@@ -328,7 +343,7 @@ struct TutorialButtonStyle: ButtonStyle {
         configuration.label
             .padding()
             .background(Color.redGradient1)
-            //.foregroundColor(.white)
+        //.foregroundColor(.white)
             .cornerRadius(15)
     }
 }
@@ -352,7 +367,7 @@ struct TutorialElement: View {
             HStack{
                 VStack(alignment: .leading){
                     Text(title)
-                        //.foregroundColor(.white)
+                    //.foregroundColor(.white)
                         .font(.system(size: 15))
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
@@ -399,7 +414,7 @@ struct TextBlob: View {
 }
 
 #Preview {
-        LocationButton()
+    BlobCombo(messageQuestion: "The app does not have", messageReply: "The app does not have location permissions. The app does not have location permissions")
         .environmentObject(LocationViewModel())
         .padding(.horizontal)
 }

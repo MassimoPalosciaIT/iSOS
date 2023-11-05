@@ -11,6 +11,7 @@
 		1A2EC8F42AF6BB81009F75C7 /* countries.geo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2EC8F32AF6BB81009F75C7 /* countries.geo.json */; };
 		1A2EC8F82AF6D03B009F75C7 /* emergencyNumbers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1A2EC8F72AF6D03B009F75C7 /* emergencyNumbers.csv */; };
 		1A48E0D32AE169900012E64E /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A48E0D22AE169900012E64E /* SelectionView.swift */; };
+		1A49CD962AF80ABF00AAAB16 /* ShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49CD952AF80ABF00AAAB16 /* ShapesView.swift */; };
 		1A782D6C2AEBC474008E7FD8 /* FirstAidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D6B2AEBC474008E7FD8 /* FirstAidModel.swift */; };
 		1A782D6E2AEBC78B008E7FD8 /* FirstAidDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */; };
 		1A782D722AEBE990008E7FD8 /* FirstAidCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */; };
@@ -45,6 +46,7 @@
 		1A2EC8F32AF6BB81009F75C7 /* countries.geo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.geo.json; sourceTree = "<group>"; };
 		1A2EC8F72AF6D03B009F75C7 /* emergencyNumbers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emergencyNumbers.csv; sourceTree = "<group>"; };
 		1A48E0D22AE169900012E64E /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		1A49CD952AF80ABF00AAAB16 /* ShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesView.swift; sourceTree = "<group>"; };
 		1A782D6B2AEBC474008E7FD8 /* FirstAidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidModel.swift; sourceTree = "<group>"; };
 		1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidDetailedView.swift; sourceTree = "<group>"; };
 		1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardsModel.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				1AB943F92AE3F10A005A5D1C /* UIElementsModel.swift */,
 				1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */,
+				1A49CD952AF80ABF00AAAB16 /* ShapesView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A49CD962AF80ABF00AAAB16 /* ShapesView.swift in Sources */,
 				1A83AC802AF666E000182B3C /* APReverseGeocoding.m in Sources */,
 				1A1FB9192AE47E9D00ED0D91 /* MapsModel.swift in Sources */,
 				1AA8546E2AE55D2500964C14 /* HapticModel.swift in Sources */,

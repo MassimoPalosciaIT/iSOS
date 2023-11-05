@@ -34,9 +34,9 @@ struct RequestLocationView: View {
                                    ,label: {
                                 Label("Allow tracking", systemImage: "location.fill")
                             })
-                            .padding(10)
+                            .padding(12)
                             .foregroundColor(.white)
-                            .background(Color.blue)
+                            .background(Color.redGradient2)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                         }.padding(.bottom, 20.0)
                         

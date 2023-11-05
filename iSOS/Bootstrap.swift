@@ -10,14 +10,14 @@ struct Bootstrap: View {
                 AnyView(RequestLocationView())
                     .environmentObject(locationViewModel)
             case .restricted:
-                ErrorView(errorText: "Location use is restricted.")
+                ErrorView(errorText: "Location use is restricted")
             case .denied:
-                ErrorView(errorText: "The app does not have location permissions. Please enable them in settings.")
+                ErrorView(errorText: "The app does not have location permissions")
             case .authorizedAlways, .authorizedWhenInUse:
                 SelectionView()
             default:
-                Text("Unexpected status")
-            }   
+                Text("Unexpected status. Contact support")
+            }
         }
         .environmentObject(locationViewModel)
     }

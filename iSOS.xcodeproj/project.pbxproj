@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1A0E5B812B0008F7006F0B77 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E5B802B0008F7006F0B77 /* MapView.swift */; };
 		1A2EC8F42AF6BB81009F75C7 /* countries.geo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2EC8F32AF6BB81009F75C7 /* countries.geo.json */; };
-		1A2EC8F82AF6D03B009F75C7 /* emergencyNumbers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1A2EC8F72AF6D03B009F75C7 /* emergencyNumbers.csv */; };
 		1A48E0D32AE169900012E64E /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A48E0D22AE169900012E64E /* SelectionView.swift */; };
 		1A49CD962AF80ABF00AAAB16 /* ShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49CD952AF80ABF00AAAB16 /* ShapesView.swift */; };
+		1A7763E42B01183A0027E945 /* emergencyNumbers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1A7763E32B01183A0027E945 /* emergencyNumbers.csv */; };
 		1A782D6C2AEBC474008E7FD8 /* FirstAidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D6B2AEBC474008E7FD8 /* FirstAidModel.swift */; };
 		1A782D6E2AEBC78B008E7FD8 /* FirstAidDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */; };
 		1A782D722AEBE990008E7FD8 /* FirstAidCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */; };
@@ -44,9 +44,9 @@
 		1A0E5B802B0008F7006F0B77 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		1A1FB9202AE5371300ED0D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1A2EC8F32AF6BB81009F75C7 /* countries.geo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.geo.json; sourceTree = "<group>"; };
-		1A2EC8F72AF6D03B009F75C7 /* emergencyNumbers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emergencyNumbers.csv; sourceTree = "<group>"; };
 		1A48E0D22AE169900012E64E /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		1A49CD952AF80ABF00AAAB16 /* ShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesView.swift; sourceTree = "<group>"; };
+		1A7763E32B01183A0027E945 /* emergencyNumbers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emergencyNumbers.csv; sourceTree = "<group>"; };
 		1A782D6B2AEBC474008E7FD8 /* FirstAidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidModel.swift; sourceTree = "<group>"; };
 		1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidDetailedView.swift; sourceTree = "<group>"; };
 		1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardsModel.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		1A00002E2AE54BC30008B9B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1A2EC8F72AF6D03B009F75C7 /* emergencyNumbers.csv */,
+				1A7763E32B01183A0027E945 /* emergencyNumbers.csv */,
 				4E1207822AEBB6A1003ABE26 /* firstAid.csv */,
 			);
 			path = Resources;
@@ -292,8 +292,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7763E42B01183A0027E945 /* emergencyNumbers.csv in Resources */,
 				4E1207832AEBB6A1003ABE26 /* firstAid.csv in Resources */,
-				1A2EC8F82AF6D03B009F75C7 /* emergencyNumbers.csv in Resources */,
 				4ED20FF72ADE95B6007B4E50 /* Preview Assets.xcassets in Resources */,
 				1A2EC8F42AF6BB81009F75C7 /* countries.geo.json in Resources */,
 				4ED20FF42ADE95B6007B4E50 /* Assets.xcassets in Resources */,

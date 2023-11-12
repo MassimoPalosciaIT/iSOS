@@ -9,4 +9,5 @@ struct Emergency: Identifiable {
     var gradientColor2: Color
     var emergencyType: EmergencyType
     var menus: [EmergencyMenu]
+    var mapSearchQuery: String
 }

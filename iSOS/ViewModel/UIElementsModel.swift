@@ -25,7 +25,6 @@ struct EmergencyMenuButton: View {
                             Spacer()
                         }
                         .font(.system(size: 24))
-                        //.foregroundColor(.white)
                         .fontWeight(.medium)
                     }
                     .padding(.top, side_padding)
@@ -61,7 +60,6 @@ struct EmergencySelectionButton: View {
                                 .padding(.trailing, side_padding)
                         }
                         .font(.system(size: 26))
-                        //.foregroundColor(.white)
                         .fontWeight(.medium)
                         
                     }
@@ -93,7 +91,6 @@ struct FirstAidSelectionButton: View {
                             .padding(.trailing, side_padding)
                     }
                     .font(.system(size: 26))
-                    //.foregroundColor(.white)
                     .fontWeight(.medium)
                     
                 }
@@ -119,7 +116,6 @@ struct AppStandartButton: View {
                 HStack() {
                     Spacer()
                     Image(systemName: iconName)
-                    //.foregroundColor(.white)
                         .opacity(iconOpacity)
                         .font(.system(size: CGFloat(iconSize)))
                         .padding(.trailing, -35)
@@ -144,7 +140,6 @@ struct AppPopupButton: View {
                 HStack() {
                     Spacer()
                     Image(systemName: iconName)
-                    //.foregroundColor(.white)
                         .fontWeight(.black)
                         .opacity(0.02)
                         .font(.system(size: CGFloat(300)))
@@ -175,7 +170,6 @@ struct AppButtonCall: View {
                     .shadow(color: gradientColor1.opacity(0.8), radius: 50)
                 
                 Image(systemName: iconName)
-                //.foregroundColor(.white)
                     .font(.system(size: 64))
             }
         }
@@ -219,7 +213,6 @@ struct AppPopupCopy: View {
                     Text(title)
                 }
                 .font(.system(size: 18))
-                //.foregroundColor(.white)
                 .fontWeight(.medium)
             }
         }
@@ -269,7 +262,6 @@ struct LocationButton: View {
                             Spacer()
                         }
                         .font(.system(size: 24))
-                        //.foregroundColor(.white)
                         .fontWeight(.medium)
                     }.padding(.top, 20.0)
                     
@@ -278,7 +270,6 @@ struct LocationButton: View {
                     HStack{
                         Text(formatedCoordinates)
                             .font(.system(size: 21))
-                        //.foregroundColor(.white)
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.center)
                             .padding([.leading, .bottom], 20.0)
@@ -343,7 +334,6 @@ struct TutorialButtonStyle: ButtonStyle {
         configuration.label
             .padding()
             .background(Color.redGradient1)
-        //.foregroundColor(.white)
             .cornerRadius(15)
     }
 }
@@ -367,7 +357,6 @@ struct TutorialElement: View {
             HStack{
                 VStack(alignment: .leading){
                     Text(title)
-                    //.foregroundColor(.white)
                         .font(.system(size: 15))
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)

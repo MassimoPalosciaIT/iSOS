@@ -7,12 +7,10 @@ struct SelectionView: View {
     
     init() {
         let navBarAppearance = UINavigationBar.appearance()
-//        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         
         let titleFontSize: CGFloat = 28.0
         let titleFont = UIFont.boldSystemFont(ofSize: titleFontSize)
         navBarAppearance.titleTextAttributes = [
-            //.foregroundColor: UIColor.white,
             .font: titleFont
         ]
     }
@@ -36,12 +34,13 @@ struct SelectionView: View {
                                         self.activeSheet = .firstAid
                                     }),
                                     EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
-                                        open_link(searchQuery: "Hospitals", locationViewModel: locationViewModel)
+                                        self.activeSheet = .maps
                                     }),
                                     EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
                                         self.activeSheet = .conversation
                                     }),
-                                ]
+                                ],
+                                mapSearchQuery: "Hospitals"
                             ), activeSheet: $activeSheet
                         )
                         
@@ -59,7 +58,8 @@ struct SelectionView: View {
                                     EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
                                         self.activeSheet = .conversation
                                     }),
-                                ]
+                                ],
+                                mapSearchQuery: "Fire department"
                             ), activeSheet: $activeSheet
                         )
                         
@@ -72,12 +72,13 @@ struct SelectionView: View {
                                 emergencyType: EmergencyType.police,
                                 menus: [
                                     EmergencyMenu(title: "Stations", iconName: "house.lodge.fill",  action: {
-                                        open_link(searchQuery: "Police stations", locationViewModel: locationViewModel)
+                                        self.activeSheet = .maps
                                     }),
                                     EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
                                         self.activeSheet = .conversation
                                     }),
-                                ]
+                                ],
+                                mapSearchQuery: "Police Stations"
                             ), activeSheet: $activeSheet
                         )
                         

@@ -44,3 +44,7 @@ func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> St
 
     return "+112"
 }
+
+func testTap(){
+    print("Test tap")
+}

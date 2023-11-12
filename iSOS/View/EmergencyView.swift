@@ -3,7 +3,8 @@ import SwiftUI
 enum ActiveSheet: Identifiable {
     case conversation
     case firstAid
-
+    case maps
+    
     var id: Int {
         hashValue
     }
@@ -11,9 +12,8 @@ enum ActiveSheet: Identifiable {
 
 struct EmergencyView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
-    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     @Binding var activeSheet: ActiveSheet?
-    
+
     let selectedEmergecny: Emergency
     
     var currentCountry: String {
@@ -71,17 +71,26 @@ struct EmergencyView: View {
         }
         .sheet(item: $activeSheet) { item in
             switch item {
-               case .conversation:
+            case .conversation:
                 ConversationView(emergencyType: selectedEmergecny.emergencyType)
-                        .environmentObject(locationViewModel)
-                       .presentationDetents([.large])
-                       .presentationDragIndicator(.visible)
-                       .padding(.top)
-               case .firstAid:
-                    FirstAidView()
-                        .presentationDetents([.large])
-                        .presentationDragIndicator(.visible)
-                        .padding(.top)
+                    .environmentObject(locationViewModel)
+                    .presentationDetents([.large])
+                    .presentationDragIndicator(.visible)
+                    .padding(.top)
+            case .firstAid:
+                FirstAidView()
+                    .presentationDetents([.large])
+                    .presentationDragIndicator(.visible)
+                    .padding(.top)
+            case .maps:
+                MapView(
+                    gradientColor1: selectedEmergecny.gradientColor1,
+                    gradientColor2: selectedEmergecny.gradientColor2,
+                    searchQuery: selectedEmergecny.mapSearchQuery,
+                    activeSheet: $activeSheet
+                )
+                .presentationDetents([.large])
+                .environmentObject(locationViewModel)
             }
         }
     }
@@ -102,13 +111,14 @@ struct EmergencyView: View {
             EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action:  testTap),
             EmergencyMenu(title: "Hospitals", iconName: "building.2.fill", action: testTap),
             EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: testTap),
-        ]
+        ],
+        mapSearchQuery: "Hospitals"
     )
     
     return EmergencyView(
         activeSheet: $activeSheet,
         selectedEmergecny: emergency
     )
-        
+    
     .environmentObject(LocationViewModel())
 }

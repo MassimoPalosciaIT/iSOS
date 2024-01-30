@@ -3,6 +3,7 @@ import SwiftUI
 struct ErrorView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
     var errorText:String
+    var locationError: Bool = true
     
     var body: some View {
         ZStack{
@@ -31,18 +32,21 @@ struct ErrorView: View {
                     
                     Spacer()
                     
-                    Group(){
-                        Button(action: {
-                            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-                        }
-                               ,label: {
-                            Label("Open settings", systemImage: "gearshape.fill")
-                        })
-                        .padding(12)
-                        .foregroundColor(.white)
-                        .background(Color.redGradient2)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                    }.padding(.bottom, 20.0)
+                    
+                    if locationError{
+                        Group(){
+                            Button(action: {
+                                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+                            }
+                                   ,label: {
+                                Label("Open settings", systemImage: "gearshape.fill")
+                            })
+                            .padding(12)
+                            .foregroundColor(.white)
+                            .background(Color.redGradient2)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                        }.padding(.bottom, 20.0)
+                    }
                     
                 }.frame(height: 340)
             }.padding(.horizontal)
@@ -53,5 +57,5 @@ struct ErrorView: View {
 }
 
 #Preview {
-    ErrorView(errorText: "The app does not have location permissions")
+    ErrorView(errorText: "Location use is restricted")
 }

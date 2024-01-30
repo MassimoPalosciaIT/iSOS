@@ -35,9 +35,7 @@
 		4E36D5212AE2608000209E4E /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5202AE2608000209E4E /* EmergencyView.swift */; };
 		4E6B4AAE2AE1419600F1C4AD /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */; };
 		4ED20FF02ADE95B4007B4E50 /* iSOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */; };
-		4ED20FF22ADE95B4007B4E50 /* Bootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED20FF12ADE95B4007B4E50 /* Bootstrap.swift */; };
 		4ED20FF42ADE95B6007B4E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */; };
-		4ED20FF72ADE95B6007B4E50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED20FF62ADE95B6007B4E50 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,9 +75,7 @@
 		4E6B4AAD2AE1419600F1C4AD /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		4ED20FEC2ADE95B4007B4E50 /* iSOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSOSApp.swift; sourceTree = "<group>"; };
-		4ED20FF12ADE95B4007B4E50 /* Bootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootstrap.swift; sourceTree = "<group>"; };
 		4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4ED20FF62ADE95B6007B4E50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				1A83AC852AF668A600182B3C /* iSOS-Bridging-Header.h */,
+				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FEE2ADE95B4007B4E50 /* iSOS */,
 				4ED20FED2ADE95B4007B4E50 /* Products */,
 			);
@@ -212,26 +209,15 @@
 		4ED20FEE2ADE95B4007B4E50 /* iSOS */ = {
 			isa = PBXGroup;
 			children = (
-				1A1FB9202AE5371300ED0D91 /* Info.plist */,
 				4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */,
-				4ED20FF12ADE95B4007B4E50 /* Bootstrap.swift */,
+				1A1FB9202AE5371300ED0D91 /* Info.plist */,
 				1AB943F72AE29D34005A5D1C /* View */,
 				1AB943F62AE29D18005A5D1C /* Models */,
 				1AC70CF82AEAE9390023F294 /* ViewModel */,
 				1A00002E2AE54BC30008B9B0 /* Resources */,
-				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				1A83AC6F2AF666E000182B3C /* APOfflineReverseGeocoding */,
-				4ED20FF52ADE95B6007B4E50 /* Preview Content */,
 			);
 			path = iSOS;
-			sourceTree = "<group>";
-		};
-		4ED20FF52ADE95B6007B4E50 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				4ED20FF62ADE95B6007B4E50 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +280,6 @@
 			files = (
 				1A7763E42B01183A0027E945 /* emergencyNumbers.csv in Resources */,
 				4E1207832AEBB6A1003ABE26 /* firstAid.csv in Resources */,
-				4ED20FF72ADE95B6007B4E50 /* Preview Assets.xcassets in Resources */,
 				1A2EC8F42AF6BB81009F75C7 /* countries.geo.json in Resources */,
 				4ED20FF42ADE95B6007B4E50 /* Assets.xcassets in Resources */,
 			);
@@ -314,7 +299,6 @@
 				1A83AC7F2AF666E000182B3C /* APCountry.m in Sources */,
 				1A782D722AEBE990008E7FD8 /* FirstAidCardsModel.swift in Sources */,
 				1A0E5B812B0008F7006F0B77 /* MapView.swift in Sources */,
-				4ED20FF22ADE95B4007B4E50 /* Bootstrap.swift in Sources */,
 				1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */,
 				1AB008202AEFC3D500887D54 /* CoordinatesTranslationModel.swift in Sources */,
 				1A83AC7D2AF666E000182B3C /* APPolygon.m in Sources */,
@@ -467,7 +451,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iSOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = GXDG2KXXXC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -500,7 +484,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iSOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = GXDG2KXXXC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

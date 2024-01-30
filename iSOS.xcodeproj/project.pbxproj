@@ -460,7 +460,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iSOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = HelpApp;
+				INFOPLIST_KEY_CFBundleDisplayName = Yaha;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to get coordinates";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to get coordinates";
@@ -493,7 +493,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iSOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = HelpApp;
+				INFOPLIST_KEY_CFBundleDisplayName = Yaha;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to get coordinates";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to get coordinates";

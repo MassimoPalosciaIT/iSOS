@@ -76,7 +76,7 @@ struct FirstAidSelectionButton: View {
     
     var body: some View {
         ZStack{
-            AppStandartButton(gradientColor1: Color.iSOSGray, gradientColor2: Color.iSOSGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
+            AppStandartButton(gradientColor1: .iSOSGray, gradientColor2: .iSOSGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
             
             VStack
             {
@@ -128,7 +128,7 @@ struct AppStandartButton: View {
 }
 
 struct AppPopupButton: View {
-    var backgrpundColor: Color = Color.iSOSGray
+    var backgrpundColor: Color = .iSOSGray
     let cornerRadius: Double = 20
     var iconName: String
     
@@ -178,8 +178,8 @@ struct AppButtonCall: View {
 }
 
 struct TopGradient: View {
-    var gradientColor1: Color = Color.pink
-    var gradientColor2: Color = Color.pink
+    var gradientColor1: Color = .pink
+    var gradientColor2: Color = .pink
     
     var body: some View {
         VStack {
@@ -200,8 +200,8 @@ struct AppPopupCopy: View {
     var body: some View {
         ZStack{
             AppStandartButton(
-                gradientColor1: Color.iSOSGray,
-                gradientColor2: Color.iSOSGray,
+                gradientColor1: .iSOSGray,
+                gradientColor2: .iSOSGray,
                 iconName: iconName,
                 frameHeight: 45,
                 iconOpacity: 0
@@ -225,7 +225,7 @@ struct LocationButton: View {
     
     let title: String = "You are here:"
     let iconName: String = "location.fill"
-    let backroundColor: Color = Color.iSOSGray
+    let backroundColor: Color = .iSOSGray
     
     var formatedCoordinates: String {
         return locationViewModel.getFormattedCoordinates()
@@ -299,7 +299,7 @@ struct BlobCombo: View {
                 HStack{
                     Text(messageQuestion)
                         .padding()
-                        .background(Color(UIColor.iSOSGray))
+                        .background(Color(.iSOSGray))
                         .clipShape(BubbleShape(myMessage: false))
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
@@ -318,7 +318,7 @@ struct BlobCombo: View {
                     Spacer()
                     Text(messageReply)
                         .padding()
-                        .background(Color(UIColor.blobGray))
+                        .background(Color(.blobGray))
                         .clipShape(BubbleShape(myMessage: true))
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
@@ -333,7 +333,7 @@ struct TutorialButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
-            .background(Color.redGradient1)
+            .background(.redGradient1)
             .cornerRadius(15)
     }
 }
@@ -349,7 +349,7 @@ struct TutorialElement: View {
             Image(systemName: iconName)
                 .font(.system(size: 40))
                 .fontWeight(.medium)
-                .foregroundColor(Color.redGradient1)
+                .foregroundColor(.redGradient1)
                 .padding(.trailing, 20)
                 .frame(width: 40,height: 40)
             
@@ -375,8 +375,8 @@ struct TutorialElement: View {
 
 struct TextBlob: View {
     var textContent: String = "2. Call an ambulance as soon as possible."
-    var fillColor: Color = Color.blobGray
-    var textColor: Color = Color.white
+    var fillColor: Color = .blobGray
+    var textColor: Color = .white
     
     var body: some View{
         ZStack{

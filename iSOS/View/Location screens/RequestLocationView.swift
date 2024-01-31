@@ -5,7 +5,7 @@ struct RequestLocationView: View {
     
     var body: some View {
             ZStack{
-                TopGradient(gradientColor1: Color.redGradient1, gradientColor2: Color.redGradient2)
+                TopGradient(gradientColor1: .redGradient1, gradientColor2: .redGradient2)
                 
                 ZStack{
                     AppPopupButton(iconName: "location.fill")
@@ -36,7 +36,7 @@ struct RequestLocationView: View {
                             })
                             .padding(12)
                             .foregroundColor(.white)
-                            .background(Color.redGradient2)
+                            .background(.redGradient2)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                         }.padding(.bottom, 20.0)
                         

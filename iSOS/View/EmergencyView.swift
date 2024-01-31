@@ -104,8 +104,8 @@ struct EmergencyView: View {
     Emergency(
         title: "Medical help",
         iconName: "cross.fill",
-        gradientColor1: Color.redGradient1,
-        gradientColor2: Color.redGradient2,
+        gradientColor1: .redGradient1,
+        gradientColor2: .redGradient2,
         emergencyType: EmergencyType.medicalHelp,
         menus: [
             EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action:  testTap),

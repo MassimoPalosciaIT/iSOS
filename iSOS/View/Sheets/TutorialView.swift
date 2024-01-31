@@ -12,7 +12,7 @@ struct TutorialView: View {
                     .clipShape(Rectangle())
                     .cornerRadius(20)
                     .padding(.top, 80.0)
-                Text("Welcome to the \n HelpApp")
+                Text("Welcome to the \n Yaha")
                     .foregroundColor(.white)
                     .font(.system(size: 36))
                     .fontWeight(.semibold)

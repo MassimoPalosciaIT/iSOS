@@ -20,10 +20,19 @@ struct FirstAidSelectionButton: View {
             {
                 HStack {
                     Group {
-                        Image(systemName:iconName)
+                        Image(systemName:"xmark")
                             .padding(.leading, side_padding)
+                            .opacity(0)
+                            .overlay(
+                                Image(systemName:iconName)
+                                    .padding(.leading, side_padding)
+                            )
+                        
+                        
                         Text(title)
                             .fontWeight(.bold)
+                            .padding(.leading)
+                        
                         Spacer()
                         Image(systemName: "chevron.right")
                             .padding(.trailing, side_padding)
@@ -35,4 +44,8 @@ struct FirstAidSelectionButton: View {
             }.frame(height: 80)
         }
     }
+}
+
+#Preview {
+    FirstAidSelectionButton(iconName: "lungs", title: "Test")
 }

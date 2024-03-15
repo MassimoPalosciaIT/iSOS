@@ -13,7 +13,7 @@ enum ActiveSheet: Identifiable {
 struct EmergencyView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
     @Binding var activeSheet: ActiveSheet?
-
+    
     let selectedEmergecny: Emergency
     
     var currentCountry: String {
@@ -25,50 +25,48 @@ struct EmergencyView: View {
     }
     
     var body: some View {
-        VStack {
-            ZStack{
-                TopGradient(gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2)
-                
-                VStack{
-                    VStack(spacing: 10){
-                        let amountOfMenus = selectedEmergecny.menus.count
-                        
-                        HStack(spacing: 10){
-                            ForEach(0..<(amountOfMenus  + 1) / 2, id: \.self) { i in
-                                let singleMenu = selectedEmergecny.menus[i]
-                                EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
-                                    singleMenu.action()
-                                }
-                            }
-                        }
-                        
-                        HStack(spacing: 10){
-                            ForEach((amountOfMenus  + 1) / 2..<amountOfMenus, id: \.self) { i in
-                                let singleMenu = selectedEmergecny.menus[i]
-                                EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
-                                    singleMenu.action()
-                                }
+        ZStack{
+            TopGradient(gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2)
+            
+            VStack{
+                VStack(spacing: 10){
+                    let amountOfMenus = selectedEmergecny.menus.count
+                    
+                    HStack(spacing: 10){
+                        ForEach(0..<(amountOfMenus  + 1) / 2, id: \.self) { i in
+                            let singleMenu = selectedEmergecny.menus[i]
+                            EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
+                                singleMenu.action()
                             }
                         }
                     }
                     
-                    Spacer()
-                    
-                    AppButtonCall(gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2, callNumber:computedCountryEmergencyNumber)
-                    
-                    Spacer()
-                    
-                    LocationButton()
+                    HStack(spacing: 10){
+                        ForEach((amountOfMenus  + 1) / 2..<amountOfMenus, id: \.self) { i in
+                            let singleMenu = selectedEmergecny.menus[i]
+                            EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
+                                singleMenu.action()
+                            }
+                        }
+                    }
                 }
-                .padding(.horizontal)
-                .padding(.top, 20.0)
                 
+                Spacer()
+                
+                AppButtonCall(gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2, callNumber:computedCountryEmergencyNumber)
+                
+                Spacer()
+                
+                LocationButton()
             }
-            .frame(maxHeight: .infinity)
-            .background(Color.iSOSBackground.ignoresSafeArea())
-            .navigationTitle(selectedEmergecny.title)
-            .navigationBarTitleDisplayMode(.inline)
+            .padding(.horizontal)
+            .padding(.top, 20.0)
+            
         }
+        .frame(maxHeight: .infinity)
+        .background(Color.iSOSBackground.ignoresSafeArea())
+        .navigationTitle(selectedEmergecny.title)
+        .navigationBarTitleDisplayMode(.inline)
         .sheet(item: $activeSheet) { item in
             switch item {
             case .conversation:

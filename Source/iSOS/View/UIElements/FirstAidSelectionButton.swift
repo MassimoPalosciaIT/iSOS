@@ -1,0 +1,38 @@
+//
+//  FirstAidSelectionButton.swift
+//  iSOS
+//
+//  Created by Matt Novoselov on 15/03/24.
+//
+
+import SwiftUI
+
+struct FirstAidSelectionButton: View {
+    let side_padding: CGFloat = 20
+    var iconName: String
+    var title: String
+    
+    var body: some View {
+        ZStack{
+            AppStandartButton(gradientColor1: .iSOSGray, gradientColor2: .iSOSGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
+            
+            VStack
+            {
+                HStack {
+                    Group {
+                        Image(systemName:iconName)
+                            .padding(.leading, side_padding)
+                        Text(title)
+                            .fontWeight(.bold)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .padding(.trailing, side_padding)
+                    }
+                    .font(.system(size: 26))
+                    .fontWeight(.medium)
+                    
+                }
+            }.frame(height: 80)
+        }
+    }
+}

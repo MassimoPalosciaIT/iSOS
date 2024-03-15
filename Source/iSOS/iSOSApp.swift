@@ -21,7 +21,7 @@ struct iSOSApp: App {
                     case .denied:
                         ErrorView(errorText: "The app does not have location permissions")
                     case .authorizedAlways, .authorizedWhenInUse:
-                        SelectionView()
+                        ContentView()
                     default:
                         Text("Unexpected status. Contact support")
                     }

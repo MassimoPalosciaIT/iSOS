@@ -1,6 +1,6 @@
 # Yaha App
 
-Source code for SwiftUI Yaha App (prev. HelpApp)
+Source code for SwiftUI Yaha App
 
 ![](https://github.com/MassimoPalosciaIT/iSOS/blob/a174809a4b9b4c8cdcdb93fce22d18aa4821f469/YahaBanner.png)
 

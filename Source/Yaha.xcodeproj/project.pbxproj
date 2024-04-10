@@ -518,8 +518,8 @@
 				INFOPLIST_FILE = iSOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Yaha;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to get coordinates";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to get coordinates";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to determine coordinates and emergency services for your country.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to determine coordinates and emergency services for your country.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -555,8 +555,8 @@
 				INFOPLIST_FILE = iSOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Yaha;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to get coordinates";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to get coordinates";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to determine coordinates and emergency services for your country.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to determine coordinates and emergency services for your country.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;

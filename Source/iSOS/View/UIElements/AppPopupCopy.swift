@@ -27,7 +27,7 @@ struct AppPopupCopy: View {
                     Image(systemName: iconName)
                     Text(title)
                 }
-                .font(.system(size: 18))
+                .font(.headline)
                 .fontWeight(.medium)
             }
         }

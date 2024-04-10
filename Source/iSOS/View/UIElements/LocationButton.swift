@@ -50,7 +50,7 @@ struct LocationButton: View {
                                 .fontWeight(.bold)
                             Spacer()
                         }
-                        .font(.system(size: 24))
+                        .font(.title2)
                         .fontWeight(.medium)
                     }.padding(.top, 20.0)
                     
@@ -58,7 +58,7 @@ struct LocationButton: View {
                     
                     HStack{
                         Text(formatedCoordinates)
-                            .font(.system(size: 21))
+                            .font(.title3)
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.center)
                             .padding([.leading, .bottom], 20.0)

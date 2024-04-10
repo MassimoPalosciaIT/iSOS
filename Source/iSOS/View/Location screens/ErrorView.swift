@@ -16,7 +16,7 @@ struct ErrorView: View {
                     
                     Text(errorText)
                         .fontWeight(.bold)
-                        .font(.system(size: 24))
+                        .font(.title2)
                         .foregroundStyle(.white)
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)

@@ -14,7 +14,7 @@ struct TutorialView: View {
                     .padding(.top, 80.0)
                 Text("Welcome to the \n Yaha")
                     .foregroundStyle(.white)
-                    .font(.system(size: 36))
+                    .font(.largeTitle)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                 

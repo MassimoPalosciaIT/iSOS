@@ -46,7 +46,7 @@ struct ConversationView: View {
         VStack (spacing: 10){
             HStack{
                 Text("Conversation")
-                    .font(.system(size: 20))
+                    .font(.title3)
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                 Spacer()

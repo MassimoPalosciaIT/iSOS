@@ -22,7 +22,7 @@ struct AppPopupButton: View {
                     Image(systemName: iconName)
                         .fontWeight(.black)
                         .opacity(0.02)
-                        .font(.system(size: CGFloat(300)))
+                        .font(.system(size: 300))
                         .padding(.trailing, -100)
                 }.mask(
                     RoundedRectangle(cornerRadius: cornerRadius)

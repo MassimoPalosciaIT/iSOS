@@ -12,7 +12,6 @@ struct AppStandartButton: View {
     var gradientColor2: Color
     var iconName: String
     var frameHeight: Double = 120
-    var iconSize: Int = 130
     var iconOpacity: Double = 0.15
     let cornerRadius: Double = 20
     
@@ -25,7 +24,7 @@ struct AppStandartButton: View {
                     Spacer()
                     Image(systemName: iconName)
                         .opacity(iconOpacity)
-                        .font(.system(size: CGFloat(iconSize)))
+                        .font(.system(size: 130))
                         .padding(.trailing, -35)
                 }.mask(
                     RoundedRectangle(cornerRadius: cornerRadius)

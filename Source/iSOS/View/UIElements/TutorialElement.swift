@@ -16,7 +16,7 @@ struct TutorialElement: View {
         HStack(){
             
             Image(systemName: iconName)
-                .font(.system(size: 40))
+                .font(.largeTitle)
                 .fontWeight(.medium)
                 .foregroundStyle(.redGradient1)
                 .padding(.trailing, 20)
@@ -26,13 +26,13 @@ struct TutorialElement: View {
             HStack{
                 VStack(alignment: .leading){
                     Text(title)
-                        .font(.system(size: 15))
+                        .font(.callout)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
                     
                     Text(description)
                         .foregroundStyle(.gray)
-                        .font(.system(size: 15))
+                        .font(.callout)
                         .fontWeight(.medium)
                         .multilineTextAlignment(.leading)
                 }

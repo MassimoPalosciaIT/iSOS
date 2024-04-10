@@ -29,7 +29,7 @@ struct EmergencyMenuButton: View {
                                 .fontWeight(.bold)
                             Spacer()
                         }
-                        .font(.system(size: 24))
+                        .font(.title2)
                         .fontWeight(.medium)
                     }
                     .padding(.top, side_padding)

@@ -11,12 +11,13 @@ struct RequestLocationView: View {
                     AppPopupButton(iconName: "location.fill")
 
                     VStack {
-                        Text("We need your permission")
+                        Text("We need your permission to track the location")
                             .fontWeight(.bold)
-                            .font(.system(size: 24))
+                            .font(.title2)
+                            .multilineTextAlignment(.center)
                             .foregroundStyle(.white)
                             .fontWeight(.medium)
-                            .padding(.top, 20.0)
+                            .padding(.top)
                         
                         Spacer()
                         
@@ -38,7 +39,8 @@ struct RequestLocationView: View {
                             .foregroundStyle(.white)
                             .background(.redGradient2)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
-                        }.padding(.bottom, 20.0)
+                        }
+                        .padding(.bottom, 20.0)
                         
                     }.frame(height: 340)
                 }.padding(.horizontal)

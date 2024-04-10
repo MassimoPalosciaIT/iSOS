@@ -37,7 +37,7 @@ struct FirstAidSelectionButton: View {
                         Image(systemName: "chevron.right")
                             .padding(.trailing, side_padding)
                     }
-                    .font(.system(size: 26))
+                    .font(.title)
                     .fontWeight(.medium)
                     
                 }

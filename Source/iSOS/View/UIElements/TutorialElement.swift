@@ -18,7 +18,7 @@ struct TutorialElement: View {
             Image(systemName: iconName)
                 .font(.system(size: 40))
                 .fontWeight(.medium)
-                .foregroundColor(.redGradient1)
+                .foregroundStyle(.redGradient1)
                 .padding(.trailing, 20)
                 .frame(width: 40,height: 40)
             
@@ -31,7 +31,7 @@ struct TutorialElement: View {
                         .multilineTextAlignment(.leading)
                     
                     Text(description)
-                        .foregroundColor(.gray)
+                        .foregroundStyle(.gray)
                         .font(.system(size: 15))
                         .fontWeight(.medium)
                         .multilineTextAlignment(.leading)

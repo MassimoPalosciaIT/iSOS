@@ -19,14 +19,14 @@ struct TextBlob: View {
                 .padding()
                 .background(fillColor)
                 .cornerRadius(20)
-                .foregroundColor(textColor.opacity(0))
+                .foregroundStyle(textColor.opacity(0))
                 .multilineTextAlignment(.leading) // Align text to the leading edge
                 .lineLimit(nil)
             HStack{
                 Text(textContent.replacingOccurrences(of: "\\n", with: "\n"))
                     .fontWeight(.semibold)
                     .padding(.leading)
-                    .foregroundColor(textColor)
+                    .foregroundStyle(textColor)
                     .multilineTextAlignment(.leading) // Align text to the leading edge
                     .lineLimit(nil)
                 

@@ -19,7 +19,7 @@ struct BlobCombo: View {
                         .padding()
                         .background(Color(.mainGray))
                         .clipShape(BubbleShape(myMessage: false))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .fontWeight(.semibold)
                     
                     Spacer()
@@ -38,7 +38,7 @@ struct BlobCombo: View {
                         .padding()
                         .background(Color(.blobGray))
                         .clipShape(BubbleShape(myMessage: true))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .fontWeight(.semibold)
                 }
                 .frame(width: 300)

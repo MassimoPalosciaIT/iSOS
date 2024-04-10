@@ -14,14 +14,14 @@ struct RequestLocationView: View {
                         Text("We need your permission")
                             .fontWeight(.bold)
                             .font(.system(size: 24))
-                            .foregroundColor(.white)
+                            .foregroundStyle(.white)
                             .fontWeight(.medium)
                             .padding(.top, 20.0)
                         
                         Spacer()
                         
                         Image(systemName: "location.circle")
-                            .foregroundColor(.white)
+                            .foregroundStyle(.white)
                             .font(.system(size: 128))
                             .fontWeight(.light)
                         
@@ -35,7 +35,7 @@ struct RequestLocationView: View {
                                 Label("Allow tracking", systemImage: "location.fill")
                             })
                             .padding(12)
-                            .foregroundColor(.white)
+                            .foregroundStyle(.white)
                             .background(.redGradient2)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                         }.padding(.bottom, 20.0)

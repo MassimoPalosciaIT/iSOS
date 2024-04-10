@@ -17,7 +17,7 @@ struct ErrorView: View {
                     Text(errorText)
                         .fontWeight(.bold)
                         .font(.system(size: 24))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)
                         .padding(.top, 20.0)
@@ -26,7 +26,7 @@ struct ErrorView: View {
                     Spacer()
                     
                     Image(systemName: "xmark.circle")
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .font(.system(size: 128))
                         .fontWeight(.light)
                     
@@ -42,7 +42,7 @@ struct ErrorView: View {
                                 Label("Open settings", systemImage: "gearshape.fill")
                             })
                             .padding(12)
-                            .foregroundColor(.white)
+                            .foregroundStyle(.white)
                             .background(.redGradient2)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                         }.padding(.bottom, 20.0)

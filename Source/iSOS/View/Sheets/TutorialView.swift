@@ -13,7 +13,7 @@ struct TutorialView: View {
                     .cornerRadius(20)
                     .padding(.top, 80.0)
                 Text("Welcome to the \n Yaha")
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .font(.system(size: 36))
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)

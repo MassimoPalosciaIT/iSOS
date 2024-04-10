@@ -1,3 +1,10 @@
+//
+//
+//
+//
+//
+//
+
 import SwiftUI
 
 struct FirstAidView: View {

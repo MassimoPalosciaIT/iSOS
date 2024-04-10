@@ -46,7 +46,7 @@
 		4E23C3052AEA55E200AD7073 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E23C3042AEA55E200AD7073 /* TutorialView.swift */; };
 		4E36D5212AE2608000209E4E /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5202AE2608000209E4E /* EmergencyView.swift */; };
 		4E6B4AAE2AE1419600F1C4AD /* LocationCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B4AAD2AE1419600F1C4AD /* LocationCoordinates.swift */; };
-		4ED20FF02ADE95B4007B4E50 /* iSOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */; };
+		4ED20FF02ADE95B4007B4E50 /* YahaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED20FEF2ADE95B4007B4E50 /* YahaApp.swift */; };
 		4ED20FF42ADE95B6007B4E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +71,7 @@
 		1A83AC792AF666E000182B3C /* APReverseGeocoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APReverseGeocoding.h; sourceTree = "<group>"; };
 		1A83AC7A2AF666E000182B3C /* APCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCountry.m; sourceTree = "<group>"; };
 		1A83AC7B2AF666E000182B3C /* APReverseGeocoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APReverseGeocoding.m; sourceTree = "<group>"; };
-		1A83AC852AF668A600182B3C /* iSOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iSOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A83AC852AF668A600182B3C /* Yaha-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yaha-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A89B5122B6971450004A9D8 /* CheckHashValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckHashValue.swift; sourceTree = "<group>"; };
 		1A96617B2AEA62030021B6F3 /* ConversationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationModel.swift; sourceTree = "<group>"; };
 		1AA8546D2AE55D2500964C14 /* HapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticEngine.swift; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 		4E23C3042AEA55E200AD7073 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		4E36D5202AE2608000209E4E /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		4E6B4AAD2AE1419600F1C4AD /* LocationCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinates.swift; sourceTree = "<group>"; };
-		4ED20FEC2ADE95B4007B4E50 /* iSOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSOSApp.swift; sourceTree = "<group>"; };
+		4ED20FEC2ADE95B4007B4E50 /* Yaha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yaha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ED20FEF2ADE95B4007B4E50 /* YahaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahaApp.swift; sourceTree = "<group>"; };
 		4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,7 +242,7 @@
 		4ED20FE32ADE95B4007B4E50 = {
 			isa = PBXGroup;
 			children = (
-				1A83AC852AF668A600182B3C /* iSOS-Bridging-Header.h */,
+				1A83AC852AF668A600182B3C /* Yaha-Bridging-Header.h */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FEE2ADE95B4007B4E50 /* iSOS */,
 				4ED20FED2ADE95B4007B4E50 /* Products */,
@@ -252,7 +252,7 @@
 		4ED20FED2ADE95B4007B4E50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4ED20FEC2ADE95B4007B4E50 /* iSOS.app */,
+				4ED20FEC2ADE95B4007B4E50 /* Yaha.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,7 +260,7 @@
 		4ED20FEE2ADE95B4007B4E50 /* iSOS */ = {
 			isa = PBXGroup;
 			children = (
-				4ED20FEF2ADE95B4007B4E50 /* iSOSApp.swift */,
+				4ED20FEF2ADE95B4007B4E50 /* YahaApp.swift */,
 				1A1FB9202AE5371300ED0D91 /* Info.plist */,
 				1AB943F72AE29D34005A5D1C /* View */,
 				1AB943F62AE29D18005A5D1C /* Models */,
@@ -275,9 +275,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4ED20FEB2ADE95B4007B4E50 /* iSOS */ = {
+		4ED20FEB2ADE95B4007B4E50 /* Yaha */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4ED210102ADE95B6007B4E50 /* Build configuration list for PBXNativeTarget "iSOS" */;
+			buildConfigurationList = 4ED210102ADE95B6007B4E50 /* Build configuration list for PBXNativeTarget "Yaha" */;
 			buildPhases = (
 				4ED20FE82ADE95B4007B4E50 /* Sources */,
 				4ED20FE92ADE95B4007B4E50 /* Frameworks */,
@@ -287,9 +287,9 @@
 			);
 			dependencies = (
 			);
-			name = iSOS;
+			name = Yaha;
 			productName = iSOS;
-			productReference = 4ED20FEC2ADE95B4007B4E50 /* iSOS.app */;
+			productReference = 4ED20FEC2ADE95B4007B4E50 /* Yaha.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -307,7 +307,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4ED20FE72ADE95B4007B4E50 /* Build configuration list for PBXProject "iSOS" */;
+			buildConfigurationList = 4ED20FE72ADE95B4007B4E50 /* Build configuration list for PBXProject "Yaha" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -320,7 +320,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4ED20FEB2ADE95B4007B4E50 /* iSOS */,
+				4ED20FEB2ADE95B4007B4E50 /* Yaha */,
 			);
 		};
 /* End PBXProject section */
@@ -379,7 +379,7 @@
 				1A89B5132B6971450004A9D8 /* CheckHashValue.swift in Sources */,
 				1AE5BCAD2BA44F8400148A26 /* FirstAidSelectionButton.swift in Sources */,
 				1A7F95AD2AE459BE008110B2 /* EmergencyMenuModel.swift in Sources */,
-				4ED20FF02ADE95B4007B4E50 /* iSOSApp.swift in Sources */,
+				4ED20FF02ADE95B4007B4E50 /* YahaApp.swift in Sources */,
 				4E36D5212AE2608000209E4E /* EmergencyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +446,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_OBJC_BRIDGING_HEADER = "iSOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Yaha-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -503,7 +503,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "iSOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Yaha-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -532,12 +532,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattnovoselov.Yaha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -565,19 +569,23 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattnovoselov.Yaha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4ED20FE72ADE95B4007B4E50 /* Build configuration list for PBXProject "iSOS" */ = {
+		4ED20FE72ADE95B4007B4E50 /* Build configuration list for PBXProject "Yaha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4ED2100E2ADE95B6007B4E50 /* Debug */,
@@ -586,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4ED210102ADE95B6007B4E50 /* Build configuration list for PBXNativeTarget "iSOS" */ = {
+		4ED210102ADE95B6007B4E50 /* Build configuration list for PBXNativeTarget "Yaha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4ED210112ADE95B6007B4E50 /* Debug */,

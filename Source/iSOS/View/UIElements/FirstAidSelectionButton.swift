@@ -14,7 +14,7 @@ struct FirstAidSelectionButton: View {
     
     var body: some View {
         ZStack{
-            AppStandartButton(gradientColor1: .iSOSGray, gradientColor2: .iSOSGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
+            AppStandartButton(gradientColor1: .mainGray, gradientColor2: .mainGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
             
             VStack
             {

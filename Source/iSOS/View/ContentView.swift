@@ -89,7 +89,7 @@ struct ContentView: View {
                 .padding(.top, 10.0)
             }
             .frame(maxHeight: .infinity)
-            .background(Color.iSOSBackground.ignoresSafeArea())
+            .background(Color.mainBackground.ignoresSafeArea())
             .navigationTitle("Need help?")
             
         }

@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct iSOSApp: App {
+struct YahaApp: App {
     @StateObject var locationViewModel = LocationViewModel()
     @State private var result: (Bool, String?) = (false, nil)
     

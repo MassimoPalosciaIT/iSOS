@@ -14,7 +14,7 @@ struct LocationButton: View {
     
     let title: String = "You are here:"
     let iconName: String = "location.fill"
-    let backroundColor: Color = .iSOSGray
+    let backroundColor: Color = .mainGray
     
     var formatedCoordinates: String {
         return locationViewModel.getFormattedCoordinates()

@@ -15,8 +15,8 @@ struct AppPopupCopy: View {
     var body: some View {
         ZStack{
             AppStandartButton(
-                gradientColor1: .iSOSGray,
-                gradientColor2: .iSOSGray,
+                gradientColor1: .mainGray,
+                gradientColor2: .mainGray,
                 iconName: iconName,
                 frameHeight: 45,
                 iconOpacity: 0

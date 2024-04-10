@@ -17,7 +17,7 @@ struct BlobCombo: View {
                 HStack{
                     Text(messageQuestion)
                         .padding()
-                        .background(Color(.iSOSGray))
+                        .background(Color(.mainGray))
                         .clipShape(BubbleShape(myMessage: false))
                         .foregroundColor(.white)
                         .fontWeight(.semibold)

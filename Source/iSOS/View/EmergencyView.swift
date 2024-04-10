@@ -64,7 +64,7 @@ struct EmergencyView: View {
             
         }
         .frame(maxHeight: .infinity)
-        .background(Color.iSOSBackground.ignoresSafeArea())
+        .background(Color.mainBackground.ignoresSafeArea())
         .navigationTitle(selectedEmergecny.title)
         .navigationBarTitleDisplayMode(.inline)
         .sheet(item: $activeSheet) { item in

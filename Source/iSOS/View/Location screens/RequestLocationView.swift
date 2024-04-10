@@ -44,7 +44,7 @@ struct RequestLocationView: View {
                 }.padding(.horizontal)
         
             }
-            .background(Color.iSOSBackground.ignoresSafeArea())
+            .background(Color.mainBackground.ignoresSafeArea())
     }
 }
 

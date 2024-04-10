@@ -52,7 +52,7 @@ struct ErrorView: View {
             }.padding(.horizontal)
             
         }
-        .background(Color.iSOSBackground.ignoresSafeArea())
+        .background(Color.mainBackground.ignoresSafeArea())
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AppPopupButton: View {
-    var backgrpundColor: Color = .iSOSGray
+    var backgrpundColor: Color = .mainGray
     let cornerRadius: Double = 20
     var iconName: String
     

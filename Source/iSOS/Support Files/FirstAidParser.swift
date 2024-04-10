@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 struct FirstAidModel: Identifiable {
     var id = UUID()

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 class FirstAidCardsModel{
     var aid:[FirstAidModel] = [

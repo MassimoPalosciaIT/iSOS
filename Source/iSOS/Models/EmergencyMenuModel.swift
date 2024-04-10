@@ -5,7 +5,6 @@
 //
 //
 
-import SwiftUI
 import Foundation
 
 struct EmergencyMenu {

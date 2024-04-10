@@ -5,7 +5,6 @@
 //
 //
 
-import Foundation
 import SwiftUI
 
 struct Emergency: Identifiable {

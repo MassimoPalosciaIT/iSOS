@@ -21,7 +21,6 @@
 		1A83AC7E2AF666E000182B3C /* APCountryInfoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A83AC762AF666E000182B3C /* APCountryInfoBuilder.m */; };
 		1A83AC7F2AF666E000182B3C /* APCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A83AC7A2AF666E000182B3C /* APCountry.m */; };
 		1A83AC802AF666E000182B3C /* APReverseGeocoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A83AC7B2AF666E000182B3C /* APReverseGeocoding.m */; };
-		1A89B5132B6971450004A9D8 /* CheckHashValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A89B5122B6971450004A9D8 /* CheckHashValue.swift */; };
 		1A96617C2AEA62030021B6F3 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96617B2AEA62030021B6F3 /* ConversationModel.swift */; };
 		1AA8546E2AE55D2500964C14 /* HapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8546D2AE55D2500964C14 /* HapticEngine.swift */; };
 		1AB008202AEFC3D500887D54 /* CoordinatesTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */; };
@@ -72,7 +71,6 @@
 		1A83AC7A2AF666E000182B3C /* APCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCountry.m; sourceTree = "<group>"; };
 		1A83AC7B2AF666E000182B3C /* APReverseGeocoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APReverseGeocoding.m; sourceTree = "<group>"; };
 		1A83AC852AF668A600182B3C /* Yaha-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yaha-Bridging-Header.h"; sourceTree = "<group>"; };
-		1A89B5122B6971450004A9D8 /* CheckHashValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckHashValue.swift; sourceTree = "<group>"; };
 		1A96617B2AEA62030021B6F3 /* ConversationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationModel.swift; sourceTree = "<group>"; };
 		1AA8546D2AE55D2500964C14 /* HapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticEngine.swift; sourceTree = "<group>"; };
 		1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesTranslation.swift; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 		1AE5BC982BA44DED00148A26 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1A89B5122B6971450004A9D8 /* CheckHashValue.swift */,
 				1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */,
 				1A782D6B2AEBC474008E7FD8 /* FirstAidParser.swift */,
 				1AA8546D2AE55D2500964C14 /* HapticEngine.swift */,
@@ -376,7 +373,6 @@
 				1A7F95A82AE44537008110B2 /* EmergencyModel.swift in Sources */,
 				1AE5BC9F2BA44EFA00148A26 /* BlobCombo.swift in Sources */,
 				1AE5BCB12BA44FB200148A26 /* EmergencyMenuButton.swift in Sources */,
-				1A89B5132B6971450004A9D8 /* CheckHashValue.swift in Sources */,
 				1AE5BCAD2BA44F8400148A26 /* FirstAidSelectionButton.swift in Sources */,
 				1A7F95AD2AE459BE008110B2 /* EmergencyMenuModel.swift in Sources */,
 				4ED20FF02ADE95B4007B4E50 /* YahaApp.swift in Sources */,

@@ -29,6 +29,7 @@
 		1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */; };
 		1AC70CFA2AEAE97E0023F294 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CF92AEAE97E0023F294 /* ConversationView.swift */; };
 		1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */; };
+		1AD0D0F92BC6896B000C9193 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0D0F82BC6896B000C9193 /* Localizable.xcstrings */; };
 		1AE5BC9B2BA44EB800148A26 /* TextBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */; };
 		1AE5BC9D2BA44ED300148A26 /* TutorialElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9C2BA44ED300148A26 /* TutorialElement.swift */; };
 		1AE5BC9F2BA44EFA00148A26 /* BlobCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9E2BA44EFA00148A26 /* BlobCombo.swift */; };
@@ -79,6 +80,7 @@
 		1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmergencyNumber.swift; sourceTree = "<group>"; };
 		1AC70CF92AEAE97E0023F294 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidView.swift; sourceTree = "<group>"; };
+		1AD0D0F82BC6896B000C9193 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlob.swift; sourceTree = "<group>"; };
 		1AE5BC9C2BA44ED300148A26 /* TutorialElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialElement.swift; sourceTree = "<group>"; };
 		1AE5BC9E2BA44EFA00148A26 /* BlobCombo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobCombo.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		4ED20FE32ADE95B4007B4E50 = {
 			isa = PBXGroup;
 			children = (
+				1AD0D0F82BC6896B000C9193 /* Localizable.xcstrings */,
 				1A83AC852AF668A600182B3C /* Yaha-Bridging-Header.h */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FEE2ADE95B4007B4E50 /* iSOS */,
@@ -328,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A7763E42B01183A0027E945 /* emergencyNumbers.csv in Resources */,
+				1AD0D0F92BC6896B000C9193 /* Localizable.xcstrings in Resources */,
 				4E1207832AEBB6A1003ABE26 /* firstAid.csv in Resources */,
 				1A2EC8F42AF6BB81009F75C7 /* countries.geo.json in Resources */,
 				4ED20FF42ADE95B6007B4E50 /* Assets.xcassets in Resources */,

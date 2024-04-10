@@ -1,0 +1,42 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "🇬🇧" : {
+
+    },
+    "🇮🇹" : {
+
+    },
+    "Allow tracking" : {
+
+    },
+    "Continue" : {
+
+    },
+    "Conversation" : {
+
+    },
+    "Done" : {
+
+    },
+    "First aid" : {
+
+    },
+    "Need help?" : {
+
+    },
+    "Open settings" : {
+
+    },
+    "Unexpected status. Contact support" : {
+
+    },
+    "We need your permission to track the location" : {
+
+    },
+    "Welcome to the \n Yaha" : {
+
+    }
+  },
+  "version" : "1.0"
+}

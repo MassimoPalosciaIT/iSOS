@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ConversationView: View {
+    
     @EnvironmentObject var locationViewModel: LocationViewModel
-
-    var formattedCoordinates: String {
+    
+    private var formattedCoordinates: String {
         return locationViewModel.getFormattedCoordinates()
     }
     
     var emergencyType: EmergencyType
-
-    var convPolice: [Conversation] {
+    
+    // MARK:
+    private var convPolice: [Conversation] {
         [
             Conversation(questionText: "Hello, I need to report an emergency.", answerText: "Salve, mi serve un'ambulanza."),
             Conversation(questionText: "My coordinates are: \(formattedCoordinates)", answerText: "Le mie coordinate sono: \(formattedCoordinates)\n\n(\(translateCoordinates(coordinate: formattedCoordinates)))"),
@@ -26,8 +28,8 @@ struct ConversationView: View {
             Conversation(questionText: "My name is [your name].", answerText: "Il mio nome è [il vostro nome]."),
         ]
     }
-
-    var convFire: [Conversation] {
+    
+    private var convFire: [Conversation] {
         [
             Conversation(questionText: "Hello, I need to report a fire emergency.", answerText: "Salve, mi serve un'ambulanza."),
             Conversation(questionText: "My coordinates are: \(formattedCoordinates)", answerText: "Le mie coordinate sono: \(formattedCoordinates)\n\n(\(translateCoordinates(coordinate: formattedCoordinates)))"),
@@ -36,8 +38,8 @@ struct ConversationView: View {
             Conversation(questionText: "My name is [your name].", answerText: "Il mio nome è [il vostro nome]."),
         ]
     }
-
-    var convMedical: [Conversation] {
+    
+    private var convMedical: [Conversation] {
         [
             Conversation(questionText: "Hello, I need medical assistance immediately.", answerText: "Salve, mi serve un'ambulanza."),
             Conversation(questionText: "My coordinates are: \(formattedCoordinates)", answerText: "Le mie coordinate sono: \(formattedCoordinates)\n\n(\(translateCoordinates(coordinate: formattedCoordinates)))"),
@@ -50,12 +52,12 @@ struct ConversationView: View {
     }
     
     var body: some View {
-        VStack (spacing: 10){
+        
+        VStack{
             HStack{
                 Text("Conversation")
                     .font(.title3)
                     .fontWeight(.semibold)
-                    .foregroundStyle(.white)
                 Spacer()
             }
             
@@ -64,41 +66,39 @@ struct ConversationView: View {
                     Text("🇬🇧")
                     Spacer()
                     Text("🇮🇹")
-
+                    
                 }
                 .font(.system(size: 64))
-                .foregroundStyle(.white)
             }
             
             ScrollView(showsIndicators: false){
+                
                 VStack(spacing:20){
-                    
                     switch emergencyType {
-                        case .police:
+                    case .police:
                         
                         ForEach(convPolice) { selectedConversation in
                             BlobCombo(messageQuestion: selectedConversation.questionText, messageReply: selectedConversation.answerText)
-                            }
+                        }
                         
-                        case .medicalHelp:
-                            
+                    case .medicalHelp:
+                        
                         ForEach(convMedical) { selectedConversation in
                             BlobCombo(messageQuestion: selectedConversation.questionText, messageReply: selectedConversation.answerText)
-                            }
+                        }
                         
-                        case .fireDepartment:
-                            
+                    case .fireDepartment:
+                        
                         ForEach(convFire) { selectedConversation in
                             BlobCombo(messageQuestion: selectedConversation.questionText, messageReply: selectedConversation.answerText)
-                            }
+                        }
                     }
                 }
                 
             }
         }
         .padding(.horizontal)
-        .padding(.top)
-        .frame(maxHeight: .infinity)
+        
     }
 }
 

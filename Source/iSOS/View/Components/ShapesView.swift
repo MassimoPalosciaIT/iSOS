@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct BubbleShape: Shape {
+    
     var myMessage : Bool
+    
     func path(in rect: CGRect) -> Path {
         let width = rect.width
         let height = rect.height
         
         let bezierPath = UIBezierPath()
+        
         if !myMessage {
             bezierPath.move(to: CGPoint(x: 20, y: height))
             bezierPath.addLine(to: CGPoint(x: width - 15, y: height))
@@ -44,5 +47,5 @@ struct BubbleShape: Shape {
 }
 
 #Preview {
-        BubbleShape(myMessage: false)
+    BubbleShape(myMessage: false)
 }

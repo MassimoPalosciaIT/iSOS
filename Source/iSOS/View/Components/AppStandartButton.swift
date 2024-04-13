@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AppStandartButton: View {
+    
     var gradientColor1: Color
     var gradientColor2: Color
     var iconName: String
@@ -16,20 +17,24 @@ struct AppStandartButton: View {
     let cornerRadius: Double = 20
     
     var body: some View {
+        
         RoundedRectangle(cornerRadius: cornerRadius)
             .fill(LinearGradient(colors: [gradientColor1, gradientColor2], startPoint: .leading, endPoint: .trailing))
             .frame(height: frameHeight)
             .overlay(
-                HStack() {
+                HStack {
                     Spacer()
                     Image(systemName: iconName)
                         .opacity(iconOpacity)
                         .font(.system(size: 130))
                         .padding(.trailing, -35)
-                }.mask(
-                    RoundedRectangle(cornerRadius: cornerRadius)
-                        .frame(height: frameHeight)
-                )
+                }
             )
+            .clipShape(.rect(cornerRadius: cornerRadius))
+        
     }
+}
+
+#Preview {
+    AppStandartButton(gradientColor1: .redGradient1, gradientColor2: .redGradient2, iconName: "xmark", frameHeight: 120, iconOpacity: 1.0)
 }

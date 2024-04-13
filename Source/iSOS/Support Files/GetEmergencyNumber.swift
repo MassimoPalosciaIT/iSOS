@@ -7,21 +7,19 @@
 
 import SwiftUI
 
-struct CallModel{
-    func startCall(to number: String) {
-        guard let url = URL(string: "tel://\(number)"), UIApplication.shared.canOpenURL(url) else {
-            print("Error: Unable to initiate call.")
-            return
-        }
-        
-        UIApplication.shared.open(url)
-    }
-}
-
 enum EmergencyType {
     case police
     case medicalHelp
     case fireDepartment
+}
+
+func startCall(to number: String) {
+    guard let url = URL(string: "tel://\(number)"), UIApplication.shared.canOpenURL(url) else {
+        print("Error: Unable to initiate call.")
+        return
+    }
+    
+    UIApplication.shared.open(url)
 }
 
 func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> String {
@@ -29,13 +27,13 @@ func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> St
           let csvContent = try? String(contentsOfFile: csvPath) else {
         return "File not found"
     }
-
+    
     let lines = csvContent.components(separatedBy: .newlines)
     
     for line in lines {
         let columns = line.split(separator: ";")
         guard columns.count >= 4 else { continue }
-
+        
         if columns[0] == country {
             switch emergencyType {
             case .police:
@@ -47,10 +45,6 @@ func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> St
             }
         }
     }
-
+    
     return "+112"
-}
-
-func testTap(){
-    print("Test tap")
 }

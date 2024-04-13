@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FirstAidCardsModel{
+class FirstAidCardViewModel{
     var aid:[FirstAidModel] = [
         FirstAidModel(title: "Bleeding", iconName: "drop"),
         FirstAidModel(title: "Heart attack", iconName: "bolt.heart"),

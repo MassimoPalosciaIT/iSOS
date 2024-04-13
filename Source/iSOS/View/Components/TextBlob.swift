@@ -8,30 +8,28 @@
 import SwiftUI
 
 struct TextBlob: View {
+    
     var textContent: String = "2. Call an ambulance as soon as possible."
     var fillColor: Color = .blobGray
-    var textColor: Color = .white
     
     var body: some View{
-        ZStack{
+        
+        HStack{
             Text(textContent.replacingOccurrences(of: "\\n", with: "\n"))
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(fillColor)
-                .cornerRadius(20)
-                .foregroundStyle(textColor.opacity(0))
+                .fontWeight(.semibold)
                 .multilineTextAlignment(.leading) // Align text to the leading edge
                 .lineLimit(nil)
-            HStack{
-                Text(textContent.replacingOccurrences(of: "\\n", with: "\n"))
-                    .fontWeight(.semibold)
-                    .padding(.leading)
-                    .foregroundStyle(textColor)
-                    .multilineTextAlignment(.leading) // Align text to the leading edge
-                    .lineLimit(nil)
-                
-                Spacer()
-            }
+            
+            Spacer()
         }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(fillColor)
+        .cornerRadius(20)
+
     }
+}
+
+#Preview {
+    TextBlob(textContent: "Est enim sit veniam occaecat adipiscing occaecat commodo eu irure consequat irure incididunt magna voluptate sit excepteur sit cupidatat enim. Eiusmod sit officia excepteur sint duis excepteur proident in ad. Elit qui irure enim qui do incididunt magna est commodo cupidatat anim.", fillColor: .red)
 }

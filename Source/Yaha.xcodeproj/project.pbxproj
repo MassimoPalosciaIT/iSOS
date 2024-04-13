@@ -14,7 +14,8 @@
 		1A7763E42B01183A0027E945 /* emergencyNumbers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1A7763E32B01183A0027E945 /* emergencyNumbers.csv */; };
 		1A782D6C2AEBC474008E7FD8 /* FirstAidParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D6B2AEBC474008E7FD8 /* FirstAidParser.swift */; };
 		1A782D6E2AEBC78B008E7FD8 /* FirstAidDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */; };
-		1A782D722AEBE990008E7FD8 /* FirstAidCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */; };
+		1A782D722AEBE990008E7FD8 /* FirstAidCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A782D712AEBE990008E7FD8 /* FirstAidCardViewModel.swift */; };
+		1A7DB17A2BCAD74F0092A6E2 /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DB1792BCAD74F0092A6E2 /* MapInfoView.swift */; };
 		1A7F95A82AE44537008110B2 /* EmergencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F95A72AE44537008110B2 /* EmergencyModel.swift */; };
 		1A7F95AD2AE459BE008110B2 /* EmergencyMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */; };
 		1A83AC7D2AF666E000182B3C /* APPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A83AC742AF666E000182B3C /* APPolygon.m */; };
@@ -24,12 +25,12 @@
 		1A96617C2AEA62030021B6F3 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96617B2AEA62030021B6F3 /* ConversationModel.swift */; };
 		1AA8546E2AE55D2500964C14 /* HapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8546D2AE55D2500964C14 /* HapticEngine.swift */; };
 		1AB008202AEFC3D500887D54 /* CoordinatesTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */; };
-		1AC1737A2AE2648700F4818C /* RequestLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173792AE2648700F4818C /* RequestLocationView.swift */; };
-		1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1737B2AE2655400F4818C /* ErrorView.swift */; };
+		1AC1737C2AE2655400F4818C /* LocationRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1737B2AE2655400F4818C /* LocationRequestView.swift */; };
 		1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */; };
 		1AC70CFA2AEAE97E0023F294 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CF92AEAE97E0023F294 /* ConversationView.swift */; };
 		1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */; };
 		1AD0D0F92BC6896B000C9193 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0D0F82BC6896B000C9193 /* Localizable.xcstrings */; };
+		1AD0D0FB2BC699C9000C9193 /* FirstAidCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */; };
 		1AE5BC9B2BA44EB800148A26 /* TextBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */; };
 		1AE5BC9D2BA44ED300148A26 /* TutorialElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9C2BA44ED300148A26 /* TutorialElement.swift */; };
 		1AE5BC9F2BA44EFA00148A26 /* BlobCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9E2BA44EFA00148A26 /* BlobCombo.swift */; };
@@ -59,7 +60,8 @@
 		1A7763E32B01183A0027E945 /* emergencyNumbers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emergencyNumbers.csv; sourceTree = "<group>"; };
 		1A782D6B2AEBC474008E7FD8 /* FirstAidParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidParser.swift; sourceTree = "<group>"; };
 		1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidDetailedView.swift; sourceTree = "<group>"; };
-		1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardsModel.swift; sourceTree = "<group>"; };
+		1A782D712AEBE990008E7FD8 /* FirstAidCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardViewModel.swift; sourceTree = "<group>"; };
+		1A7DB1792BCAD74F0092A6E2 /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
 		1A7F95A72AE44537008110B2 /* EmergencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyModel.swift; sourceTree = "<group>"; };
 		1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMenuModel.swift; sourceTree = "<group>"; };
 		1A83AC722AF666E000182B3C /* APCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCountry.h; sourceTree = "<group>"; };
@@ -75,12 +77,12 @@
 		1A96617B2AEA62030021B6F3 /* ConversationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationModel.swift; sourceTree = "<group>"; };
 		1AA8546D2AE55D2500964C14 /* HapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticEngine.swift; sourceTree = "<group>"; };
 		1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesTranslation.swift; sourceTree = "<group>"; };
-		1AC173792AE2648700F4818C /* RequestLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationView.swift; sourceTree = "<group>"; };
-		1AC1737B2AE2655400F4818C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		1AC1737B2AE2655400F4818C /* LocationRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestView.swift; sourceTree = "<group>"; };
 		1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmergencyNumber.swift; sourceTree = "<group>"; };
 		1AC70CF92AEAE97E0023F294 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidView.swift; sourceTree = "<group>"; };
 		1AD0D0F82BC6896B000C9193 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardModel.swift; sourceTree = "<group>"; };
 		1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlob.swift; sourceTree = "<group>"; };
 		1AE5BC9C2BA44ED300148A26 /* TutorialElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialElement.swift; sourceTree = "<group>"; };
 		1AE5BC9E2BA44EFA00148A26 /* BlobCombo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobCombo.swift; sourceTree = "<group>"; };
@@ -122,6 +124,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1A7DB1782BCAD73E0092A6E2 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1A0E5B802B0008F7006F0B77 /* MapView.swift */,
+				1A7DB1792BCAD74F0092A6E2 /* MapInfoView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		1A83AC6F2AF666E000182B3C /* APOfflineReverseGeocoding */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +172,7 @@
 				1A7F95A72AE44537008110B2 /* EmergencyModel.swift */,
 				1A96617B2AEA62030021B6F3 /* ConversationModel.swift */,
 				1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */,
+				1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,26 +182,17 @@
 			children = (
 				1AE5BC992BA44E0900148A26 /* Components */,
 				1AC70CFB2AEAF5C20023F294 /* Sheets */,
-				1AC1737F2AE265E700F4818C /* Location screens */,
+				1AC1737B2AE2655400F4818C /* LocationRequestView.swift */,
 				1A48E0D22AE169900012E64E /* ContentView.swift */,
 				4E36D5202AE2608000209E4E /* EmergencyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		1AC1737F2AE265E700F4818C /* Location screens */ = {
-			isa = PBXGroup;
-			children = (
-				1AC1737B2AE2655400F4818C /* ErrorView.swift */,
-				1AC173792AE2648700F4818C /* RequestLocationView.swift */,
-			);
-			path = "Location screens";
-			sourceTree = "<group>";
-		};
 		1AC70CF82AEAE9390023F294 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1A782D712AEBE990008E7FD8 /* FirstAidCardsModel.swift */,
+				1A782D712AEBE990008E7FD8 /* FirstAidCardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -201,7 +204,7 @@
 				1AC70CF92AEAE97E0023F294 /* ConversationView.swift */,
 				1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */,
 				1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */,
-				1A0E5B802B0008F7006F0B77 /* MapView.swift */,
+				1A7DB1782BCAD73E0092A6E2 /* Map */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";
@@ -349,11 +352,12 @@
 				1A49CD962AF80ABF00AAAB16 /* ShapesView.swift in Sources */,
 				1A83AC802AF666E000182B3C /* APReverseGeocoding.m in Sources */,
 				1AA8546E2AE55D2500964C14 /* HapticEngine.swift in Sources */,
-				1AC1737A2AE2648700F4818C /* RequestLocationView.swift in Sources */,
 				1A83AC7F2AF666E000182B3C /* APCountry.m in Sources */,
-				1A782D722AEBE990008E7FD8 /* FirstAidCardsModel.swift in Sources */,
+				1AD0D0FB2BC699C9000C9193 /* FirstAidCardModel.swift in Sources */,
+				1A782D722AEBE990008E7FD8 /* FirstAidCardViewModel.swift in Sources */,
 				1A0E5B812B0008F7006F0B77 /* MapView.swift in Sources */,
-				1AC1737C2AE2655400F4818C /* ErrorView.swift in Sources */,
+				1AC1737C2AE2655400F4818C /* LocationRequestView.swift in Sources */,
+				1A7DB17A2BCAD74F0092A6E2 /* MapInfoView.swift in Sources */,
 				1AB008202AEFC3D500887D54 /* CoordinatesTranslation.swift in Sources */,
 				1A83AC7D2AF666E000182B3C /* APPolygon.m in Sources */,
 				1AE5BCA32BA44F2600148A26 /* AppPopupCopy.swift in Sources */,

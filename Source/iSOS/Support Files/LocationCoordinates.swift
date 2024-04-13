@@ -83,7 +83,7 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
               let country = reverseGeocoding.geocodeCountry(with: coordinate) else {
             return "Could not perform geocoding for the given coordinates."
         }
-
+        
         return country.name ?? "No country"
     }
     

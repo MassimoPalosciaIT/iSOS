@@ -8,48 +8,47 @@
 import SwiftUI
 
 struct TutorialView: View {
+    
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
+    
     var body: some View {
-        @AppStorage("isOnboarding") var isOnboarding: Bool?
         
         VStack{
-            VStack{
+            GeometryReader{ proxy in
                 Image(uiImage: Bundle.main.icon ?? UIImage())
                     .resizable()
-                    .frame(width: 80,height: 80)
-                    .clipShape(Rectangle())
-                    .cornerRadius(20)
-                    .padding(.top, 80.0)
-                Text("Welcome to the \n Yaha")
-                    .foregroundStyle(.white)
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
+                    .clipShape(.rect(cornerRadius: proxy.size.width * 2/9))
+            }
+            .frame(width: 80, height: 80)
+            
+            Text("Welcome to Yaha")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .multilineTextAlignment(.center)
+            
+            VStack(spacing: 20){
+                TutorialElement(iconName: "phone.circle", title: "Emergency number locator", description: "The app determines your country's emergency number.")
                 
-                VStack(spacing: 20){
-                    TutorialElement(iconName: "phone.circle", title: "Emergency number locator", description: "The app determines your country's emergency number.")
-                    
-                    TutorialElement(iconName: "doc.on.doc", title: "Copy coordinates", description: "Click on the coordinates to copy them to the clipboard.")
-                    
-                    TutorialElement(iconName: "square.and.arrow.down", title: "Download offline maps", description: "Make sure to download offline maps before your journey.")
-                }
-                .padding(.top)
+                TutorialElement(iconName: "doc.on.doc", title: "Copy coordinates", description: "Click on the coordinates to copy them to the clipboard.")
                 
-                Spacer()
-                
-                HStack{
-                    Button {
-                        isOnboarding = false
-                    }
-                        label: {
-                                Text("Continue")
-                                    .frame(maxWidth: .infinity)
-                                    .fontWeight(.bold)
-                            }
-                            .buttonStyle(TutorialButtonStyle())
-                            .controlSize(.large)
-                }
-            }.padding(.horizontal, 30)
+                TutorialElement(iconName: "square.and.arrow.down", title: "Download offline maps", description: "Make sure to download offline maps before your journey.")
+            }
+            .padding(.vertical)
+            
+            Spacer()
+            
+            Button( action: {isOnboarding = false} ) {
+                Text("Continue")
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(BorderedProminentButtonStyle())
+            .controlSize(.large)
+            .tint(.redGradient1)
         }
+        .padding()
+        .padding(.top)
+        
     }
 }
 

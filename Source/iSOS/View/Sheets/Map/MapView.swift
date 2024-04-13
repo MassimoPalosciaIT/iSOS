@@ -7,42 +7,39 @@
 
 import SwiftUI
 import MapKit
-import CoreLocation
+
 
 struct MapView: View {
+    
     @EnvironmentObject var locationViewModel: LocationViewModel
+    
     @State private var searchResults: [MKMapItem] = []
     @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
     @State private var selectedResult: MKMapItem?
     @State private var route: MKRoute?
-    @Binding var activeSheet: ActiveSheet?
+    @State private var showingInfo: Bool = false
     
-    var searchQuery: String
     var gradientColor1: Color
     var gradientColor2: Color
-    
-    init(gradientColor1: Color, gradientColor2: Color, searchQuery: String, activeSheet: Binding<ActiveSheet?>) {
-        self._activeSheet = activeSheet
-        self.gradientColor1 = gradientColor1
-        self.gradientColor2 = gradientColor2
-        self.searchQuery = searchQuery
-    }
+    var searchQuery: String
+    @Binding var activeSheet: ActiveSheet?
     
     private var travelTime: String? {
         // Check if there is a route to get the info from
         guard let route else { return nil }
-    
+        
         // Set up a date formater
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .abbreviated
         formatter.allowedUnits = [.hour, .minute]
-    
+        
         // Format the travel time to the format you want to display it
         return formatter.string(from: route.expectedTravelTime)
     }
     
     var body: some View {
-        NavigationView {
+        
+        NavigationStack {
             Map(position: $position, selection: $selectedResult){
                 
                 ForEach(searchResults, id: \.self) { result in
@@ -70,17 +67,9 @@ struct MapView: View {
                 UserAnnotation()
             }
             .safeAreaInset(edge: .bottom) {
-                if selectedResult != nil{
-                    HStack{
-                        Spacer()
-                        Image(systemName: "car.fill")
-                        Text(travelTime ?? "0m")
-                        Spacer()
-                    }
-                    .padding()
-                    .background(.thinMaterial)
+                if showingInfo{
+                    MapInfoView(travelTime: travelTime)
                 }
-                
             }
             
             .mapControls{
@@ -95,9 +84,13 @@ struct MapView: View {
             
             .onChange(of: selectedResult){
                 getDirections(locationViewModel: locationViewModel)
+                
+                withAnimation{
+                    showingInfo = true
+                }
             }
             
-            .navigationBarTitle(Text(searchQuery), displayMode: .inline)
+            .navigationBarTitle(searchQuery, displayMode: .inline)
             
             .navigationBarItems(
                 trailing: Button(

@@ -8,33 +8,34 @@
 import SwiftUI
 
 struct EmergencySelectionButton: View {
+    
     var selectedEmergency: Emergency
-    @Binding var activeSheet: ActiveSheet? // Add this line
-    let side_padding: CGFloat = 20
+    @Binding var activeSheet: ActiveSheet?
     
     var body: some View {
+        
         NavigationLink(destination: EmergencyView(activeSheet: $activeSheet, selectedEmergecny: selectedEmergency)) {
-            ZStack{
-                AppStandartButton(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2, iconName: selectedEmergency.iconName)
-                
-                VStack
-                {
+            
+            AppStandartButton(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2, iconName: selectedEmergency.iconName)
+                .overlay{
                     HStack {
                         Group {
-                            Image(systemName: selectedEmergency.iconName)
-                                .padding(.leading, side_padding)
-                            Text(selectedEmergency.title)
+                            Label(selectedEmergency.title, systemImage: selectedEmergency.iconName)
                                 .fontWeight(.bold)
+                            
                             Spacer()
+                            
                             Image(systemName: "chevron.right")
-                                .padding(.trailing, side_padding)
+                            
                         }
                         .font(.title)
                         .fontWeight(.medium)
                         
                     }
-                }.frame(height: 120)
-            }
+                    .padding()
+                }
+            
         }
+        
     }
 }

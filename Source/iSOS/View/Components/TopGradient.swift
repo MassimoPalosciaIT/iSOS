@@ -8,16 +8,24 @@
 import SwiftUI
 
 struct TopGradient: View {
-    var gradientColor1: Color = .pink
-    var gradientColor2: Color = .pink
+    
+    var gradientColor1: Color
+    var gradientColor2: Color
     
     var body: some View {
-        VStack {
+        
+        VStack{
             LinearGradient(colors: [gradientColor1, gradientColor2.opacity(0)], startPoint: .top, endPoint: .bottom)
                 .frame(height: 270)
                 .ignoresSafeArea()
                 .opacity(0.7)
+            
             Spacer()
         }
+        
     }
+}
+
+#Preview {
+    TopGradient(gradientColor1: .redGradient1, gradientColor2: .redGradient2)
 }

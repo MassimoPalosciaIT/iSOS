@@ -34,7 +34,9 @@ struct MapView: View {
         formatter.allowedUnits = [.hour, .minute]
         
         // Format the travel time to the format you want to display it
-        return formatter.string(from: route.expectedTravelTime)
+        return withAnimation{
+            formatter.string(from: route.expectedTravelTime)
+        }
     }
     
     var body: some View {
@@ -68,7 +70,9 @@ struct MapView: View {
             }
             .safeAreaInset(edge: .bottom) {
                 if showingInfo{
-                    MapInfoView(travelTime: travelTime)
+                    if let selectedResult{
+                        MapInfoView(travelTime: travelTime, selectedResult: selectedResult)
+                    }
                 }
             }
             

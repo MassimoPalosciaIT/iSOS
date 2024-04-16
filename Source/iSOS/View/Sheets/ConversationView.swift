@@ -73,7 +73,7 @@ struct ConversationView: View {
             
             ScrollView(showsIndicators: false){
                 
-                VStack(spacing:20){
+                VStack(spacing: 20){
                     switch emergencyType {
                     case .police:
                         

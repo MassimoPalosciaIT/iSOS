@@ -14,13 +14,19 @@ struct MapInfoView: View {
     var body: some View {
         
         HStack{
+//            Text("Directions")
+//                .fontWeight(.bold)
+//            
+//            Spacer()
+            
             Image(systemName: "car.fill")
+            
             Text(travelTime ?? "0m")
         }
         .frame(maxWidth: .infinity)
         .padding()
         .background(.thinMaterial)
-        .clipShape(.rect(cornerRadius: 25))
+        .clipShape(.rect(cornerRadius: 90))
         .padding()
         .transition(.move(edge: .bottom))
         

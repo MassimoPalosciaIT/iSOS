@@ -62,13 +62,14 @@ struct LocationButton: View {
                     
                 }
                 .overlay{
-                    VStack(){
+                    VStack{
                         AppPopupCopy()
                             .opacity(textOpacity)
                         
                         Spacer()
                     }
                     .frame(height: 230)
+                    // MARK: 
                 }
         }
         .buttonStyle(PlainButtonStyle())

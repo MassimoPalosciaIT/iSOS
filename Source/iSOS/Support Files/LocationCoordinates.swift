@@ -46,6 +46,44 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         return String(self.coordinate?.longitude ?? 0)
     }
     
+    func getAddress(completion: @escaping (String?) -> Void) {
+        guard let location = lastSeenLocation else {
+            completion(nil)
+            return
+        }
+        
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { placemarks, error in
+            guard let placemark = placemarks?.first, error == nil else {
+                completion(nil)
+                return
+            }
+            
+            // Construct the address string
+            var addressString = ""
+            if let thoroughfare = placemark.thoroughfare {
+                addressString += thoroughfare + ", "
+            } else{
+                completion(nil)
+                return
+            }
+            if let subThoroughfare = placemark.subThoroughfare {
+                addressString += subThoroughfare + ", "
+            } else{
+                completion(nil)
+                return
+            }
+            if let locality = placemark.locality {
+                addressString += locality
+            } else{
+                completion(nil)
+                return
+            }
+            
+            completion(addressString)
+        }
+    }
+    
     func getFormattedCoordinates() -> String {
         guard let coordinate = self.coordinate else {
             return "00°00'00.00\"N 00°00'00.00\"E"

@@ -17,6 +17,8 @@ struct LocationButton: View {
     let iconName: String = "location.fill"
     let backroundColor: Color = .mainGray
     
+    @State private var address: String?
+    
     private var formatedCoordinates: String {
         return locationViewModel.getFormattedCoordinates()
     }
@@ -26,7 +28,14 @@ struct LocationButton: View {
         Button(action: {
             
             softHaptic()
-            UIPasteboard.general.setValue(formatedCoordinates, forPasteboardType: UTType.plainText.identifier)
+            
+            var copyValue: String = formatedCoordinates
+            
+            if let address{
+                copyValue += "\n\n\(address)"
+            }
+            
+            UIPasteboard.general.setValue(copyValue, forPasteboardType: UTType.plainText.identifier)
             
             withAnimation() {
                 textOpacity = 1.0
@@ -50,10 +59,21 @@ struct LocationButton: View {
                                 
                                 Spacer()
                                 
-                                Text(formatedCoordinates)
+                                Group{
+                                    if let address{
+                                        Text(address)
+                                    } else{
+                                        Text(formatedCoordinates)
+                                    }
+                                }
+                                .fontWeight(.regular)
+                                .font(.title3)
                             }
                             .font(.title2)
                             .fontWeight(.medium)
+                        }
+                        .onAppear(){
+                            updateAddress()
                         }
                         
                         Spacer()
@@ -62,17 +82,28 @@ struct LocationButton: View {
                     
                 }
                 .overlay{
-                    VStack{
+                    VStack(spacing: 30){
                         AppPopupCopy()
                             .opacity(textOpacity)
                         
-                        Spacer()
+                        AppStandartButton(gradientColor1: .clear, gradientColor2: .clear, iconName: "xmark")
+                            .padding()
+                            .opacity(0)
+                            .allowsHitTesting(false)
                     }
-                    .frame(height: 230)
-                    // MARK: 
                 }
         }
         .buttonStyle(PlainButtonStyle())
         
+    }
+    
+    func updateAddress(){
+        locationViewModel.getAddress { address in
+            if let address = address {
+                self.address = address
+            } else{
+                self.address = nil
+            }
+        }
     }
 }

@@ -30,9 +30,22 @@ struct EmergencyView: View {
             HStack{
                 ForEach(0..<(amountOfMenus  + 1) / 2, id: \.self) { i in
                     let singleMenu = selectedEmergecny.menus[i]
-                    EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
-                        singleMenu.action()
+                    
+                    // MARK:
+                    var currentCountry: String {
+                        return locationViewModel.getCountry()
                     }
+                    
+                    let listOfSupportedConversationCountries: [String] = ["Italy"]
+                    
+                    if !(singleMenu.title == "Conversation" && !listOfSupportedConversationCountries.contains(currentCountry)){
+                        
+                        EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
+                            singleMenu.action()
+                        }
+                        
+                    }
+                    // MARK:
                 }
             }
             

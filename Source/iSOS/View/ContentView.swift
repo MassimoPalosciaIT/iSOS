@@ -18,27 +18,27 @@ struct ContentView: View {
         NavigationStack{
             VStack{
                 // MARK:
-                EmergencySelectionButton(selectedEmergency:
-                                            Emergency(
-                                                title: "Medical help",
-                                                iconName: "cross.fill",
-                                                gradientColor1: .redGradient1,
-                                                gradientColor2: .redGradient2,
-                                                emergencyType: EmergencyType.medicalHelp,
-                                                menus: [
-                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
-                                                        self.activeSheet = .firstAid
-                                                    }),
-                                                    EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
-                                                        self.activeSheet = .maps
-                                                    }),
-                                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
-                                                        self.activeSheet = .conversation
-                                                    }),
-                                                ],
-                                                mapSearchQuery: "Hospitals"
-                                            ), activeSheet: $activeSheet
-                )
+//                EmergencySelectionButton(selectedEmergency:
+//                                            Emergency(
+//                                                title: "Ambulance",
+//                                                iconName: "cross.fill",
+//                                                gradientColor1: .redGradient1,
+//                                                gradientColor2: .redGradient2,
+//                                                emergencyType: EmergencyType.medicalHelp,
+//                                                menus: [
+////                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
+////                                                        self.activeSheet = .firstAid
+////                                                    }),
+//                                                    EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
+//                                                        self.activeSheet = .maps
+//                                                    }),
+//                                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
+//                                                        self.activeSheet = .conversation
+//                                                    }),
+//                                                ],
+//                                                mapSearchQuery: "Hospitals"
+//                                            ), activeSheet: $activeSheet
+//                )
                 
                 EmergencySelectionButton(selectedEmergency:
                                             Emergency(
@@ -48,9 +48,9 @@ struct ContentView: View {
                                                 gradientColor2: .orangeGradient2,
                                                 emergencyType: EmergencyType.fireDepartment,
                                                 menus: [
-                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
-                                                        self.activeSheet = .firstAid
-                                                    }),
+//                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
+//                                                        self.activeSheet = .firstAid
+//                                                    }),
                                                     EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
                                                         self.activeSheet = .conversation
                                                     }),

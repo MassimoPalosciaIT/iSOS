@@ -12,6 +12,8 @@ Yaha is your go-to companion in times of crisis. With just a few taps, connect i
 
 ![](https://github.com/MassimoPalosciaIT/iSOS/blob/a174809a4b9b4c8cdcdb93fce22d18aa4821f469/YahaBanner.png)
 
+https://github.com/Alterplay/APOfflineReverseGeocoding
+
 ## Requirements
 
 - iOS 17.0+

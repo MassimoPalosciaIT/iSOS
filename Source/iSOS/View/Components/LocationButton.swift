@@ -10,33 +10,41 @@ import UniformTypeIdentifiers
 
 struct LocationButton: View {
     
-    @EnvironmentObject var locationViewModel: LocationViewModel
+    @EnvironmentObject var locationModel: LocationModel
+    
+    // textOpacity is used for popup notification to indicate that coordinates were copied. Animated property
     @State private var textOpacity: Double = 0.0
     
     let title: String = "You are here:"
     let iconName: String = "location.fill"
-    let backroundColor: Color = .mainGray
+    let backgroundColor: Color = .mainGray
     
+    // Address is only displayed if Location Model is able to determine exact address
     @State private var address: String?
     
-    private var formatedCoordinates: String {
-        return locationViewModel.getFormattedCoordinates()
+    private var formattedCoordinates: String {
+        return locationModel.getFormattedCoordinates()
     }
     
     var body: some View {
         
         Button(action: {
             
+            // Perform soft haptic feedback
             softHaptic()
             
-            var copyValue: String = formatedCoordinates
+            // Compose value for copying
+            var copyValue: String = formattedCoordinates
             
+            // Add address, if available to the copy value
             if let address{
                 copyValue += "\n\n\(address)"
             }
             
+            // Copy value to the clipboard
             UIPasteboard.general.setValue(copyValue, forPasteboardType: UTType.plainText.identifier)
             
+            // Perform popup animation
             withAnimation() {
                 textOpacity = 1.0
             } completion: {
@@ -49,7 +57,7 @@ struct LocationButton: View {
             
         })
         {
-            AppStandartButton(gradientColor1: backroundColor, gradientColor2: backroundColor, iconName: iconName, iconOpacity: 0.05)
+            AppStandardButton(gradientColor1: backgroundColor, gradientColor2: backgroundColor, iconName: iconName, iconOpacity: 0.05)
                 .overlay{
                     
                     HStack{
@@ -60,10 +68,11 @@ struct LocationButton: View {
                                 Spacer()
                                 
                                 Group{
+                                    // Address is only displayed if Location Model is able to determine exact address
                                     if let address{
                                         Text(address)
                                     } else{
-                                        Text(formatedCoordinates)
+                                        Text(formattedCoordinates)
                                     }
                                 }
                                 .fontWeight(.regular)
@@ -72,6 +81,7 @@ struct LocationButton: View {
                             .font(.title2)
                             .fontWeight(.medium)
                         }
+                        // Update address the first time button appears on the screen. This is done to prevent the overflow of apple services and to avoid cool-out time fine
                         .onAppear(){
                             updateAddress()
                         }
@@ -86,7 +96,7 @@ struct LocationButton: View {
                         AppPopupCopy()
                             .opacity(textOpacity)
                         
-                        AppStandartButton(gradientColor1: .clear, gradientColor2: .clear, iconName: "xmark")
+                        AppStandardButton(gradientColor1: .clear, gradientColor2: .clear, iconName: "xmark")
                             .padding()
                             .opacity(0)
                             .allowsHitTesting(false)
@@ -97,8 +107,9 @@ struct LocationButton: View {
         
     }
     
+    // Update coordinates
     func updateAddress(){
-        locationViewModel.getAddress { address in
+        locationModel.getAddress { address in
             if let address = address {
                 self.address = address
             } else{

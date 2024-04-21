@@ -7,15 +7,27 @@
 
 import SwiftUI
 
+// This View is used to display errors (related to location Model) or request location
 struct LocationRequestView: View {
     
-    @EnvironmentObject var locationViewModel: LocationViewModel
+    @EnvironmentObject var locationModel: LocationModel
     
+    // Main title of the screen
     var title: String
+    
+    // Trailing SF Symbol of the background
     var symbolBackground: String
+    
+    // Central SF Symbol
     var symbol: String
+    
+    // Title for the bottom button
     var buttonTitle: String
+    
+    // Symbol for the bottom button
     var buttonSymbol: String
+    
+    // Action for the bottom button
     var action: () -> Void
     
     var body: some View {

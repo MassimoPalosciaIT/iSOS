@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// App Popup button is used to grant permissions or indicate that location permit is denied
 struct AppPopupButton: View {
     
     var backgroundColor: Color = .mainGray
@@ -15,7 +16,7 @@ struct AppPopupButton: View {
     
     var body: some View {
         
-        RoundedRectangle(cornerRadius: cornerRadius)
+        RoundedRectangle(cornerRadius: 20)
             .fill(backgroundColor)
             .aspectRatio(1.0, contentMode: .fit)
             .overlay{

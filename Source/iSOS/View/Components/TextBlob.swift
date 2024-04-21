@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Text Blob is used for conversation view and for first aid view cards
 struct TextBlob: View {
     
     var textContent: String = "2. Call an ambulance as soon as possible."

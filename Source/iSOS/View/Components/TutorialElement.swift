@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Single element of the tutorial View that appears during onboarding
 struct TutorialElement: View {
     
     var iconName: String
@@ -17,6 +18,7 @@ struct TutorialElement: View {
         
         HStack(spacing: 20){
             
+            // SF Symbol with equal size
             Image(systemName: "xmark")
                 .font(.largeTitle)
                 .foregroundStyle(.clear)
@@ -29,9 +31,11 @@ struct TutorialElement: View {
             
             VStack(alignment: .leading){
                 Group{
+                    // Main title
                     Text(title)
                         .fontWeight(.bold)
 
+                    // Description of the element
                     Text(description)
                         .foregroundStyle(.gray)
                         .fontWeight(.medium)

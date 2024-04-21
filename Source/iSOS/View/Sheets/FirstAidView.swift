@@ -9,7 +9,9 @@ import SwiftUI
 
 struct FirstAidView: View {
     
-    @State private var search_aid = ""
+    @State private var searchBarText = ""
+    
+    // Load FirstAidCardViewModel
     private let aidModel:FirstAidCardViewModel = FirstAidCardViewModel()
     
     var body: some View {
@@ -25,15 +27,16 @@ struct FirstAidView: View {
             .padding(.horizontal)
             .navigationTitle("First aid")
         }
-        .searchable(text: $search_aid, placement: .navigationBarDrawer(displayMode: .always))
+        .searchable(text: $searchBarText, placement: .navigationBarDrawer(displayMode: .always))
         
     }
     
+    // Filter search results based on the name of the first aid
     var searchResults: [FirstAidModel] {
-        if search_aid.isEmpty {
+        if searchBarText.isEmpty {
             return aidModel.aid
         } else {
-            return aidModel.aid.filter { $0.title.lowercased().contains(search_aid.lowercased()) }
+            return aidModel.aid.filter { $0.title.lowercased().contains(searchBarText.lowercased()) }
         }
     }
 }

@@ -9,8 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var locationViewModel: LocationViewModel
+    @EnvironmentObject var locationModel: LocationModel
+    
+    // Get onboarding complete value from the user defaults
     @AppStorage("isOnboarding") var showingTutorialSheet: Bool = true
+    
+    // Hold active opened sheet for emergency detail view
     @State private var activeSheet: ActiveSheet?
     
     var body: some View {
@@ -18,28 +22,30 @@ struct ContentView: View {
         NavigationStack{
             VStack{
                 // MARK:
-//                EmergencySelectionButton(selectedEmergency:
-//                                            Emergency(
-//                                                title: "Ambulance",
-//                                                iconName: "cross.fill",
-//                                                gradientColor1: .redGradient1,
-//                                                gradientColor2: .redGradient2,
-//                                                emergencyType: EmergencyType.medicalHelp,
-//                                                menus: [
-////                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
-////                                                        self.activeSheet = .firstAid
-////                                                    }),
-//                                                    EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
-//                                                        self.activeSheet = .maps
-//                                                    }),
-//                                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
-//                                                        self.activeSheet = .conversation
-//                                                    }),
-//                                                ],
-//                                                mapSearchQuery: "Hospitals"
-//                                            ), activeSheet: $activeSheet
-//                )
+                // Define structure for Medical Help Button
+                EmergencySelectionButton(selectedEmergency:
+                                            Emergency(
+                                                title: "Ambulance",
+                                                iconName: "cross.fill",
+                                                gradientColor1: .redGradient1,
+                                                gradientColor2: .redGradient2,
+                                                emergencyType: EmergencyType.medicalHelp,
+                                                menus: [
+                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
+                                                        self.activeSheet = .firstAid
+                                                    }),
+                                                    EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
+                                                        self.activeSheet = .maps
+                                                    }),
+                                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
+                                                        self.activeSheet = .conversation
+                                                    }),
+                                                ],
+                                                mapSearchQuery: "Hospitals"
+                                            ), activeSheet: $activeSheet
+                )
                 
+                // Define structure for Fire department Help Button
                 EmergencySelectionButton(selectedEmergency:
                                             Emergency(
                                                 title: "Fire department",
@@ -48,9 +54,9 @@ struct ContentView: View {
                                                 gradientColor2: .orangeGradient2,
                                                 emergencyType: EmergencyType.fireDepartment,
                                                 menus: [
-//                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
-//                                                        self.activeSheet = .firstAid
-//                                                    }),
+                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
+                                                        self.activeSheet = .firstAid
+                                                    }),
                                                     EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
                                                         self.activeSheet = .conversation
                                                     }),
@@ -59,6 +65,7 @@ struct ContentView: View {
                                             ), activeSheet: $activeSheet
                 )
                 
+                // Define structure for Police Help Button
                 EmergencySelectionButton(selectedEmergency:
                                             Emergency(
                                                 title: "Police",
@@ -80,6 +87,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
+                // Location button
                 LocationButton()
             }
             .padding(.horizontal)
@@ -91,6 +99,9 @@ struct ContentView: View {
             .navigationTitle("Need help?")
             
         }
+        
+        // Sheet with tutorial / onboarding
+        // Only present the first time user opens app
         .sheet(isPresented: $showingTutorialSheet) {
             TutorialView()
         }
@@ -100,5 +111,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(LocationViewModel())
+        .environmentObject(LocationModel())
 }

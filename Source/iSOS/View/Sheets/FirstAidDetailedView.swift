@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// FirstAidDetailedView is visible after selecting First Aid card from the FirstAidView
 struct FirstAidDetailedView: View {
     
     var FirstAidName: String
@@ -14,6 +15,7 @@ struct FirstAidDetailedView: View {
     
     init(FirstAidName: String) {
         self.FirstAidName = FirstAidName
+        // Parse tips from .csv file based on the name of the first aid
         self.tips = getFirstAidRows(for: FirstAidName)
     }
     

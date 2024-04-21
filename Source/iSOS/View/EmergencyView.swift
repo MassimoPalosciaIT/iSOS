@@ -7,75 +7,76 @@
 
 import SwiftUI
 
+// This view might display according information about each Emergency based on its type
+// You can pass custom branding (colors) as well as custom menu buttons and actions
 struct EmergencyView: View {
     
-    @EnvironmentObject var locationViewModel: LocationViewModel
+    @EnvironmentObject var locationModel: LocationModel
+    
+    // Active sheet type is passed from the main contentView
     @Binding var activeSheet: ActiveSheet?
     
-    let selectedEmergecny: Emergency
+    // Define selected emergency
+    let selectedEmergency: Emergency
     
+    // Get current country based on the location
     private var currentCountry: String {
-        return locationViewModel.getCountry()
+        return locationModel.getCountry()
     }
     
+    // Get current country emergency number based on the location
     private var countryEmergencyNumber: String {
-        return getEmergencyNumber(for: currentCountry, emergencyType: selectedEmergecny.emergencyType)
+        return getEmergencyNumber(for: currentCountry, emergencyType: selectedEmergency.emergencyType)
     }
     
     var body: some View {
         
         VStack{
-            let amountOfMenus = selectedEmergecny.menus.count
+            let amountOfMenus = selectedEmergency.menus.count
             
             HStack{
                 ForEach(0..<(amountOfMenus  + 1) / 2, id: \.self) { i in
-                    let singleMenu = selectedEmergecny.menus[i]
+                    let singleMenu = selectedEmergency.menus[i]
                     
                     // MARK:
-                    var currentCountry: String {
-                        return locationViewModel.getCountry()
-                    }
                     
+                    // The conversation feature is currently only available and working in Italy due to the lack of localization. This view will not appear in other countries.
                     let listOfSupportedConversationCountries: [String] = ["Italy"]
                     
                     if !(singleMenu.title == "Conversation" && !listOfSupportedConversationCountries.contains(currentCountry)){
                         
-                        EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
+                        EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2){
                             singleMenu.action()
                         }
                         
                     }
-                    // MARK:
                 }
             }
             
             HStack{
                 ForEach((amountOfMenus  + 1) / 2..<amountOfMenus, id: \.self) { i in
-                    let singleMenu = selectedEmergecny.menus[i]
+                    let singleMenu = selectedEmergency.menus[i]
                     
                     // MARK:
-                    var currentCountry: String {
-                        return locationViewModel.getCountry()
-                    }
                     
+                    // The conversation feature is currently only available and working in Italy due to the lack of localization. This view will not appear in other countries.
                     let listOfSupportedConversationCountries: [String] = ["Italy"]
                     
                     if !(singleMenu.title == "Conversation" && !listOfSupportedConversationCountries.contains(currentCountry)){
                         
-                        EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2){
+                        EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2){
                             singleMenu.action()
                         }
                         
                     }
-                    // MARK:
-
+                    
                 }
             }
             
             
             Spacer()
             
-            AppButtonCall(gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2, callNumber:countryEmergencyNumber)
+            AppButtonCall(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2, callNumber:countryEmergencyNumber)
             
             Spacer()
             
@@ -84,16 +85,18 @@ struct EmergencyView: View {
         .padding(.horizontal)
         .padding(.top)
         .background{
-            TopGradient(gradientColor1: selectedEmergecny.gradientColor1, gradientColor2: selectedEmergecny.gradientColor2)
+            TopGradient(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2)
         }
         .background(.mainBackground)
-        .navigationBarTitle(selectedEmergecny.title, displayMode: .inline)
+        .navigationBarTitle(selectedEmergency.title, displayMode: .inline)
+        
+        // Present sheet view based on ActiveSheet
         .sheet(item: $activeSheet) { item in
             
             Group{
                 switch item {
                 case .conversation:
-                    ConversationView(emergencyType: selectedEmergecny.emergencyType)
+                    ConversationView(emergencyType: selectedEmergency.emergencyType)
                         .presentationDragIndicator(.visible)
                         .padding(.top)
                 case .firstAid:
@@ -102,21 +105,22 @@ struct EmergencyView: View {
                         .padding(.top)
                 case .maps:
                     MapView(
-                        gradientColor1: selectedEmergecny.gradientColor1,
-                        gradientColor2: selectedEmergecny.gradientColor2,
-                        searchQuery: selectedEmergecny.mapSearchQuery,
+                        gradientColor1: selectedEmergency.gradientColor1,
+                        gradientColor2: selectedEmergency.gradientColor2,
+                        searchQuery: selectedEmergency.mapSearchQuery,
                         activeSheet: $activeSheet
                     )
                 }
             }
             .presentationDetents([.large])
-            .environmentObject(locationViewModel)
+            .environmentObject(locationModel)
             
         }
         
     }
 }
 
+// Control currently selected sheet
 enum ActiveSheet: Identifiable {
     case conversation
     case firstAid
@@ -148,8 +152,8 @@ enum ActiveSheet: Identifiable {
     
     return EmergencyView(
         activeSheet: $activeSheet,
-        selectedEmergecny: emergency
+        selectedEmergency: emergency
     )
     
-    .environmentObject(LocationViewModel())
+    .environmentObject(LocationModel())
 }

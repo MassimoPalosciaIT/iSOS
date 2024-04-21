@@ -7,20 +7,25 @@
 
 import SwiftUI
 
+// The conversation feature is currently only available and working in Italy due to the lack of localization. This view will not appear in other countries.
 struct ConversationView: View {
     
-    @EnvironmentObject var locationViewModel: LocationViewModel
+    @EnvironmentObject var locationModel: LocationModel
     
+    // Get formatted coordinates based on the current location
     private var formattedCoordinates: String {
-        return locationViewModel.getFormattedCoordinates()
+        return locationModel.getFormattedCoordinates()
     }
     
+    // Define emergency type
     var emergencyType: EmergencyType
     
+    // Get current address id the internet connection is availabe
     @State private var address: String?
     
     // MARK:
-    private var convPolice: [Conversation] {
+    // Define conversation for police
+    private var conversationPolice: [Conversation] {
         [
             Conversation(questionText: "Hello, I need to report an emergency.", answerText: "Salve, mi serve un'ambulanza."),
             Conversation(questionText: "\(address ?? "") \((address != nil) ? "\n\n" : "")My coordinates are: \(formattedCoordinates)", answerText: "\(address ?? "") \((address != nil) ? "\n\n" : "")Le mie coordinate sono: \(formattedCoordinates)\n\n(\(translateCoordinates(coordinate: formattedCoordinates)))"),
@@ -31,7 +36,8 @@ struct ConversationView: View {
         ]
     }
     
-    private var convFire: [Conversation] {
+    // Define conversation for Fire department
+    private var conversationFireDepartment: [Conversation] {
         [
             Conversation(questionText: "Hello, I need to report a fire emergency.", answerText: "Salve, mi serve un'ambulanza."),
             Conversation(questionText: "\(address ?? "") \((address != nil) ? "\n\n" : "")My coordinates are: \(formattedCoordinates)", answerText: "\(address ?? "") \((address != nil) ? "\n\n" : "")Le mie coordinate sono: \(formattedCoordinates)\n\n(\(translateCoordinates(coordinate: formattedCoordinates)))"),
@@ -41,7 +47,8 @@ struct ConversationView: View {
         ]
     }
     
-    private var convMedical: [Conversation] {
+    // Define conversation for Medical Help department
+    private var conversationMedicalHelp: [Conversation] {
         [
             Conversation(questionText: "Hello, I need medical assistance immediately.", answerText: "Salve, mi serve un'ambulanza."),
             Conversation(questionText: "\(address ?? "") \((address != nil) ? "\n\n" : "")My coordinates are: \(formattedCoordinates)", answerText: "\(address ?? "") \((address != nil) ? "\n\n" : "")Le mie coordinate sono: \(formattedCoordinates)\n\n(\(translateCoordinates(coordinate: formattedCoordinates)))"),
@@ -65,19 +72,19 @@ struct ConversationView: View {
                     switch emergencyType {
                     case .police:
                         
-                        ForEach(convPolice) { selectedConversation in
+                        ForEach(conversationPolice) { selectedConversation in
                             BlobCombo(messageQuestion: selectedConversation.questionText, messageReply: selectedConversation.answerText)
                         }
                         
                     case .medicalHelp:
                         
-                        ForEach(convMedical) { selectedConversation in
+                        ForEach(conversationMedicalHelp) { selectedConversation in
                             BlobCombo(messageQuestion: selectedConversation.questionText, messageReply: selectedConversation.answerText)
                         }
                         
                     case .fireDepartment:
                         
-                        ForEach(convFire) { selectedConversation in
+                        ForEach(conversationFireDepartment) { selectedConversation in
                             BlobCombo(messageQuestion: selectedConversation.questionText, messageReply: selectedConversation.answerText)
                         }
                     }
@@ -95,8 +102,9 @@ struct ConversationView: View {
         
     }
     
+    // Function to update address when internet connection is available
     func updateAddress(){
-        locationViewModel.getAddress { address in
+        locationModel.getAddress { address in
             if let address = address {
                 self.address = address
             } else{
@@ -106,6 +114,7 @@ struct ConversationView: View {
     }
 }
 
+// Flags View for on top overlay of ConversationView
 struct FlagsView: View {
     
     var flag1: String
@@ -135,5 +144,5 @@ struct FlagsView: View {
 
 
 #Preview {
-    ConversationView(emergencyType: .police).environmentObject(LocationViewModel())
+    ConversationView(emergencyType: .police).environmentObject(LocationModel())
 }

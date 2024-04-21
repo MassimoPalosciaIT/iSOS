@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Card for First Aid help
 struct FirstAidModel: Identifiable {
     var id = UUID()
     var title: String

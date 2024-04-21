@@ -7,6 +7,7 @@
 
 import Foundation
 
+// View Model for First Aid Cards that include Title and SF Symbol name
 class FirstAidCardViewModel{
     var aid:[FirstAidModel] = [
         FirstAidModel(title: "Bleeding", iconName: "drop"),

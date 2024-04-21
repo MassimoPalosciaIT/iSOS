@@ -7,14 +7,19 @@
 
 import SwiftUI
 
+// Tutorial View only appears the first time user enters the app and completes onboarding
 struct TutorialView: View {
     
+    // Extract isOnboarding value from the system defaults
     @AppStorage("isOnboarding") var isOnboarding: Bool?
+    
+    // Animate tutorial sheet with gradual fade animation
     @State var animationPhase: Int = 0
     
     var body: some View {
         
         VStack{
+            // Wrap app icon into the GeometryReader to determine the perfect corner radius
             GeometryReader{ proxy in
                 Image(uiImage: Bundle.main.icon ?? UIImage())
                     .resizable()
@@ -23,12 +28,14 @@ struct TutorialView: View {
             .frame(width: 80, height: 80)
             .opacity(animationPhase >= 1 ? 1 : 0)
             
+            // Main title
             Text("Welcome to Yaha")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .opacity(animationPhase >= 1 ? 1 : 0)
             
+            // List of tutorial elements
             VStack(spacing: 20){
                 TutorialElement(iconName: "phone.circle", title: "Emergency number locator", description: "The app determines your country's emergency number.")
                     .opacity(animationPhase >= 2 ? 1 : 0)
@@ -43,6 +50,7 @@ struct TutorialView: View {
             
             Spacer()
             
+            // Button that closes onboarding sheet and marks onboarding as complete
             Button( action: {isOnboarding = false} ) {
                 Text("Continue")
                     .fontWeight(.bold)
@@ -55,6 +63,10 @@ struct TutorialView: View {
         }
         .padding()
         .padding(.top)
+        // Prevent sheet from dismissing until tutorial is complete
+        .interactiveDismissDisabled()
+        
+        // Start fade phase animation on appear
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 0.8, repeats: true) { timer in
                 if animationPhase < 5 {
@@ -66,11 +78,11 @@ struct TutorialView: View {
                 }
             }
         }
-        .interactiveDismissDisabled()
         
     }
 }
 
+// Extension to extract app icon from assets
 extension Bundle {
     var icon: UIImage? {
         if let icons = infoDictionary?["CFBundleIcons"] as? [String: Any],

@@ -1,5 +1,5 @@
 //
-//  AppStandartButton.swift
+//  AppStandardButton.swift
 //  iSOS
 //
 //  Created by Matt Novoselov on 15/03/24.
@@ -7,13 +7,23 @@
 
 import SwiftUI
 
-struct AppStandartButton: View {
+// App standard button is a base of all main buttons in the app
+struct AppStandardButton: View {
     
+    // Colors of the button
     var gradientColor1: Color
     var gradientColor2: Color
+    
+    // Icon name for the trailing SF Symbol
     var iconName: String
+    
+    // Height of the button
     var frameHeight: Double = 120
+    
+    // Opacity of the trailing SF Symbol
     var iconOpacity: Double = 0.15
+    
+    // Corner radius of the button
     let cornerRadius: Double = 20
     
     var body: some View {
@@ -36,5 +46,5 @@ struct AppStandartButton: View {
 }
 
 #Preview {
-    AppStandartButton(gradientColor1: .redGradient1, gradientColor2: .redGradient2, iconName: "xmark", frameHeight: 120, iconOpacity: 1.0)
+    AppStandardButton(gradientColor1: .redGradient1, gradientColor2: .redGradient2, iconName: "xmark", frameHeight: 120, iconOpacity: 1.0)
 }

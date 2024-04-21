@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Top gradient is used on the background of al main views
 struct TopGradient: View {
     
     var gradientColor1: Color

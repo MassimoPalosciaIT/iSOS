@@ -7,12 +7,14 @@
 
 import SwiftUI
 
+// Types of emergencies
 enum EmergencyType {
     case police
     case medicalHelp
     case fireDepartment
 }
 
+// Function to start a phone call, given a defined phone number
 func startCall(to number: String) {
     guard let url = URL(string: "tel://\(number)"), UIApplication.shared.canOpenURL(url) else {
         print("Error: Unable to initiate call.")
@@ -22,14 +24,18 @@ func startCall(to number: String) {
     UIApplication.shared.open(url)
 }
 
+// Function to get emergency number for particular agency (emergency type), based on the country
 func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> String {
+    // Validate path to .csv file
     guard let csvPath = Bundle.main.path(forResource: "emergencyNumbers", ofType: "csv"),
           let csvContent = try? String(contentsOfFile: csvPath) else {
         return "File not found"
     }
     
+    // Extract lines from the .csv file
     let lines = csvContent.components(separatedBy: .newlines)
     
+    // Extract columns for each line
     for line in lines {
         let columns = line.split(separator: ";")
         guard columns.count >= 4 else { continue }

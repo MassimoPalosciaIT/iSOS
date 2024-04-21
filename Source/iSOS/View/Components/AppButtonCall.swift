@@ -9,15 +9,20 @@ import SwiftUI
 
 struct AppButtonCall: View {
     
+    // Colors for button fill
     var gradientColor1: Color
     var gradientColor2: Color
+    
+    // Phone number to call to
     var callNumber: String
-    let iconName: String = "phone.fill"
     
     var body: some View {
         
         Button(action: {
+            // Start phone call
             startCall(to: callNumber)
+            
+            // Play medium haptic feedback
             mediumHaptic()
         })
         {
@@ -26,7 +31,7 @@ struct AppButtonCall: View {
                 .frame(height: 165)
                 .shadow(color: gradientColor1.opacity(0.8), radius: 50)
                 .overlay{
-                    Image(systemName: iconName)
+                    Image(systemName: "phone.fill")
                         .font(.system(size: 64))
                 }
         }

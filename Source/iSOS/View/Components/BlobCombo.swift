@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// BlobCombo is used for conversation view screen
 struct BlobCombo: View {
     
     var messageQuestion: String
@@ -15,6 +16,7 @@ struct BlobCombo: View {
     var body: some View {
         
         VStack{
+            // English message (left tail)
             HStack{
                 HStack{
                     Text(messageQuestion)
@@ -29,6 +31,7 @@ struct BlobCombo: View {
                 Spacer()
             }
             
+            // Translated language message (right tail)
             HStack{
                 Spacer()
                 

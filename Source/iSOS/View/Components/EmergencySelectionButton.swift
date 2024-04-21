@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// EmergencySelectionButton is used in main menu to select between different types of emergencies (medical, police, fire department)
 struct EmergencySelectionButton: View {
     
     var selectedEmergency: Emergency
@@ -14,9 +15,10 @@ struct EmergencySelectionButton: View {
     
     var body: some View {
         
-        NavigationLink(destination: EmergencyView(activeSheet: $activeSheet, selectedEmergecny: selectedEmergency)) {
+        // Navigation link to proceed to detail View
+        NavigationLink(destination: EmergencyView(activeSheet: $activeSheet, selectedEmergency: selectedEmergency)) {
             
-            AppStandartButton(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2, iconName: selectedEmergency.iconName)
+            AppStandardButton(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2, iconName: selectedEmergency.iconName)
                 .overlay{
                     HStack {
                         Group {

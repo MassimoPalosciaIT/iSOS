@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// FirstAidSelectionButton is used to display a list of possible First Aid advices
 struct FirstAidSelectionButton: View {
     
     var iconName: String
@@ -14,7 +15,7 @@ struct FirstAidSelectionButton: View {
     
     var body: some View {
         
-        AppStandartButton(gradientColor1: .mainGray, gradientColor2: .mainGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
+        AppStandardButton(gradientColor1: .mainGray, gradientColor2: .mainGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
             .overlay{
                 
                 HStack {

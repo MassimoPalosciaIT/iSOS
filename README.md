@@ -9,11 +9,11 @@
 
 Yaha helps you connect to the appropriate emergency services based on your location, as well as access first aid tips, locate nearby hospitals, and bridge language barriers with pre-built conversation templates. Stay safe with Yaha.
 
-<a href="https://www.youtube.com/" target="_blank">
-  <img src="https://github.com/MassimoPalosciaIT/iSOS/blob/6ca1a0bf127661d85a6c9595c27b393156b84a74/YahaBanner.png" alt="GIF">
-</a>
-
 [![](https://github.com/matt-novoselov/matt-novoselov/blob/6386e5860d859930957588548cf1f968774ffc7e/Files/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg)](https://apps.apple.com/app/mockingbird-game/id6498711042)
+
+<a href="https://www.youtube.com/" target="_blank">
+  <img src="https://github.com/MassimoPalosciaIT/iSOS/blob/b5f9fcd61c80ed061f2453cbed55492d8db791c6/YahaBanner.png" alt="GIF">
+</a>
 
 ## Description
 Lorem ipsum

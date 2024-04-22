@@ -11,6 +11,8 @@ Yaha helps you connect to the appropriate emergency services based on your locat
 
 <img src="https://github.com/MassimoPalosciaIT/iSOS/blob/73b1859f00ef557a589483ff32bb2e8c8bc2a642/YahaBanner.png" alt="GIF">
 
+[![](https://github.com/matt-novoselov/matt-novoselov/blob/eb675928f9e5b3cd2a2db6cde2b6ecf5ab646b4c/Files/Available_on_the_Test_Flight.svg)](https://testflight.apple.com/join/Qyfhv1vH)
+
 ## Description
 Lorem ipsum
 

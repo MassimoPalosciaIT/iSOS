@@ -25,7 +25,7 @@ struct ContentView: View {
                 // Define structure for Medical Help Button
                 EmergencySelectionButton(selectedEmergency:
                                             Emergency(
-                                                title: "Ambulance",
+                                                title: "Medical Help",
                                                 iconName: "cross.fill",
                                                 gradientColor1: .redGradient1,
                                                 gradientColor2: .redGradient2,

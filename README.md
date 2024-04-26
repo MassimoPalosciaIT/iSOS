@@ -9,6 +9,8 @@
 
 Yaha helps you connect to the appropriate emergency services based on your location, as well as access first aid tips, locate nearby hospitals, and bridge language barriers with pre-built conversation templates. Stay safe with Yaha.
 
+![Preview](https://github.com/MassimoPalosciaIT/iSOS/assets/59065228/4525077a-a6c8-465b-87ea-d42f76882849)
+
 <a href="https://youtu.be/C-nO2l34tNM" target="_blank">
   <img src="https://github.com/MassimoPalosciaIT/iSOS/blob/73b1859f00ef557a589483ff32bb2e8c8bc2a642/YahaBanner.png" alt="GIF">
 </a>

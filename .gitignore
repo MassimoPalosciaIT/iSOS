@@ -72,3 +72,7 @@ iOSInjectionProject/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+# Ignore Config files
+Config.xcconfig
+.env

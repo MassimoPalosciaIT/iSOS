@@ -24,7 +24,7 @@ The app uses **CoreLocation** to determine the user’s coordinates. GPS technol
 
 **MapsKit** is used to display nearby hospitals and police offices on the map, enabling users to find directions to these locations.
 
-Our app incorporates accessibility features to assist our users.
+Our app incorporates accessibility features to assist our users, including support for VoiceOver.
 
 ## Requirements
 - iOS 17.0+

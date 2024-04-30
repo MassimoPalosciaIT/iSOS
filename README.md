@@ -18,7 +18,13 @@ Yaha helps you connect to the appropriate emergency services based on your locat
 
 
 ## Description
-Lorem ipsum
+The app was built using **SwiftUI** to create a visual interface.
+
+The app uses **CoreLocation** to determine the user’s coordinates. GPS technology enables us to calculate user’s coordinates without an internet connection. After that we process user’s coordinates through a [local offline reverse geocoding library](https://github.com/Alterplay/APOfflineReverseGeocoding) to identify the country in which the user is located. This process is entirely automated and doesn’t require an internet connection, ensuring that people can use our app even in the most remote locations. All emergency phone numbers for various types of emergencies across all countries are stored in the local database. When the app has internet access, it connects to the Apple’s reverse geocoding server to determine the exact address of the user.
+
+**MapsKit** is used to display nearby hospitals and police offices on the map, enabling users to find directions to these locations.
+
+Our app incorporates accessibility features to assist our users.
 
 ## Requirements
 - iOS 17.0+
@@ -37,6 +43,9 @@ Lorem ipsum
 <br>
 
 ## Credits
+
+Yaha includes first aid tips sourced from the [World Health Organization website](https://www.who.int/).
+
 Distributed under the MIT license. See **LICENSE** for more information.
 
 Developed with ❤️ by One Piece Team

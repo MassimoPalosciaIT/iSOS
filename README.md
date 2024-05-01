@@ -7,7 +7,7 @@
 
 <img src="https://github.com/matt-novoselov/matt-novoselov/blob/fa4553c1e2ba92cb77bf1d11d272d0c1ad5de138/Files/ios17.svg" alt="SwiftUI" style="height: 30px"> <img src="https://github.com/matt-novoselov/matt-novoselov/blob/fa4553c1e2ba92cb77bf1d11d272d0c1ad5de138/Files/SwiftUI.svg" style="height: 30px"> <img src="https://github.com/matt-novoselov/matt-novoselov/blob/fa4553c1e2ba92cb77bf1d11d272d0c1ad5de138/Files/CoreLocation.svg" alt="SwiftUI" style="height: 30px"> <img src="https://github.com/matt-novoselov/matt-novoselov/blob/fa4553c1e2ba92cb77bf1d11d272d0c1ad5de138/Files/MapsKit.svg" alt="SwiftUI" style="height: 30px">
 
-Yaha helps you connect to the appropriate emergency services based on your location, as well as access first aid tips, locate nearby hospitals, and bridge language barriers with pre-built conversation templates. Stay safe with Yaha.
+Yaha is an app designed to help you in emergency situations. It can automatically determine the appropriate emergency number for your country, provide first aid tips, locate nearby hospitals, and assist you with communication with emergency services using pre-built conversation templates. Stay safe with Yaha.
 
 <a href="https://youtu.be/C-nO2l34tNM" target="_blank">
   <img src="https://github.com/MassimoPalosciaIT/iSOS/assets/59065228/3816afd0-ed60-4369-a039-d85ed58b7000" alt="GIF">
@@ -24,7 +24,7 @@ The app uses **CoreLocation** to determine the user’s coordinates. GPS technol
 
 **MapsKit** is used to display nearby hospitals and police offices on the map, enabling users to find directions to these locations.
 
-Our app incorporates accessibility features to assist our users, including support for VoiceOver.
+Yaha incorporates accessibility features to assist our users, including support for VoiceOver.
 
 ## Requirements
 - iOS 17.0+

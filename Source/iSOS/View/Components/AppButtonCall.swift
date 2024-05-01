@@ -36,6 +36,7 @@ struct AppButtonCall: View {
                 }
         }
         .buttonStyle(PlainButtonStyle())
+        .accessibilityLabel("Call \(callNumber)")
         
     }
 }

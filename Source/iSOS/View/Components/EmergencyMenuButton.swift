@@ -41,6 +41,9 @@ struct EmergencyMenuButton: View {
                 }
         }
         .buttonStyle(PlainButtonStyle())
+        .accessibilityElement()
+        .accessibilityAddTraits(.isButton)
+        .accessibilityLabel(title)
         
     }
 }

@@ -7,10 +7,16 @@
     "🇮🇹" : {
 
     },
+    "Call %@" : {
+
+    },
     "Continue" : {
 
     },
     "Done" : {
+
+    },
+    "English. %@" : {
 
     },
     "First aid" : {
@@ -19,10 +25,16 @@
     "Get Directions" : {
 
     },
+    "Italian. %@" : {
+
+    },
     "Need help?" : {
 
     },
     "Select an app to open location" : {
+
+    },
+    "Tap to copy your current location" : {
 
     },
     "Welcome to Yaha" : {

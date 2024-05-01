@@ -93,6 +93,7 @@ struct ConversationView: View {
             }
             .overlay{
                 FlagsView(flag1: "🇬🇧", flag2: "🇮🇹")
+                    .accessibilityHidden(true)
             }
             .padding(.horizontal)
         }

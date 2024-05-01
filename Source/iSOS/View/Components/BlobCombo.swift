@@ -30,6 +30,7 @@ struct BlobCombo: View {
                 
                 Spacer()
             }
+            .accessibilityLabel("English. \(messageQuestion)")
             
             // Translated language message (right tail)
             HStack{
@@ -44,6 +45,7 @@ struct BlobCombo: View {
                         .fontWeight(.semibold)
                 }
             }
+            .accessibilityLabel("Italian. \(messageQuestion)")
         }
         
     }

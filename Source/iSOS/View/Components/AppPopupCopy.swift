@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppPopupCopy: View {
     
-    let title: String = "Address copied to the clipboard"
+    public let title: String = "Location copied to the clipboard"
     let iconName = "doc.on.doc.fill"
     
     var body: some View {

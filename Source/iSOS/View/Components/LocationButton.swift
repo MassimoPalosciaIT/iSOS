@@ -104,6 +104,7 @@ struct LocationButton: View {
                 }
         }
         .buttonStyle(PlainButtonStyle())
+        .accessibilityHint("Tap to copy your current location")
         
     }
     

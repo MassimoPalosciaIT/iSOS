@@ -40,7 +40,7 @@ struct TutorialView: View {
                 TutorialElement(iconName: "phone.circle", title: "Emergency number locator", description: "The app determines your country's emergency number.")
                     .opacity(animationPhase >= 2 ? 1 : 0)
                 
-                TutorialElement(iconName: "doc.on.doc", title: "Copy address", description: "Click on the address to copy it to the clipboard.")
+                TutorialElement(iconName: "doc.on.doc", title: "Copy location", description: "Tap on your location to copy it to the clipboard.")
                     .opacity(animationPhase >= 3 ? 1 : 0)
                 
                 TutorialElement(iconName: "square.and.arrow.down", title: "Download offline maps", description: "Make sure to download offline maps before your journey.")

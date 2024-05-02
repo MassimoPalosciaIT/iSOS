@@ -24,8 +24,8 @@ struct LocationRequestView: View {
     // Title for the bottom button
     var buttonTitle: String
     
-    // Symbol for the bottom button
-    var buttonSymbol: String
+    // Optional symbol for the bottom button
+    var buttonSymbol: String?
     
     // Action for the bottom button
     var action: () -> Void
@@ -51,7 +51,13 @@ struct LocationRequestView: View {
                     
                     
                     Button( action: action ) {
-                        Label(buttonTitle, systemImage: buttonSymbol)
+                        // If symbol is passed, then display title and symbol
+                        if let symbol = buttonSymbol {
+                            Label(buttonTitle, systemImage: symbol)
+                        } else {
+                            // Otherwise, just title
+                            Text(buttonTitle)
+                        }
                     }
                     .buttonStyle(BorderedProminentButtonStyle())
                     .tint(.redGradient2)

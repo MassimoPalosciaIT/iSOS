@@ -30,7 +30,7 @@ struct YahaApp: App {
                 switch locationModel.authorizationStatus {
                 // Location permit is not granted, asking user to allow
                 case .notDetermined:
-                    LocationRequestView(title: "We need your permission to track the location", symbolBackground: "location.fill", symbol: "location.circle", buttonTitle: "Allow tracking", buttonSymbol: "location.fill", action: {locationModel.requestPermission()})
+                    LocationRequestView(title: "We need your permission to track the location", symbolBackground: "location.fill", symbol: "location.circle", buttonTitle: "Continue", action: {locationModel.requestPermission()})
                 // Location permit is restricted, asking user to allow in settings
                 case .restricted:
                     LocationRequestView(title: "Location use is restricted", symbolBackground: "xmark", symbol: "xmark.circle", buttonTitle: "Open settings", buttonSymbol: "gearshape.fill", action: {UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)})

@@ -10,7 +10,7 @@ import SwiftUI
 // The conversation feature is currently only available and working in Italy due to the lack of localization. This view will not appear in other countries.
 struct ConversationView: View {
     
-    @EnvironmentObject var locationModel: LocationModel
+    @Environment(LocationModel.self) var locationModel: LocationModel
     
     // Get formatted coordinates based on the current location
     private var formattedCoordinates: String {
@@ -145,5 +145,6 @@ struct FlagsView: View {
 
 
 #Preview {
-    ConversationView(emergencyType: .police).environmentObject(LocationModel())
+    ConversationView(emergencyType: .police)
+        .environment(LocationModel())
 }

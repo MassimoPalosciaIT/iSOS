@@ -11,7 +11,7 @@ import SwiftUI
 // You can pass custom branding (colors) as well as custom menu buttons and actions
 struct EmergencyView: View {
     
-    @EnvironmentObject var locationModel: LocationModel
+    @Environment(LocationModel.self) var locationModel: LocationModel
     
     // Active sheet type is passed from the main contentView
     @Binding var activeSheet: ActiveSheet?
@@ -113,7 +113,7 @@ struct EmergencyView: View {
                 }
             }
             .presentationDetents([.large])
-            .environmentObject(locationModel)
+            .environment(locationModel)
             
         }
         
@@ -155,5 +155,5 @@ enum ActiveSheet: Identifiable {
         selectedEmergency: emergency
     )
     
-    .environmentObject(LocationModel())
+    .environment(LocationModel())
 }

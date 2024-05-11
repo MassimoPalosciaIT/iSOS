@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var locationModel: LocationModel
+    @Environment(LocationModel.self) var locationModel: LocationModel
     
     // Get onboarding complete value from the user defaults
     @AppStorage("isOnboarding") var showingTutorialSheet: Bool = true
@@ -111,5 +111,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(LocationModel())
+        .environment(LocationModel())
 }

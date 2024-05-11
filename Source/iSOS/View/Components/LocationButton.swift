@@ -10,7 +10,7 @@ import UniformTypeIdentifiers
 
 struct LocationButton: View {
     
-    @EnvironmentObject var locationModel: LocationModel
+    @Environment(LocationModel.self) var locationModel: LocationModel
     
     // textOpacity is used for popup notification to indicate that coordinates were copied. Animated property
     @State private var textOpacity: Double = 0.0

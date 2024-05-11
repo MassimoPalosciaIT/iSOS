@@ -20,7 +20,7 @@ import SwiftUI
 struct YahaApp: App {
     
     // Load Location Model
-    @StateObject var locationModel = LocationModel()
+    @State var locationModel = LocationModel()
     @Environment(\.openURL) var openURL
     
     var body: some Scene {
@@ -45,7 +45,7 @@ struct YahaApp: App {
                     LocationRequestView(title: "Unexpected status. Please contact support", symbolBackground: "xmark", symbol: "xmark.circle", buttonTitle: "Contact support", buttonSymbol: "envelope.fill", action: {openURL(URL(string: "https://novoselov.dev")!)})
                 }
             }
-            .environmentObject(locationModel)
+            .environment(locationModel)
             .preferredColorScheme(.dark)
         }
     }

@@ -9,16 +9,17 @@ import CoreLocation
 
 
 // Location Model that is responsible for determining current position of the user
-class LocationModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+@Observable
+class LocationModel: NSObject, CLLocationManagerDelegate {
     
     // Status of the Location Model
-    @Published var authorizationStatus: CLAuthorizationStatus
+   var authorizationStatus: CLAuthorizationStatus
     
     // Last seen location of the user
-    @Published var lastSeenLocation: CLLocation?
+    var lastSeenLocation: CLLocation?
     
     // Current selected placemark
-    @Published var currentPlacemark: CLPlacemark?
+    var currentPlacemark: CLPlacemark?
     
     private let locationManager: CLLocationManager
     

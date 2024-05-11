@@ -10,7 +10,7 @@ import SwiftUI
 // This View is used to display errors (related to location Model) or request location
 struct LocationRequestView: View {
     
-    @EnvironmentObject var locationModel: LocationModel
+    @Environment(LocationModel.self) var locationModel: LocationModel
     
     // Main title of the screen
     var title: String

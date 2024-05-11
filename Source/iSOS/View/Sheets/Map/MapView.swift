@@ -12,7 +12,7 @@ import MapKit
 struct MapView: View {
     
     // EnvironmentObject to access location data
-    @EnvironmentObject var locationModel: LocationModel
+    @Environment(LocationModel.self) var locationModel: LocationModel
     
     // State variables for managing search results, map position, selected result, route, and info view visibility
     @State private var searchResults: [MKMapItem] = []
@@ -152,5 +152,5 @@ struct MapView: View {
         searchQuery: "Hospitals",
         activeSheet: .constant(nil)
     )
-    .environmentObject(LocationModel())
+    .environment(LocationModel())
 }

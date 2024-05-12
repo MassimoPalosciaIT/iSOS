@@ -17,12 +17,24 @@ Yaha is an app designed to help you in emergency situations. It can automaticall
 [![](https://github.com/matt-novoselov/matt-novoselov/blob/eb675928f9e5b3cd2a2db6cde2b6ecf5ab646b4c/Files/Available_on_the_Test_Flight.svg)](https://testflight.apple.com/join/Qyfhv1vH)
 
 
-## Description
-The app was built using **SwiftUI** to create a visual interface.
+## Features
 
-The app uses **CoreLocation** to determine the user’s coordinates. GPS technology enables us to calculate user’s coordinates without an internet connection. After that we process user’s coordinates through a [local offline reverse geocoding library](https://github.com/Alterplay/APOfflineReverseGeocoding) to identify the country in which the user is located. This process is entirely automated and doesn’t require an internet connection, ensuring that people can use our app even in the most remote locations. All emergency phone numbers for various types of emergencies across all countries are stored in the local database. When the app has internet access, it connects to the Apple’s reverse geocoding server to determine the exact address of the user.
+### Call emergency services
+As soon as you enter the app, Yaha suggests you select your emergency type and instantly contact emergency support. All emergency phone numbers for various types of emergencies across all countries are stored in the local database.
 
+### Works fully offline
+The app uses **CoreLocation** to determine the user’s coordinates. GPS technology enables us to calculate the user’s coordinates without an internet connection. After that, we process the user’s coordinates through a [local offline reverse geocoding library](https://github.com/Alterplay/APOfflineReverseGeocoding) to identify the country in which the user is located. This process is entirely automated and doesn’t require an internet connection, ensuring that people can use our app even in the most remote locations. When the app has internet access, it connects to Apple’s reverse geocoding server to determine the exact address of the user.
+
+### First aid tips
+Get first aid tips and guidance for different medical emergencies inside the app.
+
+### Emergency services on the map
 **MapsKit** is used to display nearby hospitals and police offices on the map, enabling users to find directions to these locations.
+
+### Conversation template
+The app uses pre-built conversation templates to help users communicate with emergency services while traveling abroad.
+
+<br>
 
 Yaha incorporates accessibility features to assist our users, including support for VoiceOver.
 

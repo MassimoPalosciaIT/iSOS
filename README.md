@@ -14,7 +14,6 @@ Yaha is an app designed to help you in emergency situations. It can automaticall
 </a>
 
 [![](https://github.com/matt-novoselov/matt-novoselov/blob/34555effedede5dd5aa24ae675218d989e976cf6/Files/YouTube_Badge.svg)](https://youtu.be/C-nO2l34tNM)
-[![](https://github.com/matt-novoselov/matt-novoselov/blob/eb675928f9e5b3cd2a2db6cde2b6ecf5ab646b4c/Files/Available_on_the_Test_Flight.svg)](https://testflight.apple.com/join/Qyfhv1vH)
 
 
 ## Features

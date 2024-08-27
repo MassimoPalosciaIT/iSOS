@@ -30,7 +30,6 @@
 		1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */; };
 		1AC70CFA2AEAE97E0023F294 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CF92AEAE97E0023F294 /* ConversationView.swift */; };
 		1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */; };
-		1AD0D0F92BC6896B000C9193 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0D0F82BC6896B000C9193 /* Localizable.xcstrings */; };
 		1AD0D0FB2BC699C9000C9193 /* FirstAidCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */; };
 		1AE5BC9B2BA44EB800148A26 /* TextBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */; };
 		1AE5BC9D2BA44ED300148A26 /* TutorialElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9C2BA44ED300148A26 /* TutorialElement.swift */; };
@@ -44,6 +43,7 @@
 		1AE5BCAD2BA44F8400148A26 /* FirstAidSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BCAC2BA44F8400148A26 /* FirstAidSelectionButton.swift */; };
 		1AE5BCAF2BA44F9500148A26 /* EmergencySelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BCAE2BA44F9500148A26 /* EmergencySelectionButton.swift */; };
 		1AE5BCB12BA44FB200148A26 /* EmergencyMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BCB02BA44FB200148A26 /* EmergencyMenuButton.swift */; };
+		1AF1242B2C7E37D700C08461 /* NoLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1242A2C7E37D700C08461 /* NoLocationView.swift */; };
 		4E1207832AEBB6A1003ABE26 /* firstAid.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4E1207822AEBB6A1003ABE26 /* firstAid.csv */; };
 		4E23C3052AEA55E200AD7073 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E23C3042AEA55E200AD7073 /* TutorialView.swift */; };
 		4E36D5212AE2608000209E4E /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36D5202AE2608000209E4E /* EmergencyView.swift */; };
@@ -83,7 +83,6 @@
 		1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmergencyNumber.swift; sourceTree = "<group>"; };
 		1AC70CF92AEAE97E0023F294 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidView.swift; sourceTree = "<group>"; };
-		1AD0D0F82BC6896B000C9193 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardModel.swift; sourceTree = "<group>"; };
 		1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlob.swift; sourceTree = "<group>"; };
 		1AE5BC9C2BA44ED300148A26 /* TutorialElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialElement.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		1AE5BCAC2BA44F8400148A26 /* FirstAidSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidSelectionButton.swift; sourceTree = "<group>"; };
 		1AE5BCAE2BA44F9500148A26 /* EmergencySelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencySelectionButton.swift; sourceTree = "<group>"; };
 		1AE5BCB02BA44FB200148A26 /* EmergencyMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMenuButton.swift; sourceTree = "<group>"; };
+		1AF1242A2C7E37D700C08461 /* NoLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLocationView.swift; sourceTree = "<group>"; };
 		4E1207822AEBB6A1003ABE26 /* firstAid.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = firstAid.csv; sourceTree = "<group>"; };
 		4E23C3042AEA55E200AD7073 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		4E36D5202AE2608000209E4E /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
@@ -185,6 +185,7 @@
 				1AE5BC992BA44E0900148A26 /* Components */,
 				1AC70CFB2AEAF5C20023F294 /* Sheets */,
 				1AC1737B2AE2655400F4818C /* LocationRequestView.swift */,
+				1AF1242A2C7E37D700C08461 /* NoLocationView.swift */,
 				1A48E0D22AE169900012E64E /* ContentView.swift */,
 				4E36D5202AE2608000209E4E /* EmergencyView.swift */,
 			);
@@ -247,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				1AB666132BCEB1F300B9157B /* Settings.bundle */,
-				1AD0D0F82BC6896B000C9193 /* Localizable.xcstrings */,
 				1A83AC852AF668A600182B3C /* Yaha-Bridging-Header.h */,
 				4ED20FF32ADE95B6007B4E50 /* Assets.xcassets */,
 				4ED20FEE2ADE95B4007B4E50 /* iSOS */,
@@ -337,7 +337,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A7763E42B01183A0027E945 /* emergencyNumbers.csv in Resources */,
-				1AD0D0F92BC6896B000C9193 /* Localizable.xcstrings in Resources */,
 				4E1207832AEBB6A1003ABE26 /* firstAid.csv in Resources */,
 				1A2EC8F42AF6BB81009F75C7 /* countries.geo.json in Resources */,
 				1AB666142BCEB1F300B9157B /* Settings.bundle in Resources */,
@@ -370,6 +369,7 @@
 				1A48E0D32AE169900012E64E /* ContentView.swift in Sources */,
 				1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */,
 				1AE5BCA92BA44F6600148A26 /* AppPopupButton.swift in Sources */,
+				1AF1242B2C7E37D700C08461 /* NoLocationView.swift in Sources */,
 				1AE5BCA72BA44F5800148A26 /* AppButtonCall.swift in Sources */,
 				1AE5BC9B2BA44EB800148A26 /* TextBlob.swift in Sources */,
 				1A782D6E2AEBC78B008E7FD8 /* FirstAidDetailedView.swift in Sources */,

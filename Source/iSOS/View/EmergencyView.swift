@@ -132,7 +132,7 @@ enum ActiveSheet: Identifiable {
 }
 
 #Preview {
-    @State var activeSheet: ActiveSheet?
+    @Previewable @State var activeSheet: ActiveSheet?
     
     let emergency: Emergency =
     

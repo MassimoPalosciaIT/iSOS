@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// BlobCombo is used for conversation view screen
+// BlobCombo is used for Phrases view screen
 struct BlobCombo: View {
     
     var messageQuestion: String

@@ -11,45 +11,48 @@ struct NoLocationView: View {
     
     @Environment(LocationModel.self) var locationModel: LocationModel
     
-    // Hold active opened sheet for emergency detail view
-    @State private var isSheetVisible: Bool = false
-    
     var body: some View {
         
-        VStack{
-            // Button to request location permission
-            VStack {
-                Text("The app does not have location permissions")
-                    .font(.title2)
-                    .fontWeight(.medium)
-                    .multilineTextAlignment(.center)
-                
-                Button( action: {UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)} ) {
-                    Label("Open settings", systemImage: "gearshape.fill")
-                }
-                .buttonStyle(BorderedProminentButtonStyle())
-                .tint(.redGradient2)
-            }
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background{
-                HStack {
-                    Spacer()
-                    Image(systemName: "xmark.circle")
-                        .opacity(0.03)
-                        .font(.system(size: 130))
-                        .padding(.trailing, -35)
-                }
-            }
-            .background(.mainGray)
-            .cornerRadius(20)
+        VStack {
+            Text("The app does not have location permissions")
+                .font(.title)
+                .fontWeight(.semibold)
+                .multilineTextAlignment(.center)
             
             Spacer()
             
-            // FirstAid Button
-            EmergencyMenuButton(title: "First Aid", iconName: "cross.case.fill", gradientColor1: .redGradient1, gradientColor2: .redGradient2){
-                isSheetVisible.toggle()
+            Text("To provide you with accurate emergency service numbers, the app needs access to your location. This helps us determine which emergency service number is relevant for your area.")
+                .font(.body)
+                .multilineTextAlignment(.center)
+                .padding()
+            
+            VStack(alignment: .leading, spacing: 8) {
+                Label("Your location data is not stored, shared, or transmitted.", systemImage: "lock.shield")
+                    .font(.footnote)
+                
+                Divider()
+                
+                Label("Your location data is used to provide you with the correct emergency contact information.", systemImage: "info.circle")
+                    .font(.footnote)
+                
+                Divider()
+                
+                Label("We respect your privacy and are committed to keeping your data secure.", systemImage: "hand.raised.fill")
+                    .font(.footnote)
             }
+            .padding()
+            .background(.mainGray)
+            .cornerRadius(10)
+            
+            Spacer()
+            
+            Button(action: {
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+            }) {
+                Label("Open settings", systemImage: "gearshape.fill")
+            }
+            .buttonStyle(BorderedProminentButtonStyle())
+            .tint(.redGradient2)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
@@ -58,19 +61,10 @@ struct NoLocationView: View {
         }
         .background(.mainBackground)
         
-        // Present sheet view for First Aid
-        .sheet(isPresented: $isSheetVisible) {
-            FirstAidView()
-                .presentationDragIndicator(.visible)
-                .padding(.top)
-                .presentationDetents([.large])
-                .environment(locationModel)
-        }
-        
     }
 }
 
 #Preview {
-    ContentView()
+    NoLocationView()
         .environment(LocationModel())
 }

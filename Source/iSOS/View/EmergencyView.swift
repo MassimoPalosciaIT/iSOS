@@ -40,10 +40,10 @@ struct EmergencyView: View {
                     
                     // MARK:
                     
-                    // The conversation feature is currently only available and working in Italy due to the lack of localization. This view will not appear in other countries.
-                    let listOfSupportedConversationCountries: [String] = ["Italy"]
+                    // The Phrases feature is currently only available and working in Italy due to the lack of localization. This view will not appear in other countries.
+                    let listOfSupportedPhrasesCountries: [String] = ["Italy"]
                     
-                    if !(singleMenu.title == "Conversation" && !listOfSupportedConversationCountries.contains(currentCountry)){
+                    if !(singleMenu.title == "Emergency Phrases" && !listOfSupportedPhrasesCountries.contains(currentCountry)){
                         
                         EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2){
                             singleMenu.action()
@@ -59,10 +59,10 @@ struct EmergencyView: View {
                     
                     // MARK:
                     
-                    // The conversation feature is currently only available and working in Italy due to the lack of localization. This view will not appear in other countries.
-                    let listOfSupportedConversationCountries: [String] = ["Italy"]
+                    // The Emergency Phrases feature is currently only available and working in Italy due to the lack of localization. This view will not appear in other countries.
+                    let listOfSupportedPhrasesCountries: [String] = ["Italy"]
                     
-                    if !(singleMenu.title == "Conversation" && !listOfSupportedConversationCountries.contains(currentCountry)){
+                    if !(singleMenu.title == "Emergency Phrases" && !listOfSupportedPhrasesCountries.contains(currentCountry)){
                         
                         EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2){
                             singleMenu.action()
@@ -95,8 +95,8 @@ struct EmergencyView: View {
             
             Group{
                 switch item {
-                case .conversation:
-                    ConversationView(emergencyType: selectedEmergency.emergencyType)
+                case .phrases:
+                    PhrasesView(emergencyType: selectedEmergency.emergencyType)
                         .presentationDragIndicator(.visible)
                         .padding(.top)
                 case .firstAid:
@@ -122,7 +122,7 @@ struct EmergencyView: View {
 
 // Control currently selected sheet
 enum ActiveSheet: Identifiable {
-    case conversation
+    case phrases
     case firstAid
     case maps
     
@@ -145,7 +145,7 @@ enum ActiveSheet: Identifiable {
         menus: [
             EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action:  {}),
             EmergencyMenu(title: "Hospitals", iconName: "building.2.fill", action: {}),
-            EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {}),
+            EmergencyMenu(title: "Emergency Phrases", iconName: "text.bubble.fill", action: {}),
         ],
         mapSearchQuery: "Hospitals"
     )

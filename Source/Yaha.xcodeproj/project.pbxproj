@@ -28,7 +28,7 @@
 		1AB666142BCEB1F300B9157B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AB666132BCEB1F300B9157B /* Settings.bundle */; };
 		1AC1737C2AE2655400F4818C /* LocationRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1737B2AE2655400F4818C /* LocationRequestView.swift */; };
 		1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */; };
-		1AC70CFA2AEAE97E0023F294 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CF92AEAE97E0023F294 /* ConversationView.swift */; };
+		1AC70CFA2AEAE97E0023F294 /* PhrasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */; };
 		1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */; };
 		1AD0D0FB2BC699C9000C9193 /* FirstAidCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */; };
 		1AE5BC9B2BA44EB800148A26 /* TextBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */; };
@@ -81,7 +81,7 @@
 		1AB666132BCEB1F300B9157B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1AC1737B2AE2655400F4818C /* LocationRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestView.swift; sourceTree = "<group>"; };
 		1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmergencyNumber.swift; sourceTree = "<group>"; };
-		1AC70CF92AEAE97E0023F294 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesView.swift; sourceTree = "<group>"; };
 		1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidView.swift; sourceTree = "<group>"; };
 		1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardModel.swift; sourceTree = "<group>"; };
 		1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlob.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				4E23C3042AEA55E200AD7073 /* TutorialView.swift */,
-				1AC70CF92AEAE97E0023F294 /* ConversationView.swift */,
+				1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */,
 				1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */,
 				1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */,
 				1A7DB1782BCAD73E0092A6E2 /* Map */,
@@ -380,7 +380,7 @@
 				1AE5BC9D2BA44ED300148A26 /* TutorialElement.swift in Sources */,
 				1A96617C2AEA62030021B6F3 /* ConversationModel.swift in Sources */,
 				1A83AC7E2AF666E000182B3C /* APCountryInfoBuilder.m in Sources */,
-				1AC70CFA2AEAE97E0023F294 /* ConversationView.swift in Sources */,
+				1AC70CFA2AEAE97E0023F294 /* PhrasesView.swift in Sources */,
 				4E6B4AAE2AE1419600F1C4AD /* LocationCoordinates.swift in Sources */,
 				1A7F95A82AE44537008110B2 /* EmergencyModel.swift in Sources */,
 				1AE5BC9F2BA44EFA00148A26 /* BlobCombo.swift in Sources */,

@@ -7,8 +7,8 @@
 
 import Foundation
 
-// Conversation Model for Conversation View
-struct Conversation: Identifiable {
+// Phrases Model for PhrasesView
+struct Phrases: Identifiable {
     var id = UUID()
     
     // Leading text blob

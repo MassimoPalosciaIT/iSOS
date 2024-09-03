@@ -31,14 +31,14 @@ struct ContentView: View {
                                                 gradientColor2: .redGradient2,
                                                 emergencyType: EmergencyType.medicalHelp,
                                                 menus: [
-                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
-                                                        self.activeSheet = .firstAid
-                                                    }),
+//                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
+//                                                        self.activeSheet = .firstAid
+//                                                    }),
                                                     EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
                                                         self.activeSheet = .maps
                                                     }),
-                                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
-                                                        self.activeSheet = .conversation
+                                                    EmergencyMenu(title: "Emergency Phrases", iconName: "text.bubble.fill", action: {
+                                                        self.activeSheet = .phrases
                                                     }),
                                                 ],
                                                 mapSearchQuery: "Hospitals"
@@ -54,11 +54,11 @@ struct ContentView: View {
                                                 gradientColor2: .orangeGradient2,
                                                 emergencyType: EmergencyType.fireDepartment,
                                                 menus: [
-                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
-                                                        self.activeSheet = .firstAid
-                                                    }),
-                                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
-                                                        self.activeSheet = .conversation
+//                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
+//                                                        self.activeSheet = .firstAid
+//                                                    }),
+                                                    EmergencyMenu(title: "Emergency Phrases", iconName: "text.bubble.fill", action: {
+                                                        self.activeSheet = .phrases
                                                     }),
                                                 ],
                                                 mapSearchQuery: "Fire department"
@@ -77,8 +77,8 @@ struct ContentView: View {
                                                     EmergencyMenu(title: "Stations", iconName: "house.lodge.fill",  action: {
                                                         self.activeSheet = .maps
                                                     }),
-                                                    EmergencyMenu(title: "Conversation", iconName: "text.bubble.fill", action: {
-                                                        self.activeSheet = .conversation
+                                                    EmergencyMenu(title: "Emergency Phrases", iconName: "text.bubble.fill", action: {
+                                                        self.activeSheet = .phrases
                                                     }),
                                                 ],
                                                 mapSearchQuery: "Police Stations"

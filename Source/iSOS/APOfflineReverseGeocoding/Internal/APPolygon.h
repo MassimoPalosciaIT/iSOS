@@ -12,6 +12,8 @@
 
 @interface APPolygon : NSObject
 
+@property (nonatomic, strong, readonly) NSArray *points;
+
 /**
  *  Convenience initializer.
  *

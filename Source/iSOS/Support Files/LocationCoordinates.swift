@@ -153,7 +153,7 @@ class LocationModel: NSObject, CLLocationManagerDelegate {
             return "Could not perform geocoding for the given coordinates."
         }
         
-        return country.name ?? "No country"
+        return country.name
     }
     
     var coordinate: CLLocationCoordinate2D? {

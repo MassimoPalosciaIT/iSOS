@@ -52,5 +52,7 @@ func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> St
         }
     }
     
+    print("Error: Unable to get emergency number. Returning a standard number.")
+    
     return "+112"
 }

@@ -60,9 +60,11 @@ static NSString *const APReverseGeocodingCountriesKey  = @"features";
 - (APCountry *)_geocodeCountryWithCoordinate:(CLLocationCoordinate2D)coordinate
 {
     NSArray *countryData = self.countries;
-
-    for (int i = 0; i < [countryData count]; i++){
-        
+    APCountry *closestCountry = nil;
+    CLLocationDistance closestDistance = DBL_MAX;
+    
+    for (int i = 0; i < [countryData count]; i++)
+    {
         NSDictionary *countryDict = [countryData objectAtIndex:i];
         NSDictionary *geometry = [countryDict objectForKey:@"geometry"];
         NSString *geometryType = [geometry valueForKey:@"type"];
@@ -75,9 +77,15 @@ static NSString *const APReverseGeocodingCountriesKey  = @"features";
             NSArray *polygonPoints  = [coordinates objectAtIndex:0];
             APPolygon *polygon = [APPolygon polygonWithPoints:polygonPoints];
             
-            /* Cehck containment */
+            /* Check containment */
             if ([polygon containsLocation:coordinate]) {
                 return [APCountry countryWithGEODictionary:countryDict];
+            } else {
+                CLLocationDistance distance = [self distanceFromCoordinate:coordinate toPolygon:polygon];
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    closestCountry = [APCountry countryWithGEODictionary:countryDict];
+                }
             }
 
         /* Loop through all sub-polygons and make the checks */
@@ -89,11 +97,51 @@ static NSString *const APReverseGeocodingCountriesKey  = @"features";
                 
                 if([polygon containsLocation:coordinate]) {
                     return [APCountry countryWithGEODictionary:countryDict];
+                } else {
+                    CLLocationDistance distance = [self distanceFromCoordinate:coordinate toPolygon:polygon];
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestCountry = [APCountry countryWithGEODictionary:countryDict];
+                    }
                 }
             }
         }
     }
-    return nil;
+    
+    return closestCountry;
+}
+
+- (CLLocationDistance)distanceFromCoordinate:(CLLocationCoordinate2D)coordinate toPolygon:(APPolygon *)polygon {
+    double minDistance = DBL_MAX;
+    
+    for (NSArray *pointArray in polygon.points) {
+        CLLocationCoordinate2D pointCoordinate;
+        pointCoordinate.latitude = [pointArray[1] doubleValue];
+        pointCoordinate.longitude = [pointArray[0] doubleValue];
+        
+        double distance = [self haversineDistanceFrom:coordinate to:pointCoordinate];
+        if (distance < minDistance) {
+            minDistance = distance;
+        }
+    }
+    
+    return minDistance;
+}
+
+- (double)haversineDistanceFrom:(CLLocationCoordinate2D)coord1 to:(CLLocationCoordinate2D)coord2 {
+    double lat1 = coord1.latitude * M_PI / 180.0;
+    double lon1 = coord1.longitude * M_PI / 180.0;
+    double lat2 = coord2.latitude * M_PI / 180.0;
+    double lon2 = coord2.longitude * M_PI / 180.0;
+    
+    double dlat = lat2 - lat1;
+    double dlon = lon2 - lon1;
+    
+    double a = pow(sin(dlat / 2), 2) + cos(lat1) * cos(lat2) * pow(sin(dlon / 2), 2);
+    double c = 2 * asin(sqrt(a));
+    double R = 6371000; // Radius of Earth in meters
+    
+    return R * c;
 }
 
 #pragma mark - Lazy Accessors

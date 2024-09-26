@@ -31,9 +31,6 @@ struct ContentView: View {
                                                 gradientColor2: .redGradient2,
                                                 emergencyType: EmergencyType.medicalHelp,
                                                 menus: [
-//                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
-//                                                        self.activeSheet = .firstAid
-//                                                    }),
                                                     EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
                                                         self.activeSheet = .maps
                                                     }),
@@ -54,9 +51,6 @@ struct ContentView: View {
                                                 gradientColor2: .orangeGradient2,
                                                 emergencyType: EmergencyType.fireDepartment,
                                                 menus: [
-//                                                    EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action: {
-//                                                        self.activeSheet = .firstAid
-//                                                    }),
                                                     EmergencyMenu(title: "Emergency Phrases", iconName: "text.bubble.fill", action: {
                                                         self.activeSheet = .phrases
                                                     }),
@@ -90,8 +84,7 @@ struct ContentView: View {
                 // Location button
                 LocationButton()
             }
-            .padding(.horizontal)
-            .padding(.top)
+            .padding()
             .background{
                 TopGradient(gradientColor1: .redGradient1, gradientColor2: .redGradient2)
             }

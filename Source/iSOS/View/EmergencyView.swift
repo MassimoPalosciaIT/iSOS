@@ -82,8 +82,7 @@ struct EmergencyView: View {
             
             LocationButton()
         }
-        .padding(.horizontal)
-        .padding(.top)
+        .padding()
         .background{
             TopGradient(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2)
         }

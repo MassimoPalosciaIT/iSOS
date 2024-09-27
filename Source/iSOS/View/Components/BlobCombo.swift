@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 // BlobCombo is used for Phrases view screen
 struct BlobCombo: View {
@@ -21,7 +22,7 @@ struct BlobCombo: View {
                 HStack{
                     Text(messageQuestion)
                         .padding()
-                        .background(Color(.mainGray))
+                        .background(.mainGray)
                         .clipShape(BubbleShape(myMessage: false))
                         .fontWeight(.semibold)
                     
@@ -40,7 +41,7 @@ struct BlobCombo: View {
                     Spacer()
                     Text(messageReply)
                         .padding()
-                        .background(Color(.blobGray))
+                        .background(.blobGray)
                         .clipShape(BubbleShape(myMessage: true))
                         .fontWeight(.semibold)
                 }
@@ -48,6 +49,31 @@ struct BlobCombo: View {
             .accessibilityLabel("Italian. \(messageQuestion)")
         }
         
+        // Action buttons under message
+        HStack{
+            Group{
+                // Copy message to clipboard
+                Button(action: {copyToClipboard(messageReply)}) {
+                    Label("Copy to clipboard", systemImage: "rectangle.portrait.on.rectangle.portrait")
+                        .labelStyle(.iconOnly)
+                }
+                
+                // Playback message
+                Button(action: {}) {
+                    Label("Playback", systemImage: "speaker.wave.3")
+                        .labelStyle(.iconOnly)
+                }
+            }
+            .foregroundStyle(.gray)
+            .fontWeight(.bold)
+        }
+        .frame(maxWidth: .infinity, alignment: .trailing)
+        
+    }
+    
+    // Copy value to the clipboard
+    func copyToClipboard(_ copyValue: String) {
+        UIPasteboard.general.setValue(copyValue, forPasteboardType: UTType.plainText.identifier)
     }
 }
 

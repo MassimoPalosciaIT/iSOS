@@ -1,8 +1,8 @@
 //
+//  ContentView.swift
+//  Yaha
 //
-//
-//
-//
+//  Created by Matt Novoselov on 26/09/24.
 //
 
 import SwiftUI
@@ -10,99 +10,25 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(LocationModel.self) var locationModel: LocationModel
-    
-    // Get onboarding complete value from the user defaults
-    @AppStorage("isOnboarding") var showingTutorialSheet: Bool = true
-    
-    // Hold active opened sheet for emergency detail view
-    @State private var activeSheet: ActiveSheet?
+    @Environment(\.openURL) var openURL
     
     var body: some View {
         
-        NavigationStack{
-            VStack{
-                // MARK:
-                // Define structure for Medical Help Button
-                EmergencySelectionButton(selectedEmergency:
-                                            Emergency(
-                                                title: "Medical Help",
-                                                iconName: "cross.fill",
-                                                gradientColor1: .redGradient1,
-                                                gradientColor2: .redGradient2,
-                                                emergencyType: EmergencyType.medicalHelp,
-                                                menus: [
-                                                    EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
-                                                        self.activeSheet = .maps
-                                                    }),
-                                                    EmergencyMenu(title: "Emergency Phrases", iconName: "text.bubble.fill", action: {
-                                                        self.activeSheet = .phrases
-                                                    }),
-                                                ],
-                                                mapSearchQuery: "Hospitals"
-                                            ), activeSheet: $activeSheet
-                )
-                
-                // Define structure for Fire department Help Button
-                EmergencySelectionButton(selectedEmergency:
-                                            Emergency(
-                                                title: "Fire department",
-                                                iconName: "flame.fill",
-                                                gradientColor1: .orangeGradient1,
-                                                gradientColor2: .orangeGradient2,
-                                                emergencyType: EmergencyType.fireDepartment,
-                                                menus: [
-                                                    EmergencyMenu(title: "Emergency Phrases", iconName: "text.bubble.fill", action: {
-                                                        self.activeSheet = .phrases
-                                                    }),
-                                                ],
-                                                mapSearchQuery: "Fire department"
-                                            ), activeSheet: $activeSheet
-                )
-                
-                // Define structure for Police Help Button
-                EmergencySelectionButton(selectedEmergency:
-                                            Emergency(
-                                                title: "Police",
-                                                iconName: "shield.righthalf.filled",
-                                                gradientColor1: .blueGradient1,
-                                                gradientColor2: .blueGradient2,
-                                                emergencyType: EmergencyType.police,
-                                                menus: [
-                                                    EmergencyMenu(title: "Stations", iconName: "house.lodge.fill",  action: {
-                                                        self.activeSheet = .maps
-                                                    }),
-                                                    EmergencyMenu(title: "Emergency Phrases", iconName: "text.bubble.fill", action: {
-                                                        self.activeSheet = .phrases
-                                                    }),
-                                                ],
-                                                mapSearchQuery: "Police Stations"
-                                            ), activeSheet: $activeSheet
-                )
-                
-                Spacer()
-                
-                // Location button
-                LocationButton()
-            }
-            .padding()
-            .background{
-                TopGradient(gradientColor1: .redGradient1, gradientColor2: .redGradient2)
-            }
-            .background(.mainBackground)
-            .navigationTitle("Need help?")
-            
-        }
-        
-        // Sheet with tutorial / onboarding
-        // Only present the first time user opens app
-        .sheet(isPresented: $showingTutorialSheet) {
-            TutorialView()
+        // Show view based on the state of the Location Model
+        switch locationModel.authorizationStatus {
+        // Location permit is not granted, asking user to allow
+        case .notDetermined:
+            LocationRequestView(title: "We need your permission to track the location", symbolBackground: "location.fill", symbol: "location.circle", buttonTitle: "Continue", action: {locationModel.requestPermission()})
+        // Location permit is restricted or denied
+        case .restricted, .denied:
+            NoLocationView()
+        // Location permit is granted and working correctly
+        case .authorizedAlways, .authorizedWhenInUse:
+            EmergencySelectionView()
+        // Unexpected status
+        default:
+            LocationRequestView(title: "Unexpected status. Please contact support", symbolBackground: "xmark", symbol: "xmark.circle", buttonTitle: "Contact support", buttonSymbol: "envelope.fill", action: {openURL(URL(string: "https://novoselov.dev")!)})
         }
         
     }
-}
-
-#Preview {
-    ContentView()
-        .environment(LocationModel())
 }

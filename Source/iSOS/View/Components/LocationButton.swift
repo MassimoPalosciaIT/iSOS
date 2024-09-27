@@ -11,6 +11,7 @@ import UniformTypeIdentifiers
 struct LocationButton: View {
     
     @Environment(LocationModel.self) var locationModel: LocationModel
+    @Environment(AppSettings.self) var appSettings: AppSettings
     
     // textOpacity is used for popup notification to indicate that coordinates were copied. Animated property
     @State private var textOpacity: Double = 0.0
@@ -105,6 +106,12 @@ struct LocationButton: View {
         }
         .buttonStyle(PlainButtonStyle())
         .accessibilityHint("Tap to copy your current location")
+
+        .simultaneousGesture(
+            TapGesture(count: 10).onEnded {
+                appSettings.isDebugSheetPresented.toggle()
+            }
+        )
         
     }
     
@@ -118,4 +125,10 @@ struct LocationButton: View {
             }
         }
     }
+}
+
+#Preview{
+    LocationButton()
+        .environment(LocationModel())
+        .environment(AppSettings())
 }

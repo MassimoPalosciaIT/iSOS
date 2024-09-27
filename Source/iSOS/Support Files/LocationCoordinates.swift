@@ -6,6 +6,7 @@
 //
 
 import CoreLocation
+import SwiftUI
 
 
 // Location Model that is responsible for determining current position of the user

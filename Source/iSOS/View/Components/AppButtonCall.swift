@@ -12,15 +12,16 @@ struct AppButtonCall: View {
     // Colors for button fill
     var gradientColor1: Color
     var gradientColor2: Color
+    var emergencyType: EmergencyType
     
-    // Phone number to call to
-    var callNumber: String
+    @Environment(LocationModel.self) var locationModel: LocationModel
     
     var body: some View {
         
+        let emergencyNumber: String = getEmergencyNumber(for: locationModel.getCountry(), emergencyType: emergencyType)
+        
         Button(action: {
-            // Start phone call
-            startCall(to: callNumber)
+            startCall(to: emergencyType, locationModel: locationModel)
             
             // Play medium haptic feedback
             mediumHaptic()
@@ -36,11 +37,7 @@ struct AppButtonCall: View {
                 }
         }
         .buttonStyle(PlainButtonStyle())
-        .accessibilityLabel("Call \(callNumber)")
+        .accessibilityLabel("Call \(emergencyNumber)")
         
     }
-}
-
-#Preview {
-    AppButtonCall(gradientColor1: .redGradient1, gradientColor2: .redGradient2, callNumber: "+112")
 }

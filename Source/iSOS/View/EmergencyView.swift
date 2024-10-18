@@ -24,11 +24,6 @@ struct EmergencyView: View {
         return locationModel.getCountry()
     }
     
-    // Get current country emergency number based on the location
-    private var countryEmergencyNumber: String {
-        return getEmergencyNumber(for: currentCountry, emergencyType: selectedEmergency.emergencyType)
-    }
-    
     var body: some View {
         
         VStack{
@@ -76,7 +71,7 @@ struct EmergencyView: View {
             
             Spacer()
             
-            AppButtonCall(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2, callNumber:countryEmergencyNumber)
+            AppButtonCall(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2, emergencyType: selectedEmergency.emergencyType)
             
             Spacer()
             

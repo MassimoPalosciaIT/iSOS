@@ -10,8 +10,7 @@ import SwiftUI
 struct AppButtonCall: View {
     
     // Colors for button fill
-    var gradientColor1: Color
-    var gradientColor2: Color
+    var colorCombination: ColorCombination
     var emergencyType: EmergencyType
     
     @Environment(LocationModel.self) var locationModel: LocationModel
@@ -28,9 +27,9 @@ struct AppButtonCall: View {
         })
         {
             Circle()
-                .fill(LinearGradient(colors: [gradientColor1, gradientColor2], startPoint: .top, endPoint: .bottom))
+                .fill(LinearGradient(colors: [colorCombination.main, colorCombination.secondary], startPoint: .top, endPoint: .bottom))
                 .frame(height: 165)
-                .shadow(color: gradientColor1.opacity(0.8), radius: 50)
+                .shadow(color: colorCombination.main.opacity(0.8), radius: 50)
                 .overlay{
                     Image(systemName: "phone.fill")
                         .font(.system(size: 64))

@@ -18,8 +18,7 @@ struct Emergency: Identifiable {
     var iconName: String
     
     // Gradient colors for branding of detail view and menu card
-    var gradientColor1: Color
-    var gradientColor2: Color
+    var colorCombination: ColorCombination
     
     // Specified emergency Type (police, medicalHelp, fireDepartment)
     var emergencyType: EmergencyType

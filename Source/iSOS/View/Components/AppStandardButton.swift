@@ -11,8 +11,7 @@ import SwiftUI
 struct AppStandardButton: View {
     
     // Colors of the button
-    var gradientColor1: Color
-    var gradientColor2: Color
+    var colorCombination: ColorCombination
     
     // Icon name for the trailing SF Symbol
     var iconName: String
@@ -29,7 +28,7 @@ struct AppStandardButton: View {
     var body: some View {
         
         RoundedRectangle(cornerRadius: cornerRadius)
-            .fill(LinearGradient(colors: [gradientColor1, gradientColor2], startPoint: .leading, endPoint: .trailing))
+            .fill(LinearGradient(colors: [colorCombination.main, colorCombination.secondary], startPoint: .leading, endPoint: .trailing))
             .frame(height: frameHeight)
             .overlay(
                 HStack {
@@ -46,5 +45,5 @@ struct AppStandardButton: View {
 }
 
 #Preview {
-    AppStandardButton(gradientColor1: .redGradient1, gradientColor2: .redGradient2, iconName: "xmark", frameHeight: 120, iconOpacity: 1.0)
+    AppStandardButton(colorCombination: ColorCombination(main: .redGradient1, secondary: .redGradient2), iconName: "xmark", frameHeight: 120, iconOpacity: 1.0)
 }

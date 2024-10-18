@@ -17,7 +17,6 @@ struct LocationButton: View {
     
     let title: String = "You are here:"
     let iconName: String = "location.fill"
-    let backgroundColor: Color = .mainGray
     
     // Address is only displayed if Location Model is able to determine exact address
     @State private var address: String?
@@ -57,7 +56,7 @@ struct LocationButton: View {
             
         })
         {
-            AppStandardButton(gradientColor1: backgroundColor, gradientColor2: backgroundColor, iconName: iconName, iconOpacity: 0.05)
+            AppStandardButton(colorCombination: .init(main: .mainGray, secondary: .mainGray), iconName: iconName, iconOpacity: 0.05)
                 .overlay{
                     
                     HStack{
@@ -91,12 +90,13 @@ struct LocationButton: View {
                     .padding()
                     
                 }
+
                 .overlay{
                     VStack(spacing: 30){
                         AppPopupCopy()
                             .opacity(textOpacity)
                         
-                        AppStandardButton(gradientColor1: .clear, gradientColor2: .clear, iconName: "xmark")
+                        AppStandardButton(colorCombination: .init(main: .clear, secondary: .clear), iconName: "xmark")
                             .padding()
                             .opacity(0)
                             .allowsHitTesting(false)

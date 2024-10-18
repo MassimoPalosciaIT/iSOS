@@ -25,6 +25,7 @@
 		1A96617C2AEA62030021B6F3 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96617B2AEA62030021B6F3 /* ConversationModel.swift */; };
 		1AA8546E2AE55D2500964C14 /* HapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8546D2AE55D2500964C14 /* HapticEngine.swift */; };
 		1AB008202AEFC3D500887D54 /* CoordinatesTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */; };
+		1AB1382E2CC2A32100BB40AD /* ColorCombinationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1382D2CC2A32100BB40AD /* ColorCombinationModel.swift */; };
 		1AB666142BCEB1F300B9157B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AB666132BCEB1F300B9157B /* Settings.bundle */; };
 		1AC1737C2AE2655400F4818C /* LocationRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1737B2AE2655400F4818C /* LocationRequestView.swift */; };
 		1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */; };
@@ -80,6 +81,7 @@
 		1A96617B2AEA62030021B6F3 /* ConversationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationModel.swift; sourceTree = "<group>"; };
 		1AA8546D2AE55D2500964C14 /* HapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticEngine.swift; sourceTree = "<group>"; };
 		1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesTranslation.swift; sourceTree = "<group>"; };
+		1AB1382D2CC2A32100BB40AD /* ColorCombinationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationModel.swift; sourceTree = "<group>"; };
 		1AB666132BCEB1F300B9157B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1AC1737B2AE2655400F4818C /* LocationRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestView.swift; sourceTree = "<group>"; };
 		1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmergencyNumber.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				1A7F95A72AE44537008110B2 /* EmergencyModel.swift */,
+				1AB1382D2CC2A32100BB40AD /* ColorCombinationModel.swift */,
 				1A96617B2AEA62030021B6F3 /* ConversationModel.swift */,
 				1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */,
 				1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */,
@@ -382,6 +385,7 @@
 				1AE5BCA32BA44F2600148A26 /* AppPopupCopy.swift in Sources */,
 				1A782D6C2AEBC474008E7FD8 /* FirstAidParser.swift in Sources */,
 				1AE5BCA52BA44F3700148A26 /* TopGradient.swift in Sources */,
+				1AB1382E2CC2A32100BB40AD /* ColorCombinationModel.swift in Sources */,
 				1A48E0D32AE169900012E64E /* ContentView.swift in Sources */,
 				1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */,
 				1AE5BCA92BA44F6600148A26 /* AppPopupButton.swift in Sources */,

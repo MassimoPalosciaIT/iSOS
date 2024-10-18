@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 // The Phrases feature is currently only available and working in Italy due to the lack of localization. This view will not appear in other countries.
 struct PhrasesView: View {
@@ -23,6 +24,8 @@ struct PhrasesView: View {
     // Get current address id the internet connection is available
     @State private var address: String?
     
+    private let synthesizer = AVSpeechSynthesizer()
+    
     var body: some View {
         
         let emergencyPhrases: [Phrases] = getEmergencyPhrases(emergencyType: emergencyType, address: address, formattedCoordinates: formattedCoordinates)
@@ -35,7 +38,7 @@ struct PhrasesView: View {
                 
                 VStack(spacing: 20){
                     ForEach(emergencyPhrases) { phrase in
-                        BlobCombo(messageQuestion: phrase.questionText, messageReply: phrase.answerText)
+                        BlobCombo(messageQuestion: phrase.questionText, messageReply: phrase.answerText, synthesizer: synthesizer)
                     }
                 }
                 

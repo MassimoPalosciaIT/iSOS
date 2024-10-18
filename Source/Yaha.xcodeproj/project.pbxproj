@@ -32,6 +32,7 @@
 		1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */; };
 		1AC70CFA2AEAE97E0023F294 /* PhrasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */; };
 		1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */; };
+		1AC88EEB2CC28765004E7A6F /* AppIconExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC88EEA2CC28765004E7A6F /* AppIconExtension.swift */; };
 		1ACDA42E2CA6C05C00507AA0 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACDA42D2CA6C05C00507AA0 /* DebugView.swift */; };
 		1AD0D0FB2BC699C9000C9193 /* FirstAidCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */; };
 		1AE5BC9B2BA44EB800148A26 /* TextBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */; };
@@ -88,6 +89,7 @@
 		1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmergencyNumber.swift; sourceTree = "<group>"; };
 		1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesView.swift; sourceTree = "<group>"; };
 		1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidView.swift; sourceTree = "<group>"; };
+		1AC88EEA2CC28765004E7A6F /* AppIconExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconExtension.swift; sourceTree = "<group>"; };
 		1ACDA42D2CA6C05C00507AA0 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardModel.swift; sourceTree = "<group>"; };
 		1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlob.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				1AE5BC992BA44E0900148A26 /* Components */,
 				1AC70CFB2AEAF5C20023F294 /* Sheets */,
+				4E23C3042AEA55E200AD7073 /* TutorialView.swift */,
 				1AC1737B2AE2655400F4818C /* LocationRequestView.swift */,
 				1AF1242A2C7E37D700C08461 /* NoLocationView.swift */,
 				1A48E0D22AE169900012E64E /* EmergencySelectionView.swift */,
@@ -211,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				1ACDA42D2CA6C05C00507AA0 /* DebugView.swift */,
-				4E23C3042AEA55E200AD7073 /* TutorialView.swift */,
 				1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */,
 				1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */,
 				1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */,
@@ -220,9 +222,18 @@
 			path = Sheets;
 			sourceTree = "<group>";
 		};
+		1AC88EE92CC28755004E7A6F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1AC88EEA2CC28765004E7A6F /* AppIconExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1AE5BC982BA44DED00148A26 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				1AC88EE92CC28755004E7A6F /* Extensions */,
 				1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */,
 				1A782D6B2AEBC474008E7FD8 /* FirstAidParser.swift */,
 				1AA8546D2AE55D2500964C14 /* HapticEngine.swift */,
@@ -396,6 +407,7 @@
 				1AE5BC9F2BA44EFA00148A26 /* BlobCombo.swift in Sources */,
 				1AE5BCB12BA44FB200148A26 /* EmergencyMenuButton.swift in Sources */,
 				1AE5BCAD2BA44F8400148A26 /* FirstAidSelectionButton.swift in Sources */,
+				1AC88EEB2CC28765004E7A6F /* AppIconExtension.swift in Sources */,
 				1A7F95AD2AE459BE008110B2 /* EmergencyMenuModel.swift in Sources */,
 				1ACDA42E2CA6C05C00507AA0 /* DebugView.swift in Sources */,
 				4ED20FF02ADE95B4007B4E50 /* YahaApp.swift in Sources */,

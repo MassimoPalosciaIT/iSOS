@@ -8,14 +8,14 @@
 import SwiftUI
 
 // Types of emergencies
-enum EmergencyType {
+public enum EmergencyType {
     case police
     case medicalHelp
     case fireDepartment
 }
 
 // Function to start a phone call, given a defined phone number
-func startCall(to number: String) {
+private func startCall(to number: String) {
     guard let url = URL(string: "tel://\(number)"), UIApplication.shared.canOpenURL(url) else {
         print("Error: Unable to initiate call.")
         return
@@ -25,7 +25,7 @@ func startCall(to number: String) {
 }
 
 // Function to get emergency number for particular agency (emergency type), based on the country
-func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> String {
+public func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> String {
     // Validate path to .csv file
     guard let csvPath = Bundle.main.path(forResource: "emergencyNumbers", ofType: "csv"),
           let csvContent = try? String(contentsOfFile: csvPath) else {
@@ -55,4 +55,13 @@ func getEmergencyNumber(for country: String, emergencyType: EmergencyType) -> St
     print("Error: Unable to get emergency number. Returning a standard number.")
     
     return "+112"
+}
+
+func startCall(to emergencyType: EmergencyType, locationModel: LocationModel){
+    
+    // Get current country emergency number based on the location
+    let countryEmergencyNumber: String = getEmergencyNumber(for: locationModel.getCountry(), emergencyType: emergencyType)
+    
+    // Start phone call
+    startCall(to: countryEmergencyNumber)
 }

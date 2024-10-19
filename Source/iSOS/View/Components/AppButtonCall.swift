@@ -10,37 +10,33 @@ import SwiftUI
 struct AppButtonCall: View {
     
     // Colors for button fill
-    var gradientColor1: Color
-    var gradientColor2: Color
+    var colorCombination: ColorCombination
+    var emergencyType: EmergencyType
     
-    // Phone number to call to
-    var callNumber: String
+    @Environment(LocationModel.self) var locationModel: LocationModel
     
     var body: some View {
         
+        let emergencyNumber: String = getEmergencyNumber(for: locationModel.getCountry(), emergencyType: emergencyType)
+        
         Button(action: {
-            // Start phone call
-            startCall(to: callNumber)
+            startCall(to: emergencyType, locationModel: locationModel)
             
             // Play medium haptic feedback
             mediumHaptic()
         })
         {
             Circle()
-                .fill(LinearGradient(colors: [gradientColor1, gradientColor2], startPoint: .top, endPoint: .bottom))
+                .fill(LinearGradient(colors: [colorCombination.main, colorCombination.secondary], startPoint: .top, endPoint: .bottom))
                 .frame(height: 165)
-                .shadow(color: gradientColor1.opacity(0.8), radius: 50)
+                .shadow(color: colorCombination.main.opacity(0.8), radius: 50)
                 .overlay{
                     Image(systemName: "phone.fill")
                         .font(.system(size: 64))
                 }
         }
         .buttonStyle(PlainButtonStyle())
-        .accessibilityLabel("Call \(callNumber)")
+        .accessibilityLabel("Call \(emergencyNumber)")
         
     }
-}
-
-#Preview {
-    AppButtonCall(gradientColor1: .redGradient1, gradientColor2: .redGradient2, callNumber: "+112")
 }

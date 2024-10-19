@@ -8,8 +8,8 @@
 import Foundation
 
 // Phrases Model for PhrasesView
-struct Phrases: Identifiable {
-    var id = UUID()
+public struct Phrases: Identifiable {
+    public var id = UUID()
     
     // Leading text blob
     var questionText: String

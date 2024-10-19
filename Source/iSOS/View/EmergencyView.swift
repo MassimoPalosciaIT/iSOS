@@ -24,11 +24,6 @@ struct EmergencyView: View {
         return locationModel.getCountry()
     }
     
-    // Get current country emergency number based on the location
-    private var countryEmergencyNumber: String {
-        return getEmergencyNumber(for: currentCountry, emergencyType: selectedEmergency.emergencyType)
-    }
-    
     var body: some View {
         
         VStack{
@@ -45,7 +40,7 @@ struct EmergencyView: View {
                     
                     if !(singleMenu.title == "Emergency Phrases" && !listOfSupportedPhrasesCountries.contains(currentCountry)){
                         
-                        EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2){
+                        EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, colorCombination: selectedEmergency.colorCombination){
                             singleMenu.action()
                         }
                         
@@ -64,7 +59,7 @@ struct EmergencyView: View {
                     
                     if !(singleMenu.title == "Emergency Phrases" && !listOfSupportedPhrasesCountries.contains(currentCountry)){
                         
-                        EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2){
+                        EmergencyMenuButton(title: singleMenu.title, iconName: singleMenu.iconName, colorCombination: selectedEmergency.colorCombination){
                             singleMenu.action()
                         }
                         
@@ -76,7 +71,7 @@ struct EmergencyView: View {
             
             Spacer()
             
-            AppButtonCall(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2, callNumber:countryEmergencyNumber)
+            AppButtonCall(colorCombination: selectedEmergency.colorCombination, emergencyType: selectedEmergency.emergencyType)
             
             Spacer()
             
@@ -84,7 +79,7 @@ struct EmergencyView: View {
         }
         .padding()
         .background{
-            TopGradient(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2)
+            TopGradient(colorCombination: selectedEmergency.colorCombination)
         }
         .background(.mainBackground)
         .navigationBarTitle(selectedEmergency.title, displayMode: .inline)
@@ -104,8 +99,7 @@ struct EmergencyView: View {
                         .padding(.top)
                 case .maps:
                     MapView(
-                        gradientColor1: selectedEmergency.gradientColor1,
-                        gradientColor2: selectedEmergency.gradientColor2,
+                        colorCombination: selectedEmergency.colorCombination,
                         searchQuery: selectedEmergency.mapSearchQuery,
                         activeSheet: $activeSheet
                     )
@@ -138,8 +132,7 @@ enum ActiveSheet: Identifiable {
     Emergency(
         title: "Medical help",
         iconName: "cross.fill",
-        gradientColor1: .redGradient1,
-        gradientColor2: .redGradient2,
+        colorCombination: ColorCombination(main: .redGradient1, secondary: .redGradient2),
         emergencyType: EmergencyType.medicalHelp,
         menus: [
             EmergencyMenu(title: "First Aid", iconName: "cross.case.fill", action:  {}),

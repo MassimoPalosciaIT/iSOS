@@ -57,7 +57,7 @@ struct NoLocationView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
         .background{
-            TopGradient(gradientColor1: .redGradient1, gradientColor2: .redGradient2)
+            TopGradient(colorCombination: .init(main: .redGradient1, secondary: .redGradient2))
         }
         .background(.mainBackground)
         

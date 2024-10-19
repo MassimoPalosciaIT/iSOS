@@ -22,8 +22,7 @@ struct MapView: View {
     @State private var showingInfo: Bool = false
     
     // Properties for gradient colors, search query, and binding to activeSheet
-    var gradientColor1: Color
-    var gradientColor2: Color
+    var colorCombination: ColorCombination
     var searchQuery: String
     @Binding var activeSheet: ActiveSheet?
     
@@ -58,7 +57,7 @@ struct MapView: View {
                             
                             Gradient(
                                 colors: [
-                                    gradientColor1, gradientColor2
+                                    colorCombination.main, colorCombination.secondary
                                 ]
                             ),
                             
@@ -147,8 +146,7 @@ struct MapView: View {
 // Preview for MapView
 #Preview {
     MapView(
-        gradientColor1: .redGradient1,
-        gradientColor2: .redGradient2,
+        colorCombination: ColorCombination(main: .redGradient1, secondary: .redGradient2),
         searchQuery: "Hospitals",
         activeSheet: .constant(nil)
     )

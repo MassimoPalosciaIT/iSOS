@@ -15,7 +15,7 @@ struct FirstAidSelectionButton: View {
     
     var body: some View {
         
-        AppStandardButton(gradientColor1: .mainGray, gradientColor2: .mainGray, iconName: "xmark", frameHeight: 80, iconOpacity: 0)
+        AppStandardButton(colorCombination: ColorCombination(main: .mainGray, secondary: .mainGray), iconName: "xmark", frameHeight: 80, iconOpacity: 0)
             .overlay{
                 
                 HStack {

@@ -10,13 +10,12 @@ import SwiftUI
 // Top gradient is used on the background of al main views
 struct TopGradient: View {
     
-    var gradientColor1: Color
-    var gradientColor2: Color
+    var colorCombination: ColorCombination
     
     var body: some View {
         
         VStack{
-            LinearGradient(colors: [gradientColor1, gradientColor2.opacity(0)], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [colorCombination.main, colorCombination.secondary.opacity(0)], startPoint: .top, endPoint: .bottom)
                 .frame(height: 270)
                 .ignoresSafeArea()
                 .opacity(0.7)
@@ -28,5 +27,5 @@ struct TopGradient: View {
 }
 
 #Preview {
-    TopGradient(gradientColor1: .redGradient1, gradientColor2: .redGradient2)
+    TopGradient(colorCombination: ColorCombination(main: .redGradient1, secondary: .redGradient2))
 }

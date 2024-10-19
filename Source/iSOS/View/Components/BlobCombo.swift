@@ -7,14 +7,12 @@
 
 import SwiftUI
 import UniformTypeIdentifiers
-import AVFoundation
 
 // BlobCombo is used for Phrases view screen
 struct BlobCombo: View {
     
     var messageQuestion: String
     var messageReply: String
-    var synthesizer: AVSpeechSynthesizer
     
     var body: some View {
         
@@ -61,7 +59,7 @@ struct BlobCombo: View {
                 }
                 
                 // Playback message
-                Button(action: {speakText(messageReply)}) {
+                Button(action: {}) {
                     Label("Playback", systemImage: "speaker.wave.3")
                         .labelStyle(.iconOnly)
                 }
@@ -77,18 +75,8 @@ struct BlobCombo: View {
     func copyToClipboard(_ copyValue: String) {
         UIPasteboard.general.setValue(copyValue, forPasteboardType: UTType.plainText.identifier)
     }
-    
-    func speakText(_ text: String) {
-        if synthesizer.isSpeaking {
-            synthesizer.stopSpeaking(at: .immediate)
-        }
-        
-        let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: "IT-it")
-        synthesizer.speak(utterance)
-    }
 }
 
 #Preview {
-    BlobCombo(messageQuestion: "Est enim sit veniam occaecat adipiscing occaecat commodo eu irure consequat irure incididunt magna voluptate sit excepteur sit cupidatat enim. Eiusmod sit officia excepteur sint duis excepteur proident in ad. Elit qui irure enim qui do incididunt magna est commodo cupidatat anim.", messageReply: "Est enim sit veniam occaecat adipiscing occaecat commodo eu irure consequat irure incididunt magna voluptate sit excepteur sit cupidatat enim. Eiusmod sit officia excepteur sint duis excepteur proident in ad. Elit qui irure enim qui do incididunt magna est commodo cupidatat anim.", synthesizer: AVSpeechSynthesizer())
+    BlobCombo(messageQuestion: "Est enim sit veniam occaecat adipiscing occaecat commodo eu irure consequat irure incididunt magna voluptate sit excepteur sit cupidatat enim. Eiusmod sit officia excepteur sint duis excepteur proident in ad. Elit qui irure enim qui do incididunt magna est commodo cupidatat anim.", messageReply: "Est enim sit veniam occaecat adipiscing occaecat commodo eu irure consequat irure incididunt magna voluptate sit excepteur sit cupidatat enim. Eiusmod sit officia excepteur sint duis excepteur proident in ad. Elit qui irure enim qui do incididunt magna est commodo cupidatat anim.")
 }

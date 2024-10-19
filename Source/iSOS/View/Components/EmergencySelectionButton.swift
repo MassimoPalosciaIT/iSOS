@@ -18,7 +18,7 @@ struct EmergencySelectionButton: View {
         // Navigation link to proceed to detail View
         NavigationLink(destination: EmergencyView(activeSheet: $activeSheet, selectedEmergency: selectedEmergency)) {
             
-            AppStandardButton(colorCombination: selectedEmergency.colorCombination, iconName: selectedEmergency.iconName)
+            AppStandardButton(gradientColor1: selectedEmergency.gradientColor1, gradientColor2: selectedEmergency.gradientColor2, iconName: selectedEmergency.iconName)
                 .overlay{
                     HStack {
                         Group {

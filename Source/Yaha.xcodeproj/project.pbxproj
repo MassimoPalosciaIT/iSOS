@@ -27,7 +27,6 @@
 		1A96617C2AEA62030021B6F3 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96617B2AEA62030021B6F3 /* ConversationModel.swift */; };
 		1AA8546E2AE55D2500964C14 /* HapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8546D2AE55D2500964C14 /* HapticEngine.swift */; };
 		1AB008202AEFC3D500887D54 /* CoordinatesTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */; };
-		1AB1382E2CC2A32100BB40AD /* ColorCombinationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1382D2CC2A32100BB40AD /* ColorCombinationModel.swift */; };
 		1AB666142BCEB1F300B9157B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AB666132BCEB1F300B9157B /* Settings.bundle */; };
 		1AC1737C2AE2655400F4818C /* LocationRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1737B2AE2655400F4818C /* LocationRequestView.swift */; };
 		1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */; };
@@ -35,8 +34,6 @@
 		1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */; };
 		1AC88EEB2CC28765004E7A6F /* AppIconExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC88EEA2CC28765004E7A6F /* AppIconExtension.swift */; };
 		1ACDA42E2CA6C05C00507AA0 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACDA42D2CA6C05C00507AA0 /* DebugView.swift */; };
-		1AC88EF02CC28AE1004E7A6F /* GetEmergencyPhrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC88EEF2CC28AE1004E7A6F /* GetEmergencyPhrases.swift */; };
-		1AC88EF32CC28B66004E7A6F /* FlagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC88EF22CC28B66004E7A6F /* FlagsView.swift */; };
 		1AD0D0FB2BC699C9000C9193 /* FirstAidCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */; };
 		1AE5BC9B2BA44EB800148A26 /* TextBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */; };
 		1AE5BC9D2BA44ED300148A26 /* TutorialElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9C2BA44ED300148A26 /* TutorialElement.swift */; };
@@ -87,7 +84,6 @@
 		1A96617B2AEA62030021B6F3 /* ConversationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationModel.swift; sourceTree = "<group>"; };
 		1AA8546D2AE55D2500964C14 /* HapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticEngine.swift; sourceTree = "<group>"; };
 		1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesTranslation.swift; sourceTree = "<group>"; };
-		1AB1382D2CC2A32100BB40AD /* ColorCombinationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationModel.swift; sourceTree = "<group>"; };
 		1AB666132BCEB1F300B9157B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1AC1737B2AE2655400F4818C /* LocationRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestView.swift; sourceTree = "<group>"; };
 		1AC173802AE27B8700F4818C /* GetEmergencyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmergencyNumber.swift; sourceTree = "<group>"; };
@@ -95,8 +91,6 @@
 		1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidView.swift; sourceTree = "<group>"; };
 		1AC88EEA2CC28765004E7A6F /* AppIconExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconExtension.swift; sourceTree = "<group>"; };
 		1ACDA42D2CA6C05C00507AA0 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
-		1AC88EEF2CC28AE1004E7A6F /* GetEmergencyPhrases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmergencyPhrases.swift; sourceTree = "<group>"; };
-		1AC88EF22CC28B66004E7A6F /* FlagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsView.swift; sourceTree = "<group>"; };
 		1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardModel.swift; sourceTree = "<group>"; };
 		1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlob.swift; sourceTree = "<group>"; };
 		1AE5BC9C2BA44ED300148A26 /* TutorialElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialElement.swift; sourceTree = "<group>"; };
@@ -186,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				1A7F95A72AE44537008110B2 /* EmergencyModel.swift */,
-				1AB1382D2CC2A32100BB40AD /* ColorCombinationModel.swift */,
 				1A96617B2AEA62030021B6F3 /* ConversationModel.swift */,
 				1A7F95AC2AE459BE008110B2 /* EmergencyMenuModel.swift */,
 				1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */,
@@ -222,8 +215,6 @@
 			children = (
 				1ACDA42D2CA6C05C00507AA0 /* DebugView.swift */,
 				1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */,
-				1AC88EF12CC28B55004E7A6F /* PhrasesView */,
-				4E23C3042AEA55E200AD7073 /* TutorialView.swift */,
 				1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */,
 				1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */,
 				1A7DB1782BCAD73E0092A6E2 /* Map */,
@@ -243,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				1AC88EE92CC28755004E7A6F /* Extensions */,
-				1AC88EEF2CC28AE1004E7A6F /* GetEmergencyPhrases.swift */,
 				1AB0081F2AEFC3D500887D54 /* CoordinatesTranslation.swift */,
 				1A782D6B2AEBC474008E7FD8 /* FirstAidParser.swift */,
 				1AA8546D2AE55D2500964C14 /* HapticEngine.swift */,
@@ -391,16 +381,12 @@
 				1A0E5B812B0008F7006F0B77 /* MapView.swift in Sources */,
 				1AC1737C2AE2655400F4818C /* LocationRequestView.swift in Sources */,
 				1A7DB17A2BCAD74F0092A6E2 /* MapInfoView.swift in Sources */,
-				1AC88EF32CC28B66004E7A6F /* FlagsView.swift in Sources */,
 				1AB008202AEFC3D500887D54 /* CoordinatesTranslation.swift in Sources */,
-				1AC88EF02CC28AE1004E7A6F /* GetEmergencyPhrases.swift in Sources */,
 				1A83AC7D2AF666E000182B3C /* APPolygon.m in Sources */,
 				1AE5BCA32BA44F2600148A26 /* AppPopupCopy.swift in Sources */,
 				1A782D6C2AEBC474008E7FD8 /* FirstAidParser.swift in Sources */,
 				1AE5BCA52BA44F3700148A26 /* TopGradient.swift in Sources */,
 				1A48E0D32AE169900012E64E /* EmergencySelectionView.swift in Sources */,
-				1AB1382E2CC2A32100BB40AD /* ColorCombinationModel.swift in Sources */,
-				1A48E0D32AE169900012E64E /* ContentView.swift in Sources */,
 				1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */,
 				1AE5BCA92BA44F6600148A26 /* AppPopupButton.swift in Sources */,
 				1AF1242B2C7E37D700C08461 /* NoLocationView.swift in Sources */,

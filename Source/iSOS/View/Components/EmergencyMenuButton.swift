@@ -14,7 +14,8 @@ struct EmergencyMenuButton: View {
     var iconName: String
     
     // Colors of the button
-    var colorCombination: ColorCombination
+    var gradientColor1: Color
+    var gradientColor2: Color
     
     // Action that should happen after the button is pressed
     var action: () -> Void
@@ -23,7 +24,7 @@ struct EmergencyMenuButton: View {
         
         Button(action: action) {
             
-            AppStandardButton(colorCombination: colorCombination, iconName: iconName,iconOpacity: 0.12)
+            AppStandardButton(gradientColor1: gradientColor1, gradientColor2: gradientColor2, iconName: iconName,iconOpacity: 0.12)
                 .overlay{
                     VStack{
                         HStack{

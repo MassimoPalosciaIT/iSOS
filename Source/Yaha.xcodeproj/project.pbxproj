@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A0E5B812B0008F7006F0B77 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E5B802B0008F7006F0B77 /* MapView.swift */; };
-		1A16083A2CC4220200E248C4 /* FlagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1608392CC4220200E248C4 /* FlagsView.swift */; };
 		1A2EC8F42AF6BB81009F75C7 /* countries.geo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2EC8F32AF6BB81009F75C7 /* countries.geo.json */; };
 		1A48E0D32AE169900012E64E /* EmergencySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A48E0D22AE169900012E64E /* EmergencySelectionView.swift */; };
 		1A49CD962AF80ABF00AAAB16 /* ShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49CD952AF80ABF00AAAB16 /* ShapesView.swift */; };
@@ -35,8 +34,9 @@
 		1AC70CFA2AEAE97E0023F294 /* PhrasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */; };
 		1AC70CFD2AEB026E0023F294 /* FirstAidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */; };
 		1AC88EEB2CC28765004E7A6F /* AppIconExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC88EEA2CC28765004E7A6F /* AppIconExtension.swift */; };
-		1AC88EF02CC28AE1004E7A6F /* GetEmergencyPhrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC88EEF2CC28AE1004E7A6F /* GetEmergencyPhrases.swift */; };
 		1ACDA42E2CA6C05C00507AA0 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACDA42D2CA6C05C00507AA0 /* DebugView.swift */; };
+		1AC88EF02CC28AE1004E7A6F /* GetEmergencyPhrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC88EEF2CC28AE1004E7A6F /* GetEmergencyPhrases.swift */; };
+		1AC88EF32CC28B66004E7A6F /* FlagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC88EF22CC28B66004E7A6F /* FlagsView.swift */; };
 		1AD0D0FB2BC699C9000C9193 /* FirstAidCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */; };
 		1AE5BC9B2BA44EB800148A26 /* TextBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */; };
 		1AE5BC9D2BA44ED300148A26 /* TutorialElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5BC9C2BA44ED300148A26 /* TutorialElement.swift */; };
@@ -61,7 +61,6 @@
 
 /* Begin PBXFileReference section */
 		1A0E5B802B0008F7006F0B77 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		1A1608392CC4220200E248C4 /* FlagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsView.swift; sourceTree = "<group>"; };
 		1A1FB9202AE5371300ED0D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1A2EC8F32AF6BB81009F75C7 /* countries.geo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.geo.json; sourceTree = "<group>"; };
 		1A48E0D22AE169900012E64E /* EmergencySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencySelectionView.swift; sourceTree = "<group>"; };
@@ -95,8 +94,9 @@
 		1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesView.swift; sourceTree = "<group>"; };
 		1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidView.swift; sourceTree = "<group>"; };
 		1AC88EEA2CC28765004E7A6F /* AppIconExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconExtension.swift; sourceTree = "<group>"; };
-		1AC88EEF2CC28AE1004E7A6F /* GetEmergencyPhrases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmergencyPhrases.swift; sourceTree = "<group>"; };
 		1ACDA42D2CA6C05C00507AA0 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
+		1AC88EEF2CC28AE1004E7A6F /* GetEmergencyPhrases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmergencyPhrases.swift; sourceTree = "<group>"; };
+		1AC88EF22CC28B66004E7A6F /* FlagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsView.swift; sourceTree = "<group>"; };
 		1AD0D0FA2BC699C9000C9193 /* FirstAidCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidCardModel.swift; sourceTree = "<group>"; };
 		1AE5BC9A2BA44EB800148A26 /* TextBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlob.swift; sourceTree = "<group>"; };
 		1AE5BC9C2BA44ED300148A26 /* TutorialElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialElement.swift; sourceTree = "<group>"; };
@@ -138,15 +138,6 @@
 				4E1207822AEBB6A1003ABE26 /* firstAid.csv */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		1A576DB62CC41ED7007CFDF6 /* Phrases View */ = {
-			isa = PBXGroup;
-			children = (
-				1A1608392CC4220200E248C4 /* FlagsView.swift */,
-				1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */,
-			);
-			path = "Phrases View";
 			sourceTree = "<group>";
 		};
 		1A7DB1782BCAD73E0092A6E2 /* Map */ = {
@@ -229,8 +220,10 @@
 		1AC70CFB2AEAF5C20023F294 /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
-				1A576DB62CC41ED7007CFDF6 /* Phrases View */,
 				1ACDA42D2CA6C05C00507AA0 /* DebugView.swift */,
+				1AC70CF92AEAE97E0023F294 /* PhrasesView.swift */,
+				1AC88EF12CC28B55004E7A6F /* PhrasesView */,
+				4E23C3042AEA55E200AD7073 /* TutorialView.swift */,
 				1AC70CFC2AEB026E0023F294 /* FirstAidView.swift */,
 				1A782D6D2AEBC78B008E7FD8 /* FirstAidDetailedView.swift */,
 				1A7DB1782BCAD73E0092A6E2 /* Map */,
@@ -343,7 +336,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					4ED20FEB2ADE95B4007B4E50 = {
 						CreatedOnToolsVersion = 15.0;
@@ -398,6 +391,7 @@
 				1A0E5B812B0008F7006F0B77 /* MapView.swift in Sources */,
 				1AC1737C2AE2655400F4818C /* LocationRequestView.swift in Sources */,
 				1A7DB17A2BCAD74F0092A6E2 /* MapInfoView.swift in Sources */,
+				1AC88EF32CC28B66004E7A6F /* FlagsView.swift in Sources */,
 				1AB008202AEFC3D500887D54 /* CoordinatesTranslation.swift in Sources */,
 				1AC88EF02CC28AE1004E7A6F /* GetEmergencyPhrases.swift in Sources */,
 				1A83AC7D2AF666E000182B3C /* APPolygon.m in Sources */,
@@ -406,6 +400,7 @@
 				1AE5BCA52BA44F3700148A26 /* TopGradient.swift in Sources */,
 				1A48E0D32AE169900012E64E /* EmergencySelectionView.swift in Sources */,
 				1AB1382E2CC2A32100BB40AD /* ColorCombinationModel.swift in Sources */,
+				1A48E0D32AE169900012E64E /* ContentView.swift in Sources */,
 				1AC173812AE27B8700F4818C /* GetEmergencyNumber.swift in Sources */,
 				1AE5BCA92BA44F6600148A26 /* AppPopupButton.swift in Sources */,
 				1AF1242B2C7E37D700C08461 /* NoLocationView.swift in Sources */,
@@ -428,7 +423,6 @@
 				1AE5BCAD2BA44F8400148A26 /* FirstAidSelectionButton.swift in Sources */,
 				1AC88EEB2CC28765004E7A6F /* AppIconExtension.swift in Sources */,
 				1A7F95AD2AE459BE008110B2 /* EmergencyMenuModel.swift in Sources */,
-				1A16083A2CC4220200E248C4 /* FlagsView.swift in Sources */,
 				1ACDA42E2CA6C05C00507AA0 /* DebugView.swift in Sources */,
 				4ED20FF02ADE95B4007B4E50 /* YahaApp.swift in Sources */,
 				1A7B64802CA5CCD4009B866A /* AppSettings.swift in Sources */,

@@ -24,7 +24,8 @@ struct EmergencySelectionView: View {
                                             Emergency(
                                                 title: "Medical Help",
                                                 iconName: "cross.fill",
-                                                colorCombination: .init(main: .redGradient1, secondary: .redGradient2),
+                                                gradientColor1: .redGradient1,
+                                                gradientColor2: .redGradient2,
                                                 emergencyType: EmergencyType.medicalHelp,
                                                 menus: [
                                                     EmergencyMenu(title: "Hospitals", iconName: "building.2.fill",  action: {
@@ -43,7 +44,8 @@ struct EmergencySelectionView: View {
                                             Emergency(
                                                 title: "Fire department",
                                                 iconName: "flame.fill",
-                                                colorCombination: .init(main: .orangeGradient1, secondary: .orangeGradient2),
+                                                gradientColor1: .orangeGradient1,
+                                                gradientColor2: .orangeGradient2,
                                                 emergencyType: EmergencyType.fireDepartment,
                                                 menus: [
                                                     EmergencyMenu(title: "Emergency Phrases", iconName: "text.bubble.fill", action: {
@@ -59,7 +61,8 @@ struct EmergencySelectionView: View {
                                             Emergency(
                                                 title: "Police",
                                                 iconName: "shield.righthalf.filled",
-                                                colorCombination: .init(main: .blueGradient1, secondary: .blueGradient2),
+                                                gradientColor1: .blueGradient1,
+                                                gradientColor2: .blueGradient2,
                                                 emergencyType: EmergencyType.police,
                                                 menus: [
                                                     EmergencyMenu(title: "Stations", iconName: "house.lodge.fill",  action: {
@@ -80,7 +83,7 @@ struct EmergencySelectionView: View {
             }
             .padding()
             .background{
-                TopGradient(colorCombination: .init(main: .redGradient1, secondary: .redGradient2))
+                TopGradient(gradientColor1: .redGradient1, gradientColor2: .redGradient2)
             }
             .background(.mainBackground)
             .navigationTitle("Need help?")
